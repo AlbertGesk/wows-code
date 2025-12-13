@@ -6,6 +6,7 @@ from tirex_tracker import tracking, ExportFormat
 from tira.third_party_integrations import ir_datasets, ensure_pyterrier_is_loaded
 from tqdm import tqdm
 import string
+from pyterrier.terrier import TerrierStopwords
 
 
 def run_query_expansion(index, dataset, retrieval_model, query_expansion):
@@ -31,7 +32,7 @@ def extract_text_of_document(doc, field):
 
 
 def get_index(dataset, field, output_path, query_expansion):
-    index_dir = output_path / "indexes" / f"{dataset}-on-{field}-stem-stop"
+    index_dir = output_path / "indexes" / f"{dataset}-on-{field}-porter-terrier-stop"
     if not index_dir.is_dir():
         print("Build new index")
         docs = []
@@ -41,20 +42,19 @@ def get_index(dataset, field, output_path, query_expansion):
             docs.append({"docno": doc.doc_id, "text": extract_text_of_document(doc, field)})
 
         with tracking(export_file_path=index_dir / "index-metadata.yml", export_format=ExportFormat.IR_METADATA):
-            pt.IterDictIndexer(str(index_dir.absolute()), meta={'docno' : 100}, verbose=True).index(docs)
+            indexer = pt.IterDictIndexer(str(index_dir.absolute()), meta={"docno": 100}, stemmer = "PorterStemmer", stopwords = TerrierStopwords.terrier, verbose=True).index(docs)
 
     return pt.IndexFactory.of(str(index_dir.absolute()))
 
 
 def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retrieve, query_expansion):
-    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}-stem-stop-with-{query_expansion}"
+    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}-porter-terrier-stop-with-{query_expansion}"
     target_dir = output / "runs" / dataset / tag
     target_file = target_dir / "run.txt.gz"
 
     if target_file.exists():
         return
 
-    
     topics = run_query_expansion(index, dataset, retrieval_model, query_expansion)
 
     retriever = pt.terrier.Retriever(index, wmodel=retrieval_model)
