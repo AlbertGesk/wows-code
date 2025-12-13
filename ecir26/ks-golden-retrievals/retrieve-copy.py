@@ -15,7 +15,7 @@ def run_query_expansion(index, dataset, retrieval_model, query_expansion):
     elif query_expansion == "bo1":
         bo1_expansion = pt.BatchRetrieve(index, wmodel=retrieval_model) >> pt.rewrite.Bo1QueryExpansion(index)
         return bo1_expansion(topics)
-    elif query_expansion == "rm3":
+    elif query_expansion == "RM3":
         rm3_expansion = pt.BatchRetrieve(index, wmodel=retrieval_model) >> pt.rewrite.RM3(index) >> pt.BatchRetrieve(index, wmodel=retrieval_model)
         return rm3_expansion(topics)
 
@@ -46,7 +46,7 @@ def get_index(dataset, field, output_path, query_expansion):
 
 
 def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retrieve, query_expansion):
-    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}"
+    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}-with-{query_expansion}"
     target_dir = output / "runs" / dataset / tag
     target_file = target_dir / "run.txt.gz"
 
