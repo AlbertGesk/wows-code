@@ -6,7 +6,7 @@ from tirex_tracker import tracking, ExportFormat
 from tira.third_party_integrations import ir_datasets, ensure_pyterrier_is_loaded
 from tqdm import tqdm
 import string
-from pyterrier.terrier import TerrierStopwords
+
 
 def extract_text_of_document(doc, field):
     # ToDo: here one can make modifications to the document representations
@@ -16,7 +16,6 @@ def extract_text_of_document(doc, field):
         return doc.title
     elif field == "description":
         return doc.description
-
 
 def get_index(dataset, field, output_path):
     index_dir = output_path / "indexes" / f"{dataset}-on-{field}-reranking-with-controls"
@@ -35,6 +34,7 @@ def get_index(dataset, field, output_path):
 
 
 def run_retrieval(output, index, dataset, text_field_to_retrieve):
+
     tag = f"pyterrier-BM25-PL2-on-{text_field_to_retrieve}-reranking-with-controls"
     target_dir = output / "runs" / dataset / tag
     target_file = target_dir / "run.txt.gz"
@@ -55,7 +55,6 @@ def run_retrieval(output, index, dataset, text_field_to_retrieve):
 
     with tracking(export_file_path=target_dir / "ir-metadata.yml", export_format=ExportFormat.IR_METADATA, system_description=description, system_name=tag):
         run = pipeline(topics)
-
     pt.io.write_results(run, target_file)
 
 @click.command()
@@ -63,13 +62,12 @@ def run_retrieval(output, index, dataset, text_field_to_retrieve):
 @click.option("--output", type=Path, required=False, default=Path("output"), help="The output directory.")
 @click.option("--retrieval-model", type=str, default="BM25", required=False, help="The retrieval model (e.g., BM25, PL2, DirichletLM).")
 @click.option("--text-field-to-retrieve", type=click.Choice(["default_text", "title", "description"]), required=False, default="default_text", help="The text field of the documents on which to retrieve.")
+
+
 def main(dataset, text_field_to_retrieve, retrieval_model, output):
     ensure_pyterrier_is_loaded(is_offline=False)
-
     index = get_index(dataset, text_field_to_retrieve, output)
     run_retrieval(output, index, dataset, text_field_to_retrieve)
-    
 
 if __name__ == '__main__':
     main()
-
