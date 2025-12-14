@@ -19,7 +19,7 @@ def run_query_expansion(index, dataset, retrieval_model, query_expansion):
     elif query_expansion == "RM3":
         rm3_expansion = pt.BatchRetrieve(index, wmodel=retrieval_model) >> pt.rewrite.RM3(index) >> pt.BatchRetrieve(index, wmodel=retrieval_model)
         return rm3_expansion(topics)
-    elif query_expansion == "QE":
+    
         
 
 def extract_text_of_document(doc, field):
