@@ -33,7 +33,7 @@ def extract_text_of_document(doc, field):
 
 
 def get_index(dataset, field, output_path, query_expansion):
-    index_dir = output_path / "indexes" / f"{dataset}-on-{field}-stem-stop"
+    index_dir = output_path / "indexes" / f"{dataset}-on-{field}-controls"
     if not index_dir.is_dir():
         print("Build new index")
         docs = []
@@ -49,7 +49,7 @@ def get_index(dataset, field, output_path, query_expansion):
 
 
 def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retrieve, query_expansion):
-    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}-stem-stop-with-{query_expansion}"
+    tag = f"pyterrier-{retrieval_model}-on-{text_field_to_retrieve}-with-{query_expansion}-controls"
     target_dir = output / "runs" / dataset / tag
     target_file = target_dir / "run.txt.gz"
 
@@ -61,12 +61,15 @@ def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retriev
 
     retriever = pt.terrier.Retriever(index, wmodel=retrieval_model)
 
+    pipeline = (
+        index.bm25()
+        >> index.bm25(k1=1.2, b=0.5)
+    )
+
     description = f"This is a PyTerrier retriever using the retrieval model {retriever} retrieving on the {text_field_to_retrieve} text representation of the documents. {query_expansion} is used to add additional terms. Everything is set to the defaults."
 
-    with tracking(export_file_path=target_dir / "ir-metadata.yml", export_format=ExportFormat.IR_METADATA, system_description=description, system_name=tag):
-        
-        
-        run = retriever(topics)
+    with tracking(export_file_path=target_dir / "ir-metadata.yml", export_format=ExportFormat.IR_METADATA, system_description=description, system_name=tag): 
+        run = pipeline(topics)
 
     pt.io.write_results(run, target_file)
 
