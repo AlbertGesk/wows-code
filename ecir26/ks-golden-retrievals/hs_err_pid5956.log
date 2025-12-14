@@ -1,0 +1,1432 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000070b76e53835c, pid=5956, tid=5956
+#
+# JRE version: OpenJDK Runtime Environment (11.0.28+6) (build 11.0.28+6-post-Ubuntu-1ubuntu122.04.1)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.28+6-post-Ubuntu-1ubuntu122.04.1, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libtirex_tracker.so+0xf635c]  std::filesystem::__cxx11::path::path<char const*, std::filesystem::__cxx11::path>(char const* const&, std::filesystem::__cxx11::path::format)+0xc
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/wsl-capture-crash %t %E %p %s" (or dumping to /workspaces/wows-code/ecir26/ks-golden-retrievals/core.5956)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: python[pyterrier]:./retrieve-copy.py
+
+Host: AMD Ryzen 5 PRO 5650U with Radeon Graphics, 12 cores, 7G, Ubuntu 22.04.5 LTS
+Time: Sun Dec 14 20:16:14 2025 UTC elapsed time: 23.506729 seconds (0d 0h 0m 23s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000062fabd6b7800):  JavaThread "main" [_thread_in_native, id=5956, stack(0x00007fff67462000,0x00007fff67562000)]
+
+Stack: [0x00007fff67462000,0x00007fff67562000],  sp=0x00007fff6755b080,  free space=996k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libtirex_tracker.so+0xf635c]  std::filesystem::__cxx11::path::path<char const*, std::filesystem::__cxx11::path>(char const* const&, std::filesystem::__cxx11::path::format)+0xc
+
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000058
+
+Register to memory mapping:
+
+RAX=0x000062fabef1bd00 points into unknown readable memory: 0x000070b700000004 | 04 00 00 00 b7 70 00 00
+RBX=0x00007fff6755b260 is pointing into the stack for thread: 0x000062fabd6b7800
+RCX=0x0000000000000003 is an unknown value
+RDX=0x0000000000000002 is an unknown value
+RSP=0x00007fff6755b080 is pointing into the stack for thread: 0x000062fabd6b7800
+RBP=0x000062fabece7890 points into unknown readable memory: 0x000062fc916596d7 | d7 96 65 91 fc 62 00 00
+RSI=0x0000000000000058 is an unknown value
+RDI=0x00007fff6755b260 is pointing into the stack for thread: 0x000062fabd6b7800
+R8 =0x000062fabece7890 points into unknown readable memory: 0x000062fc916596d7 | d7 96 65 91 fc 62 00 00
+R9 =0x000062fabece85c0 points into unknown readable memory: 0x000101000000000a | 0a 00 00 00 00 01 01 00
+R10=0x000062fabececef0 points into unknown readable memory: 0x00000000000037b0 | b0 37 00 00 00 00 00 00
+R11=0xec711af3d0eb447b is an unknown value
+R12=0x0000000000000042 is an unknown value
+R13=0x00000000000000ea is an unknown value
+R14=0x000062fabef1bd00 points into unknown readable memory: 0x000070b700000004 | 04 00 00 00 b7 70 00 00
+R15=0x00000000000000b5 is an unknown value
+
+
+Registers:
+RAX=0x000062fabef1bd00, RBX=0x00007fff6755b260, RCX=0x0000000000000003, RDX=0x0000000000000002
+RSP=0x00007fff6755b080, RBP=0x000062fabece7890, RSI=0x0000000000000058, RDI=0x00007fff6755b260
+R8 =0x000062fabece7890, R9 =0x000062fabece85c0, R10=0x000062fabececef0, R11=0xec711af3d0eb447b
+R12=0x0000000000000042, R13=0x00000000000000ea, R14=0x000062fabef1bd00, R15=0x00000000000000b5
+RIP=0x000070b76e53835c, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fff6755b080)
+0x00007fff6755b080:   000062fabece8190 0000000000000042
+0x00007fff6755b090:   00000000000000ea 000062fabef1bd00
+0x00007fff6755b0a0:   00000000000000b5 000070b76e5349f6
+0x00007fff6755b0b0:   0000003000000010 000062fabee10660 
+
+Instructions: (pc=0x000070b76e53835c)
+0x000070b76e53825c:   41 5c 41 5d 41 5e 41 5f 5d c3 eb 02 eb 00 48 89
+0x000070b76e53826c:   c3 48 89 e7 e8 0b 95 f4 ff 48 89 df e8 63 cb f4
+0x000070b76e53827c:   ff 0f 1f 00 53 48 89 fb 48 8b 77 20 48 85 f6 74
+0x000070b76e53828c:   09 48 8d 7b 20 e8 3a 78 f4 ff 48 c7 43 20 00 00
+0x000070b76e53829c:   00 00 48 8b 3b 48 83 c3 10 48 39 df 74 06 5b e9
+0x000070b76e5382ac:   20 a0 f4 ff 5b c3 66 2e 0f 1f 84 00 00 00 00 00
+0x000070b76e5382bc:   0f 1f 40 00 41 57 41 56 53 48 8b 1f 4c 8b 7f 08
+0x000070b76e5382cc:   4c 39 fb 74 2e 49 89 fe eb 13 66 2e 0f 1f 84 00
+0x000070b76e5382dc:   00 00 00 00 48 83 c3 10 4c 39 fb 74 13 48 8b 3b
+0x000070b76e5382ec:   48 83 c3 10 48 39 df 74 eb e8 d6 9f f4 ff eb e4
+0x000070b76e5382fc:   49 8b 1e 48 85 db 74 0d 48 89 df 5b 41 5e 41 5f
+0x000070b76e53830c:   e9 bf 9f f4 ff 5b 41 5e 41 5f c3 66 0f 1f 84 00
+0x000070b76e53831c:   00 00 00 00 53 48 89 fb 48 8b 7f 20 48 8d 43 30
+0x000070b76e53832c:   48 39 c7 74 05 e8 9a 9f f4 ff 48 8b 3b 48 83 c3
+0x000070b76e53833c:   10 48 39 df 74 06 5b e9 88 9f f4 ff 5b c3 66 0f
+0x000070b76e53834c:   1f 44 00 00 41 57 41 56 41 55 41 54 53 48 89 fb
+0x000070b76e53835c:   4c 8b 3e 4c 89 ff e8 69 81 f4 ff 49 89 c6 4c 8d
+0x000070b76e53836c:   6b 10 4c 89 2b 4d 89 ec 48 83 f8 10 72 1c 4c 89
+0x000070b76e53837c:   f0 48 c1 e8 3e 75 5d 49 8d 7e 01 e8 24 a1 f4 ff
+0x000070b76e53838c:   49 89 c4 48 89 03 4c 89 73 10 4d 85 f6 74 1e 49
+0x000070b76e53839c:   83 fe 01 75 0a 41 0f b6 07 41 88 04 24 eb 0e 4c
+0x000070b76e5383ac:   89 e7 4c 89 fe 4c 89 f2 e8 77 97 f4 ff 4c 89 73
+0x000070b76e5383bc:   08 43 c6 04 34 00 4c 8d 7b 20 4c 89 ff e8 22 77
+0x000070b76e5383cc:   f4 ff 48 89 df e8 9a 95 f4 ff 5b 41 5c 41 5d 41
+0x000070b76e5383dc:   5e 41 5f c3 48 8d 3d f6 7c 09 00 e8 b4 86 f4 ff
+0x000070b76e5383ec:   49 89 c6 49 8b 37 48 85 f6 74 08 4c 89 ff e8 d1
+0x000070b76e5383fc:   76 f4 ff 49 c7 07 00 00 00 00 eb 03 49 89 c6 48
+0x000070b76e53840c:   8b 3b 4c 39 ef 74 05 e8 b8 9e f4 ff 4c 89 f7 e8
+0x000070b76e53841c:   c0 c9 f4 ff 55 41 57 41 56 41 55 41 54 53 48 83
+0x000070b76e53842c:   ec 78 4d 89 c7 49 89 cc 48 8d 5c 24 20 48 89 5c
+0x000070b76e53843c:   24 10 48 8b 2f 4c 8b 6f 08 49 83 fd 10 72 33 48
+0x000070b76e53844c:   89 74 24 08 4c 89 e8 48 c1 e8 3e 0f 85 d2 00 00 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x000062fabece8190 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+stack at sp + 1 slots: 0x0000000000000042 is an unknown value
+stack at sp + 2 slots: 0x00000000000000ea is an unknown value
+stack at sp + 3 slots: 0x000062fabef1bd00 points into unknown readable memory: 0x000070b700000004 | 04 00 00 00 b7 70 00 00
+stack at sp + 4 slots: 0x00000000000000b5 is an unknown value
+stack at sp + 5 slots: 0x000070b76e5349f6: <offset 0x00000000000f29f6> in /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so at 0x000070b76e442000
+stack at sp + 6 slots: 0x0000003000000010 is an unknown value
+stack at sp + 7 slots: 0x000062fabee10660 points into unknown readable memory: 0x000062fabef150f0 | f0 50 f1 be fa 62 00 00
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000070b710074aa0, length=9, elements={
+0x000062fabd6b7800, 0x000062fabecc6800, 0x000062fabecc9000, 0x000062fabeccc800,
+0x000062fabecce800, 0x000062fabecd0800, 0x000062fabecd2800, 0x000062fabecd4800,
+0x000062fabed25000
+}
+
+Java Threads: ( => current thread )
+=>0x000062fabd6b7800 JavaThread "main" [_thread_in_native, id=5956, stack(0x00007fff67462000,0x00007fff67562000)]
+  0x000062fabecc6800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6000, stack(0x000070b74c014000,0x000070b74c114000)]
+  0x000062fabecc9000 JavaThread "Finalizer" daemon [_thread_blocked, id=6001, stack(0x000070b745700000,0x000070b745800000)]
+  0x000062fabeccc800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6002, stack(0x000070b745600000,0x000070b745700000)]
+  0x000062fabecce800 JavaThread "Service Thread" daemon [_thread_blocked, id=6003, stack(0x000070b745500000,0x000070b745600000)]
+  0x000062fabecd0800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6004, stack(0x000070b745400000,0x000070b745500000)]
+  0x000062fabecd2800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=6005, stack(0x000070b745300000,0x000070b745400000)]
+  0x000062fabecd4800 JavaThread "Sweeper thread" daemon [_thread_blocked, id=6006, stack(0x000070b745200000,0x000070b745300000)]
+  0x000062fabed25000 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=6009, stack(0x000070b744eff000,0x000070b744fff000)]
+
+Other Threads:
+  0x000062fabecc4800 VMThread "VM Thread" [stack: 0x000070b74c115000,0x000070b74c215000] [id=5999]
+  0x000062fabed14000 WatcherThread [stack: 0x000070b745100000,0x000070b745200000] [id=6007]
+  0x000062fabd6c7800 GCTaskThread "GC Thread#0" [stack: 0x000070b754b30000,0x000070b754c30000] [id=5994]
+  0x000062fabe0f3800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000070b74c519000,0x000070b74c619000] [id=5995]
+  0x000062fabe0f4800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000070b74c418000,0x000070b74c518000] [id=5996]
+  0x000062fabeb57800 ConcurrentGCThread "G1 Refine#0" [stack: 0x000070b74c317000,0x000070b74c417000] [id=5997]
+  0x000062fabeb58800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x000070b74c216000,0x000070b74c316000] [id=5998]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x000000008d200000, size: 1838 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000840000000
+
+Heap:
+ garbage-first heap   total 120832K, used 13008K [0x000000008d200000, 0x0000000100000000)
+  region size 1024K, 7 young (7168K), 0 survivors (0K)
+ Metaspace       used 2747K, capacity 5450K, committed 5504K, reserved 1056768K
+  class space    used 303K, capacity 593K, committed 640K, reserved 1048576K
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, A=archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x000000008d200000, 0x000000008d300000, 0x000000008d300000|100%|HS|  |TAMS 0x000000008d200000, 0x000000008d200000| Complete 
+|   1|0x000000008d300000, 0x000000008d400000, 0x000000008d400000|100%|HC|  |TAMS 0x000000008d300000, 0x000000008d300000| Complete 
+|   2|0x000000008d400000, 0x000000008d500000, 0x000000008d500000|100%|HC|  |TAMS 0x000000008d400000, 0x000000008d400000| Complete 
+|   3|0x000000008d500000, 0x000000008d600000, 0x000000008d600000|100%|HC|  |TAMS 0x000000008d500000, 0x000000008d500000| Complete 
+|   4|0x000000008d600000, 0x000000008d700000, 0x000000008d700000|100%|HC|  |TAMS 0x000000008d600000, 0x000000008d600000| Complete 
+|   5|0x000000008d700000, 0x000000008d800000, 0x000000008d800000|100%|HC|  |TAMS 0x000000008d700000, 0x000000008d700000| Complete 
+|   6|0x000000008d800000, 0x000000008d900000, 0x000000008d900000|100%|HS|  |TAMS 0x000000008d800000, 0x000000008d800000| Complete 
+|   7|0x000000008d900000, 0x000000008d900000, 0x000000008da00000|  0%| F|  |TAMS 0x000000008d900000, 0x000000008d900000| Untracked 
+|   8|0x000000008da00000, 0x000000008da00000, 0x000000008db00000|  0%| F|  |TAMS 0x000000008da00000, 0x000000008da00000| Untracked 
+|   9|0x000000008db00000, 0x000000008db00000, 0x000000008dc00000|  0%| F|  |TAMS 0x000000008db00000, 0x000000008db00000| Untracked 
+|  10|0x000000008dc00000, 0x000000008dc00000, 0x000000008dd00000|  0%| F|  |TAMS 0x000000008dc00000, 0x000000008dc00000| Untracked 
+|  11|0x000000008dd00000, 0x000000008dd00000, 0x000000008de00000|  0%| F|  |TAMS 0x000000008dd00000, 0x000000008dd00000| Untracked 
+|  12|0x000000008de00000, 0x000000008de00000, 0x000000008df00000|  0%| F|  |TAMS 0x000000008de00000, 0x000000008de00000| Untracked 
+|  13|0x000000008df00000, 0x000000008df00000, 0x000000008e000000|  0%| F|  |TAMS 0x000000008df00000, 0x000000008df00000| Untracked 
+|  14|0x000000008e000000, 0x000000008e000000, 0x000000008e100000|  0%| F|  |TAMS 0x000000008e000000, 0x000000008e000000| Untracked 
+|  15|0x000000008e100000, 0x000000008e100000, 0x000000008e200000|  0%| F|  |TAMS 0x000000008e100000, 0x000000008e100000| Untracked 
+|  16|0x000000008e200000, 0x000000008e200000, 0x000000008e300000|  0%| F|  |TAMS 0x000000008e200000, 0x000000008e200000| Untracked 
+|  17|0x000000008e300000, 0x000000008e300000, 0x000000008e400000|  0%| F|  |TAMS 0x000000008e300000, 0x000000008e300000| Untracked 
+|  18|0x000000008e400000, 0x000000008e400000, 0x000000008e500000|  0%| F|  |TAMS 0x000000008e400000, 0x000000008e400000| Untracked 
+|  19|0x000000008e500000, 0x000000008e500000, 0x000000008e600000|  0%| F|  |TAMS 0x000000008e500000, 0x000000008e500000| Untracked 
+|  20|0x000000008e600000, 0x000000008e600000, 0x000000008e700000|  0%| F|  |TAMS 0x000000008e600000, 0x000000008e600000| Untracked 
+|  21|0x000000008e700000, 0x000000008e700000, 0x000000008e800000|  0%| F|  |TAMS 0x000000008e700000, 0x000000008e700000| Untracked 
+|  22|0x000000008e800000, 0x000000008e800000, 0x000000008e900000|  0%| F|  |TAMS 0x000000008e800000, 0x000000008e800000| Untracked 
+|  23|0x000000008e900000, 0x000000008e900000, 0x000000008ea00000|  0%| F|  |TAMS 0x000000008e900000, 0x000000008e900000| Untracked 
+|  24|0x000000008ea00000, 0x000000008ea00000, 0x000000008eb00000|  0%| F|  |TAMS 0x000000008ea00000, 0x000000008ea00000| Untracked 
+|  25|0x000000008eb00000, 0x000000008eb00000, 0x000000008ec00000|  0%| F|  |TAMS 0x000000008eb00000, 0x000000008eb00000| Untracked 
+|  26|0x000000008ec00000, 0x000000008ec00000, 0x000000008ed00000|  0%| F|  |TAMS 0x000000008ec00000, 0x000000008ec00000| Untracked 
+|  27|0x000000008ed00000, 0x000000008ed00000, 0x000000008ee00000|  0%| F|  |TAMS 0x000000008ed00000, 0x000000008ed00000| Untracked 
+|  28|0x000000008ee00000, 0x000000008ee00000, 0x000000008ef00000|  0%| F|  |TAMS 0x000000008ee00000, 0x000000008ee00000| Untracked 
+|  29|0x000000008ef00000, 0x000000008ef00000, 0x000000008f000000|  0%| F|  |TAMS 0x000000008ef00000, 0x000000008ef00000| Untracked 
+|  30|0x000000008f000000, 0x000000008f000000, 0x000000008f100000|  0%| F|  |TAMS 0x000000008f000000, 0x000000008f000000| Untracked 
+|  31|0x000000008f100000, 0x000000008f100000, 0x000000008f200000|  0%| F|  |TAMS 0x000000008f100000, 0x000000008f100000| Untracked 
+|  32|0x000000008f200000, 0x000000008f200000, 0x000000008f300000|  0%| F|  |TAMS 0x000000008f200000, 0x000000008f200000| Untracked 
+|  33|0x000000008f300000, 0x000000008f300000, 0x000000008f400000|  0%| F|  |TAMS 0x000000008f300000, 0x000000008f300000| Untracked 
+|  34|0x000000008f400000, 0x000000008f400000, 0x000000008f500000|  0%| F|  |TAMS 0x000000008f400000, 0x000000008f400000| Untracked 
+|  35|0x000000008f500000, 0x000000008f500000, 0x000000008f600000|  0%| F|  |TAMS 0x000000008f500000, 0x000000008f500000| Untracked 
+|  36|0x000000008f600000, 0x000000008f600000, 0x000000008f700000|  0%| F|  |TAMS 0x000000008f600000, 0x000000008f600000| Untracked 
+|  37|0x000000008f700000, 0x000000008f700000, 0x000000008f800000|  0%| F|  |TAMS 0x000000008f700000, 0x000000008f700000| Untracked 
+|  38|0x000000008f800000, 0x000000008f800000, 0x000000008f900000|  0%| F|  |TAMS 0x000000008f800000, 0x000000008f800000| Untracked 
+|  39|0x000000008f900000, 0x000000008f900000, 0x000000008fa00000|  0%| F|  |TAMS 0x000000008f900000, 0x000000008f900000| Untracked 
+|  40|0x000000008fa00000, 0x000000008fa00000, 0x000000008fb00000|  0%| F|  |TAMS 0x000000008fa00000, 0x000000008fa00000| Untracked 
+|  41|0x000000008fb00000, 0x000000008fb00000, 0x000000008fc00000|  0%| F|  |TAMS 0x000000008fb00000, 0x000000008fb00000| Untracked 
+|  42|0x000000008fc00000, 0x000000008fc00000, 0x000000008fd00000|  0%| F|  |TAMS 0x000000008fc00000, 0x000000008fc00000| Untracked 
+|  43|0x000000008fd00000, 0x000000008fd00000, 0x000000008fe00000|  0%| F|  |TAMS 0x000000008fd00000, 0x000000008fd00000| Untracked 
+|  44|0x000000008fe00000, 0x000000008fe00000, 0x000000008ff00000|  0%| F|  |TAMS 0x000000008fe00000, 0x000000008fe00000| Untracked 
+|  45|0x000000008ff00000, 0x000000008ff00000, 0x0000000090000000|  0%| F|  |TAMS 0x000000008ff00000, 0x000000008ff00000| Untracked 
+|  46|0x0000000090000000, 0x0000000090000000, 0x0000000090100000|  0%| F|  |TAMS 0x0000000090000000, 0x0000000090000000| Untracked 
+|  47|0x0000000090100000, 0x0000000090100000, 0x0000000090200000|  0%| F|  |TAMS 0x0000000090100000, 0x0000000090100000| Untracked 
+|  48|0x0000000090200000, 0x0000000090200000, 0x0000000090300000|  0%| F|  |TAMS 0x0000000090200000, 0x0000000090200000| Untracked 
+|  49|0x0000000090300000, 0x0000000090300000, 0x0000000090400000|  0%| F|  |TAMS 0x0000000090300000, 0x0000000090300000| Untracked 
+|  50|0x0000000090400000, 0x0000000090400000, 0x0000000090500000|  0%| F|  |TAMS 0x0000000090400000, 0x0000000090400000| Untracked 
+|  51|0x0000000090500000, 0x0000000090500000, 0x0000000090600000|  0%| F|  |TAMS 0x0000000090500000, 0x0000000090500000| Untracked 
+|  52|0x0000000090600000, 0x0000000090600000, 0x0000000090700000|  0%| F|  |TAMS 0x0000000090600000, 0x0000000090600000| Untracked 
+|  53|0x0000000090700000, 0x0000000090700000, 0x0000000090800000|  0%| F|  |TAMS 0x0000000090700000, 0x0000000090700000| Untracked 
+|  54|0x0000000090800000, 0x0000000090800000, 0x0000000090900000|  0%| F|  |TAMS 0x0000000090800000, 0x0000000090800000| Untracked 
+|  55|0x0000000090900000, 0x0000000090900000, 0x0000000090a00000|  0%| F|  |TAMS 0x0000000090900000, 0x0000000090900000| Untracked 
+|  56|0x0000000090a00000, 0x0000000090a00000, 0x0000000090b00000|  0%| F|  |TAMS 0x0000000090a00000, 0x0000000090a00000| Untracked 
+|  57|0x0000000090b00000, 0x0000000090b00000, 0x0000000090c00000|  0%| F|  |TAMS 0x0000000090b00000, 0x0000000090b00000| Untracked 
+|  58|0x0000000090c00000, 0x0000000090c00000, 0x0000000090d00000|  0%| F|  |TAMS 0x0000000090c00000, 0x0000000090c00000| Untracked 
+|  59|0x0000000090d00000, 0x0000000090d00000, 0x0000000090e00000|  0%| F|  |TAMS 0x0000000090d00000, 0x0000000090d00000| Untracked 
+|  60|0x0000000090e00000, 0x0000000090e00000, 0x0000000090f00000|  0%| F|  |TAMS 0x0000000090e00000, 0x0000000090e00000| Untracked 
+|  61|0x0000000090f00000, 0x0000000090f00000, 0x0000000091000000|  0%| F|  |TAMS 0x0000000090f00000, 0x0000000090f00000| Untracked 
+|  62|0x0000000091000000, 0x0000000091000000, 0x0000000091100000|  0%| F|  |TAMS 0x0000000091000000, 0x0000000091000000| Untracked 
+|  63|0x0000000091100000, 0x0000000091100000, 0x0000000091200000|  0%| F|  |TAMS 0x0000000091100000, 0x0000000091100000| Untracked 
+|  64|0x0000000091200000, 0x0000000091200000, 0x0000000091300000|  0%| F|  |TAMS 0x0000000091200000, 0x0000000091200000| Untracked 
+|  65|0x0000000091300000, 0x0000000091300000, 0x0000000091400000|  0%| F|  |TAMS 0x0000000091300000, 0x0000000091300000| Untracked 
+|  66|0x0000000091400000, 0x0000000091400000, 0x0000000091500000|  0%| F|  |TAMS 0x0000000091400000, 0x0000000091400000| Untracked 
+|  67|0x0000000091500000, 0x0000000091500000, 0x0000000091600000|  0%| F|  |TAMS 0x0000000091500000, 0x0000000091500000| Untracked 
+|  68|0x0000000091600000, 0x0000000091600000, 0x0000000091700000|  0%| F|  |TAMS 0x0000000091600000, 0x0000000091600000| Untracked 
+|  69|0x0000000091700000, 0x0000000091700000, 0x0000000091800000|  0%| F|  |TAMS 0x0000000091700000, 0x0000000091700000| Untracked 
+|  70|0x0000000091800000, 0x0000000091800000, 0x0000000091900000|  0%| F|  |TAMS 0x0000000091800000, 0x0000000091800000| Untracked 
+|  71|0x0000000091900000, 0x0000000091900000, 0x0000000091a00000|  0%| F|  |TAMS 0x0000000091900000, 0x0000000091900000| Untracked 
+|  72|0x0000000091a00000, 0x0000000091a00000, 0x0000000091b00000|  0%| F|  |TAMS 0x0000000091a00000, 0x0000000091a00000| Untracked 
+|  73|0x0000000091b00000, 0x0000000091b00000, 0x0000000091c00000|  0%| F|  |TAMS 0x0000000091b00000, 0x0000000091b00000| Untracked 
+|  74|0x0000000091c00000, 0x0000000091c00000, 0x0000000091d00000|  0%| F|  |TAMS 0x0000000091c00000, 0x0000000091c00000| Untracked 
+|  75|0x0000000091d00000, 0x0000000091d00000, 0x0000000091e00000|  0%| F|  |TAMS 0x0000000091d00000, 0x0000000091d00000| Untracked 
+|  76|0x0000000091e00000, 0x0000000091e00000, 0x0000000091f00000|  0%| F|  |TAMS 0x0000000091e00000, 0x0000000091e00000| Untracked 
+|  77|0x0000000091f00000, 0x0000000091f00000, 0x0000000092000000|  0%| F|  |TAMS 0x0000000091f00000, 0x0000000091f00000| Untracked 
+|  78|0x0000000092000000, 0x0000000092000000, 0x0000000092100000|  0%| F|  |TAMS 0x0000000092000000, 0x0000000092000000| Untracked 
+|  79|0x0000000092100000, 0x0000000092100000, 0x0000000092200000|  0%| F|  |TAMS 0x0000000092100000, 0x0000000092100000| Untracked 
+|  80|0x0000000092200000, 0x0000000092200000, 0x0000000092300000|  0%| F|  |TAMS 0x0000000092200000, 0x0000000092200000| Untracked 
+|  81|0x0000000092300000, 0x0000000092300000, 0x0000000092400000|  0%| F|  |TAMS 0x0000000092300000, 0x0000000092300000| Untracked 
+|  82|0x0000000092400000, 0x0000000092400000, 0x0000000092500000|  0%| F|  |TAMS 0x0000000092400000, 0x0000000092400000| Untracked 
+|  83|0x0000000092500000, 0x0000000092500000, 0x0000000092600000|  0%| F|  |TAMS 0x0000000092500000, 0x0000000092500000| Untracked 
+|  84|0x0000000092600000, 0x0000000092600000, 0x0000000092700000|  0%| F|  |TAMS 0x0000000092600000, 0x0000000092600000| Untracked 
+|  85|0x0000000092700000, 0x0000000092700000, 0x0000000092800000|  0%| F|  |TAMS 0x0000000092700000, 0x0000000092700000| Untracked 
+|  86|0x0000000092800000, 0x0000000092800000, 0x0000000092900000|  0%| F|  |TAMS 0x0000000092800000, 0x0000000092800000| Untracked 
+|  87|0x0000000092900000, 0x0000000092900000, 0x0000000092a00000|  0%| F|  |TAMS 0x0000000092900000, 0x0000000092900000| Untracked 
+|  88|0x0000000092a00000, 0x0000000092a00000, 0x0000000092b00000|  0%| F|  |TAMS 0x0000000092a00000, 0x0000000092a00000| Untracked 
+|  89|0x0000000092b00000, 0x0000000092b00000, 0x0000000092c00000|  0%| F|  |TAMS 0x0000000092b00000, 0x0000000092b00000| Untracked 
+|  90|0x0000000092c00000, 0x0000000092c00000, 0x0000000092d00000|  0%| F|  |TAMS 0x0000000092c00000, 0x0000000092c00000| Untracked 
+|  91|0x0000000092d00000, 0x0000000092d00000, 0x0000000092e00000|  0%| F|  |TAMS 0x0000000092d00000, 0x0000000092d00000| Untracked 
+|  92|0x0000000092e00000, 0x0000000092e00000, 0x0000000092f00000|  0%| F|  |TAMS 0x0000000092e00000, 0x0000000092e00000| Untracked 
+|  93|0x0000000092f00000, 0x0000000092f00000, 0x0000000093000000|  0%| F|  |TAMS 0x0000000092f00000, 0x0000000092f00000| Untracked 
+|  94|0x0000000093000000, 0x0000000093000000, 0x0000000093100000|  0%| F|  |TAMS 0x0000000093000000, 0x0000000093000000| Untracked 
+|  95|0x0000000093100000, 0x0000000093100000, 0x0000000093200000|  0%| F|  |TAMS 0x0000000093100000, 0x0000000093100000| Untracked 
+|  96|0x0000000093200000, 0x0000000093200000, 0x0000000093300000|  0%| F|  |TAMS 0x0000000093200000, 0x0000000093200000| Untracked 
+|  97|0x0000000093300000, 0x0000000093300000, 0x0000000093400000|  0%| F|  |TAMS 0x0000000093300000, 0x0000000093300000| Untracked 
+|  98|0x0000000093400000, 0x0000000093400000, 0x0000000093500000|  0%| F|  |TAMS 0x0000000093400000, 0x0000000093400000| Untracked 
+|  99|0x0000000093500000, 0x0000000093500000, 0x0000000093600000|  0%| F|  |TAMS 0x0000000093500000, 0x0000000093500000| Untracked 
+| 100|0x0000000093600000, 0x0000000093600000, 0x0000000093700000|  0%| F|  |TAMS 0x0000000093600000, 0x0000000093600000| Untracked 
+| 101|0x0000000093700000, 0x0000000093700000, 0x0000000093800000|  0%| F|  |TAMS 0x0000000093700000, 0x0000000093700000| Untracked 
+| 102|0x0000000093800000, 0x0000000093800000, 0x0000000093900000|  0%| F|  |TAMS 0x0000000093800000, 0x0000000093800000| Untracked 
+| 103|0x0000000093900000, 0x0000000093900000, 0x0000000093a00000|  0%| F|  |TAMS 0x0000000093900000, 0x0000000093900000| Untracked 
+| 104|0x0000000093a00000, 0x0000000093a00000, 0x0000000093b00000|  0%| F|  |TAMS 0x0000000093a00000, 0x0000000093a00000| Untracked 
+| 105|0x0000000093b00000, 0x0000000093b00000, 0x0000000093c00000|  0%| F|  |TAMS 0x0000000093b00000, 0x0000000093b00000| Untracked 
+| 106|0x0000000093c00000, 0x0000000093c00000, 0x0000000093d00000|  0%| F|  |TAMS 0x0000000093c00000, 0x0000000093c00000| Untracked 
+| 107|0x0000000093d00000, 0x0000000093d00000, 0x0000000093e00000|  0%| F|  |TAMS 0x0000000093d00000, 0x0000000093d00000| Untracked 
+| 108|0x0000000093e00000, 0x0000000093e00000, 0x0000000093f00000|  0%| F|  |TAMS 0x0000000093e00000, 0x0000000093e00000| Untracked 
+| 109|0x0000000093f00000, 0x0000000093f9df00, 0x0000000094000000| 61%| E|  |TAMS 0x0000000093f00000, 0x0000000093f00000| Complete 
+| 110|0x0000000094000000, 0x0000000094100000, 0x0000000094100000|100%| E|  |TAMS 0x0000000094000000, 0x0000000094000000| Complete 
+| 111|0x0000000094100000, 0x0000000094200000, 0x0000000094200000|100%| E|CS|TAMS 0x0000000094100000, 0x0000000094100000| Complete 
+| 112|0x0000000094200000, 0x0000000094300000, 0x0000000094300000|100%| E|CS|TAMS 0x0000000094200000, 0x0000000094200000| Complete 
+| 113|0x0000000094300000, 0x0000000094400000, 0x0000000094400000|100%| E|CS|TAMS 0x0000000094300000, 0x0000000094300000| Complete 
+| 114|0x0000000094400000, 0x0000000094500000, 0x0000000094500000|100%| E|CS|TAMS 0x0000000094400000, 0x0000000094400000| Complete 
+| 115|0x0000000094500000, 0x0000000094600000, 0x0000000094600000|100%| E|CS|TAMS 0x0000000094500000, 0x0000000094500000| Complete 
+|1834|0x00000000ffc00000, 0x00000000ffc48000, 0x00000000ffd00000| 28%|OA|  |TAMS 0x00000000ffc00000, 0x00000000ffc00000| Untracked 
+|1836|0x00000000ffe00000, 0x00000000ffe6c000, 0x00000000fff00000| 42%|CA|  |TAMS 0x00000000ffe00000, 0x00000000ffe00000| Untracked 
+
+Card table byte_map: [0x000070b754401000,0x000070b754798000] _byte_map_base: 0x000070b753f98000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x000062fabe0ebab8, (CMBitMap*) 0x000062fabe0ebaf0
+ Prev Bits: [0x000070b74e348000, 0x000070b750000000)
+ Next Bits: [0x000070b74c690000, 0x000070b74e348000)
+
+Polling page: 0x000070b79e59c000
+
+Metaspace:
+
+Usage:
+  Non-class:      4.74 MB capacity,     2.39 MB ( 50%) used,     2.34 MB ( 49%) free+waste,    12.00 KB ( <1%) overhead. 
+      Class:    593.00 KB capacity,   303.01 KB ( 51%) used,   282.93 KB ( 48%) free+waste,     7.06 KB (  1%) overhead. 
+       Both:      5.32 MB capacity,     2.68 MB ( 50%) used,     2.62 MB ( 49%) free+waste,    19.06 KB ( <1%) overhead. 
+
+Virtual space:
+  Non-class space:        8.00 MB reserved,       4.75 MB ( 59%) committed 
+      Class space:        1.00 GB reserved,     640.00 KB ( <1%) committed 
+             Both:        1.01 GB reserved,       5.38 MB ( <1%) committed 
+
+Chunk freelists:
+   Non-Class:  7.00 KB
+       Class:  0 bytes
+        Both:  7.00 KB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 20.80 MB
+Current GC threshold: 20.80 MB
+CDS: on
+
+CodeHeap 'non-profiled nmethods': size=120032Kb used=215Kb max_used=215Kb free=119816Kb
+ bounds [0x000070b75c8da000, 0x000070b75cb4a000, 0x000070b763e12000]
+CodeHeap 'profiled nmethods': size=120028Kb used=1130Kb max_used=1130Kb free=118897Kb
+ bounds [0x000070b7553a3000, 0x000070b755613000, 0x000070b75c8da000]
+CodeHeap 'non-nmethods': size=5700Kb used=1140Kb max_used=1156Kb free=4559Kb
+ bounds [0x000070b754e12000, 0x000070b755082000, 0x000070b7553a3000]
+ total_blobs=1096 nmethods=698 adapters=312
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 0.710 Thread 0x000062fabecd2800 nmethod 689 0x000070b7554baa90 code [0x000070b7554bac40, 0x000070b7554badd0]
+Event: 0.710 Thread 0x000062fabecd2800  690       3       java.lang.invoke.BoundMethodHandle::<init> (32 bytes)
+Event: 0.710 Thread 0x000062fabecd2800 nmethod 690 0x000070b7554bae90 code [0x000070b7554bb040, 0x000070b7554bb1a0]
+Event: 0.710 Thread 0x000062fabecd2800  691       3       java.util.Arrays$ArrayList::size (6 bytes)
+Event: 0.710 Thread 0x000062fabecd2800 nmethod 691 0x000070b7554bb290 code [0x000070b7554bb440, 0x000070b7554bb570]
+Event: 0.710 Thread 0x000062fabecd2800  692       3       java.lang.invoke.MethodType::basicType (8 bytes)
+Event: 0.710 Thread 0x000062fabecd2800 nmethod 692 0x000070b7554bb610 code [0x000070b7554bb7c0, 0x000070b7554bb8f0]
+Event: 0.711 Thread 0x000062fabecd2800  693       3       java.lang.invoke.LambdaForm::editor (5 bytes)
+Event: 0.711 Thread 0x000062fabecd2800 nmethod 693 0x000070b7554bb990 code [0x000070b7554bbb60, 0x000070b7554bbea0]
+Event: 0.711 Thread 0x000062fabecd2800  694       3       java.lang.invoke.LambdaFormEditor::lambdaFormEditor (12 bytes)
+Event: 0.711 Thread 0x000062fabecd2800 nmethod 694 0x000070b7554bc010 code [0x000070b7554bc1e0, 0x000070b7554bc480]
+Event: 0.711 Thread 0x000062fabecd2800  695       3       java.lang.invoke.DirectMethodHandle$Holder::invokeStatic (15 bytes)
+Event: 0.712 Thread 0x000062fabecd2800 nmethod 695 0x000070b7554bc610 code [0x000070b7554bc7e0, 0x000070b7554bccd0]
+Event: 0.712 Thread 0x000062fabecd2800  696       3       java.util.Properties::getProperty (50 bytes)
+Event: 0.712 Thread 0x000062fabecd2800 nmethod 696 0x000070b7554bce10 code [0x000070b7554bd000, 0x000070b7554bd4d0]
+Event: 0.712 Thread 0x000062fabecd2800  697       3       java.util.ArrayDeque::inc (12 bytes)
+Event: 0.712 Thread 0x000070b71c08e000  698       4       java.lang.String::getBytes (44 bytes)
+Event: 0.713 Thread 0x000062fabecd2800 nmethod 697 0x000070b7554bd610 code [0x000070b7554bd7c0, 0x000070b7554bd8d0]
+Event: 0.714 Thread 0x000070b71c08e000 nmethod 698 0x000070b75c90f090 code [0x000070b75c90f220, 0x000070b75c90f358]
+Event: 0.716 Thread 0x000062fabecd0800 nmethod 688 0x000070b75c90f490 code [0x000070b75c90f640, 0x000070b75c90fb98]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (12 events):
+Event: 0.231 Thread 0x000062fabd6b7800 Uncommon trap: trap_request=0xffffff4d fr.pc=0x000070b75c8e04ac relative=0x000000000000016c
+Event: 0.231 Thread 0x000062fabd6b7800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000070b75c8e04ac method=java.util.zip.ZipFile$Source.isMetaName([BII)Z @ 43 c2
+Event: 0.231 Thread 0x000062fabd6b7800 DEOPT PACKING pc=0x000070b75c8e04ac sp=0x00007fff675588b0
+Event: 0.231 Thread 0x000062fabd6b7800 DEOPT UNPACKING pc=0x000070b754e5bea5 sp=0x00007fff67558878 mode 2
+Event: 0.376 Thread 0x000062fabd6b7800 Uncommon trap: trap_request=0xffffff4d fr.pc=0x000070b75c8e9f7c relative=0x00000000000002bc
+Event: 0.377 Thread 0x000062fabd6b7800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000070b75c8e9f7c method=java.io.BufferedReader.read()I @ 19 c2
+Event: 0.377 Thread 0x000062fabd6b7800 DEOPT PACKING pc=0x000070b75c8e9f7c sp=0x00007fff67558d40
+Event: 0.377 Thread 0x000062fabd6b7800 DEOPT UNPACKING pc=0x000070b754e5bea5 sp=0x00007fff67558c70 mode 2
+Event: 0.378 Thread 0x000062fabd6b7800 Uncommon trap: trap_request=0xffffff4d fr.pc=0x000070b75c8e98f8 relative=0x00000000000002d8
+Event: 0.378 Thread 0x000062fabd6b7800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000070b75c8e98f8 method=java.io.BufferedReader.read()I @ 19 c2
+Event: 0.378 Thread 0x000062fabd6b7800 DEOPT PACKING pc=0x000070b75c8e98f8 sp=0x00007fff67558c20
+Event: 0.378 Thread 0x000062fabd6b7800 DEOPT UNPACKING pc=0x000070b754e5bea5 sp=0x00007fff67558bd8 mode 2
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (12 events):
+Event: 0.374 Thread 0x000062fabd6b7800 Exception <a 'java/lang/ClassNotFoundException'{0x000000009431df20}: javax/smartcardio/CardPermission> (0x000000009431df20) thrown at [./src/hotspot/share/classfile/systemDictionary.cpp, line 230]
+Event: 0.379 Thread 0x000062fabd6b7800 Exception <a 'java/io/FileNotFoundException'{0x000000009432b250}> (0x000000009432b250) thrown at [./src/hotspot/share/prims/jni.cpp, line 617]
+Event: 0.482 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x0000000094246638}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x0000000094246638) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.485 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x0000000094254480}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x0000000094254480) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, l
+Event: 0.488 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x0000000094262230}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, int, int, java.lang.Object, long, java.lang.Object)'> (0x0000000094262230) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.488 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x00000000942656c8}: 'java.lang.Object java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, int, int, java.lang.Object, long, java.lang.Object)'> (0x00000000942656c8) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.490 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x0000000094269908}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000094269908) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.506 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x00000000942b7398}: 'java.lang.Object java.lang.invoke.Invokers$Holder.linkToTargetMethod(java.lang.Object, long, java.lang.Object, java.lang.Object)'> (0x00000000942b7398) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.670 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x0000000094082688}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int)'> (0x0000000094082688) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.675 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x00000000940a0368}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int, int)'> (0x00000000940a0368) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.678 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x00000000940bf0f8}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int, int, java.lang.Object)'> (0x00000000940bf0f8) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+Event: 0.681 Thread 0x000062fabd6b7800 Exception <a 'java/lang/NoSuchMethodError'{0x00000000940df510}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, int, int, java.lang.Object, java.lang.Object)'> (0x00000000940df510) thrown at [./src/hotspot/share/interpreter/linkResolver.cpp, line 772]
+
+Events (20 events):
+Event: 0.697 loading class org/eclipse/aether/graph/DependencyFilter done
+Event: 0.698 loading class org/terrier/utility/MavenResolver$MutableURLClassLoader
+Event: 0.698 loading class org/terrier/utility/MavenResolver$MutableURLClassLoader done
+Event: 0.698 loading class java/net/URLClassLoader
+Event: 0.698 loading class java/net/URLClassLoader done
+Event: 0.699 loading class org/eclipse/aether/impl/DefaultServiceLocator$ErrorHandler
+Event: 0.699 loading class org/eclipse/aether/impl/DefaultServiceLocator$ErrorHandler done
+Event: 0.699 loading class org/terrier/utility/MavenResolver$2
+Event: 0.699 loading class org/terrier/utility/MavenResolver$2 done
+Event: 0.699 loading class org/eclipse/aether/resolution/VersionRangeResolutionException
+Event: 0.699 loading class org/eclipse/aether/resolution/VersionRangeResolutionException done
+Event: 0.700 loading class org/eclipse/aether/RepositoryException
+Event: 0.700 loading class org/eclipse/aether/RepositoryException done
+Event: 0.701 loading class org/eclipse/aether/artifact/Artifact
+Event: 0.701 loading class org/eclipse/aether/artifact/Artifact done
+Event: 0.702 loading class org/terrier/structures/IndexFactory
+Event: 0.702 loading class org/terrier/structures/IndexFactory done
+Event: 0.712 loading class org/terrier/Version
+Event: 0.712 loading class org/terrier/Version done
+Event: 5.714 Thread 0x000070b71c08e000 Thread exited: 0x000070b71c08e000
+
+
+Dynamic libraries:
+8d200000-94600000 rw-p 00000000 00:00 0 
+94600000-ffc00000 ---p 00000000 00:00 0 
+ffc00000-ffc48000 rw-p 00b13000 08:30 7221976                            /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+ffc48000-ffd00000 rw-p 00000000 00:00 0 
+ffd00000-ffe00000 ---p 00000000 00:00 0 
+ffe00000-ffe6c000 rw-p 00aa7000 08:30 7221976                            /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+ffe6c000-fff00000 rw-p 00000000 00:00 0 
+fff00000-100000000 ---p 00000000 00:00 0 
+800000000-800002000 rwxp 00001000 08:30 7221976                          /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+800002000-8003ce000 rw-p 00003000 08:30 7221976                          /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+8003ce000-800aa5000 r--p 003cf000 08:30 7221976                          /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+800aa5000-800aa6000 rw-p 00aa6000 08:30 7221976                          /usr/lib/jvm/java-11-openjdk-amd64/lib/server/classes.jsa
+840000000-8400a0000 rw-p 00000000 00:00 0 
+8400a0000-880000000 ---p 00000000 00:00 0 
+62fa95a2e000-62fa95a9b000 r--p 00000000 08:30 7218275                    /usr/bin/python3.10
+62fa95a9b000-62fa95d50000 r-xp 0006d000 08:30 7218275                    /usr/bin/python3.10
+62fa95d50000-62fa95f92000 r--p 00322000 08:30 7218275                    /usr/bin/python3.10
+62fa95f92000-62fa95f99000 r--p 00563000 08:30 7218275                    /usr/bin/python3.10
+62fa95f99000-62fa95fd8000 rw-p 0056a000 08:30 7218275                    /usr/bin/python3.10
+62fa95fd8000-62fa9601e000 rw-p 00000000 00:00 0 
+62fabbf68000-62fabefcb000 rw-p 00000000 00:00 0                          [heap]
+70b707605000-70b70c000000 r--s 00000000 00:42 2814749768630310           /workspaces/wows-code/.git/objects/pack/pack-4fdd2f146ad2e74dd2916c2e3ee8893e88a98131.pack
+70b70c000000-70b70c021000 rw-p 00000000 00:00 0 
+70b70c021000-70b710000000 ---p 00000000 00:00 0 
+70b710000000-70b710248000 rw-p 00000000 00:00 0 
+70b710248000-70b714000000 ---p 00000000 00:00 0 
+70b714000000-70b714021000 rw-p 00000000 00:00 0 
+70b714021000-70b718000000 ---p 00000000 00:00 0 
+70b718000000-70b718021000 rw-p 00000000 00:00 0 
+70b718021000-70b71c000000 ---p 00000000 00:00 0 
+70b71c000000-70b71c21b000 rw-p 00000000 00:00 0 
+70b71c21b000-70b720000000 ---p 00000000 00:00 0 
+70b720000000-70b720198000 rw-p 00000000 00:00 0 
+70b720198000-70b724000000 ---p 00000000 00:00 0 
+70b724000000-70b724021000 rw-p 00000000 00:00 0 
+70b724021000-70b728000000 ---p 00000000 00:00 0 
+70b728000000-70b728021000 rw-p 00000000 00:00 0 
+70b728021000-70b72c000000 ---p 00000000 00:00 0 
+70b72c000000-70b72c021000 rw-p 00000000 00:00 0 
+70b72c021000-70b730000000 ---p 00000000 00:00 0 
+70b730000000-70b730021000 rw-p 00000000 00:00 0 
+70b730021000-70b734000000 ---p 00000000 00:00 0 
+70b734000000-70b734021000 rw-p 00000000 00:00 0 
+70b734021000-70b738000000 ---p 00000000 00:00 0 
+70b738000000-70b738021000 rw-p 00000000 00:00 0 
+70b738021000-70b73c000000 ---p 00000000 00:00 0 
+70b73c000000-70b73c021000 rw-p 00000000 00:00 0 
+70b73c021000-70b740000000 ---p 00000000 00:00 0 
+70b740000000-70b740021000 rw-p 00000000 00:00 0 
+70b740021000-70b744000000 ---p 00000000 00:00 0 
+70b744dff000-70b744e03000 ---p 00000000 00:00 0 
+70b744e03000-70b744eff000 rw-p 00000000 00:00 0 
+70b744eff000-70b744f03000 ---p 00000000 00:00 0 
+70b744f03000-70b7450ff000 rw-p 00000000 00:00 0 
+70b7450ff000-70b745100000 ---p 00000000 00:00 0 
+70b745100000-70b745200000 rw-p 00000000 00:00 0 
+70b745200000-70b745204000 ---p 00000000 00:00 0 
+70b745204000-70b745300000 rw-p 00000000 00:00 0 
+70b745300000-70b745304000 ---p 00000000 00:00 0 
+70b745304000-70b745400000 rw-p 00000000 00:00 0 
+70b745400000-70b745404000 ---p 00000000 00:00 0 
+70b745404000-70b745500000 rw-p 00000000 00:00 0 
+70b745500000-70b745504000 ---p 00000000 00:00 0 
+70b745504000-70b745600000 rw-p 00000000 00:00 0 
+70b745600000-70b745604000 ---p 00000000 00:00 0 
+70b745604000-70b745700000 rw-p 00000000 00:00 0 
+70b745700000-70b745704000 ---p 00000000 00:00 0 
+70b745704000-70b745cc0000 rw-p 00000000 00:00 0 
+70b745cc0000-70b746000000 ---p 00000000 00:00 0 
+70b746000000-70b748000000 rw-p 00000000 00:00 0 
+70b748000000-70b748021000 rw-p 00000000 00:00 0 
+70b748021000-70b74c000000 ---p 00000000 00:00 0 
+70b74c014000-70b74c018000 ---p 00000000 00:00 0 
+70b74c018000-70b74c114000 rw-p 00000000 00:00 0 
+70b74c114000-70b74c115000 ---p 00000000 00:00 0 
+70b74c115000-70b74c215000 rw-p 00000000 00:00 0 
+70b74c215000-70b74c216000 ---p 00000000 00:00 0 
+70b74c216000-70b74c316000 rw-p 00000000 00:00 0 
+70b74c316000-70b74c317000 ---p 00000000 00:00 0 
+70b74c317000-70b74c417000 rw-p 00000000 00:00 0 
+70b74c417000-70b74c418000 ---p 00000000 00:00 0 
+70b74c418000-70b74c518000 rw-p 00000000 00:00 0 
+70b74c518000-70b74c519000 ---p 00000000 00:00 0 
+70b74c519000-70b74c860000 rw-p 00000000 00:00 0 
+70b74c860000-70b74e338000 ---p 00000000 00:00 0 
+70b74e338000-70b74e33c000 rw-p 00000000 00:00 0 
+70b74e33c000-70b74e340000 ---p 00000000 00:00 0 
+70b74e340000-70b74e344000 rw-p 00000000 00:00 0 
+70b74e344000-70b74e348000 ---p 00000000 00:00 0 
+70b74e348000-70b74e518000 rw-p 00000000 00:00 0 
+70b74e518000-70b74fff0000 ---p 00000000 00:00 0 
+70b74fff0000-70b74fff4000 rw-p 00000000 00:00 0 
+70b74fff4000-70b74fff8000 ---p 00000000 00:00 0 
+70b74fff8000-70b74fffc000 rw-p 00000000 00:00 0 
+70b74fffc000-70b750000000 ---p 00000000 00:00 0 
+70b750000000-70b750021000 rw-p 00000000 00:00 0 
+70b750021000-70b754000000 ---p 00000000 00:00 0 
+70b754034000-70b75403e000 r--s 00000000 00:42 4503599627792369           /workspaces/wows-code/.git/objects/pack/pack-4fdd2f146ad2e74dd2916c2e3ee8893e88a98131.idx
+70b75403e000-70b754042000 r--p 00000000 08:30 7221954                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+70b754042000-70b754050000 r-xp 00004000 08:30 7221954                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+70b754050000-70b754054000 r--p 00012000 08:30 7221954                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+70b754054000-70b754055000 r--p 00015000 08:30 7221954                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+70b754055000-70b754056000 rw-p 00016000 08:30 7221954                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnet.so
+70b754056000-70b75405d000 r--p 00000000 08:30 7221955                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+70b75405d000-70b754065000 r-xp 00007000 08:30 7221955                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+70b754065000-70b754068000 r--p 0000f000 08:30 7221955                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+70b754068000-70b754069000 r--p 00011000 08:30 7221955                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+70b754069000-70b75406a000 rw-p 00012000 08:30 7221955                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libnio.so
+70b75406a000-70b7540a4000 rw-p 00000000 00:00 0 
+70b7540a4000-70b7543ff000 ---p 00000000 00:00 0 
+70b7543ff000-70b75443b000 rw-p 00000000 00:00 0 
+70b75443b000-70b754796000 ---p 00000000 00:00 0 
+70b754796000-70b7547d2000 rw-p 00000000 00:00 0 
+70b7547d2000-70b754b2d000 ---p 00000000 00:00 0 
+70b754b2d000-70b754b2f000 rw-p 00000000 00:00 0 
+70b754b2f000-70b754b30000 ---p 00000000 00:00 0 
+70b754b30000-70b754c35000 rw-p 00000000 00:00 0 
+70b754c35000-70b754d1b000 ---p 00000000 00:00 0 
+70b754d1b000-70b754d20000 rw-p 00000000 00:00 0 
+70b754d20000-70b754e06000 ---p 00000000 00:00 0 
+70b754e06000-70b754e0b000 rw-p 00000000 00:00 0 
+70b754e0b000-70b754e12000 ---p 00000000 00:00 0 
+70b754e12000-70b755082000 rwxp 00000000 00:00 0 
+70b755082000-70b7553a3000 ---p 00000000 00:00 0 
+70b7553a3000-70b755613000 rwxp 00000000 00:00 0 
+70b755613000-70b75c8da000 ---p 00000000 00:00 0 
+70b75c8da000-70b75cb4a000 rwxp 00000000 00:00 0 
+70b75cb4a000-70b763e12000 ---p 00000000 00:00 0 
+70b763e12000-70b76c662000 r--s 00000000 08:30 7221965                    /usr/lib/jvm/java-11-openjdk-amd64/lib/modules
+70b76c662000-70b76c664000 r--p 00000000 08:30 7221964                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libzip.so
+70b76c664000-70b76c669000 r-xp 00002000 08:30 7221964                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libzip.so
+70b76c669000-70b76c66b000 r--p 00007000 08:30 7221964                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libzip.so
+70b76c66b000-70b76c66c000 r--p 00008000 08:30 7221964                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libzip.so
+70b76c66c000-70b76c66d000 rw-p 00009000 08:30 7221964                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libzip.so
+70b76c66d000-70b76c675000 rw-s 00000000 08:30 7749619                    /tmp/hsperfdata_root/5956
+70b76c675000-70b76c677000 r--p 00000000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c677000-70b76c67a000 r-xp 00002000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c67a000-70b76c67b000 r--p 00005000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c67b000-70b76c67c000 ---p 00006000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c67c000-70b76c67d000 r--p 00006000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c67d000-70b76c67e000 rw-p 00007000 08:30 7221946                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so
+70b76c67e000-70b76c68c000 r--p 00000000 08:30 7221942                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+70b76c68c000-70b76c6a2000 r-xp 0000e000 08:30 7221942                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+70b76c6a2000-70b76c6a9000 r--p 00024000 08:30 7221942                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+70b76c6a9000-70b76c6aa000 r--p 0002a000 08:30 7221942                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+70b76c6aa000-70b76c6ab000 rw-p 0002b000 08:30 7221942                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libjava.so
+70b76c6ab000-70b76c6ac000 rw-p 00000000 00:00 0 
+70b76c6ac000-70b76c6b1000 r--p 00000000 08:30 7221963                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libverify.so
+70b76c6b1000-70b76c6b8000 r-xp 00005000 08:30 7221963                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libverify.so
+70b76c6b8000-70b76c6ba000 r--p 0000c000 08:30 7221963                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libverify.so
+70b76c6ba000-70b76c6bc000 r--p 0000d000 08:30 7221963                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libverify.so
+70b76c6bc000-70b76c6bd000 rw-p 0000f000 08:30 7221963                    /usr/lib/jvm/java-11-openjdk-amd64/lib/libverify.so
+70b76c6bd000-70b76c940000 r--p 00000000 08:30 7221978                    /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+70b76c940000-70b76d5eb000 r-xp 00283000 08:30 7221978                    /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+70b76d5eb000-70b76d847000 r--p 00f2e000 08:30 7221978                    /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+70b76d847000-70b76d90b000 r--p 01189000 08:30 7221978                    /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+70b76d90b000-70b76d946000 rw-p 0124d000 08:30 7221978                    /usr/lib/jvm/java-11-openjdk-amd64/lib/server/libjvm.so
+70b76d946000-70b76d99d000 rw-p 00000000 00:00 0 
+70b76d99d000-70b76d9a7000 r--p 00000000 08:30 7238031                    /usr/local/lib/python3.10/dist-packages/jnius/jnius.cpython-310-x86_64-linux-gnu.so
+70b76d9a7000-70b76da22000 r-xp 0000a000 08:30 7238031                    /usr/local/lib/python3.10/dist-packages/jnius/jnius.cpython-310-x86_64-linux-gnu.so
+70b76da22000-70b76da31000 r--p 00085000 08:30 7238031                    /usr/local/lib/python3.10/dist-packages/jnius/jnius.cpython-310-x86_64-linux-gnu.so
+70b76da31000-70b76da34000 r--p 00093000 08:30 7238031                    /usr/local/lib/python3.10/dist-packages/jnius/jnius.cpython-310-x86_64-linux-gnu.so
+70b76da34000-70b76da38000 rw-p 00096000 08:30 7238031                    /usr/local/lib/python3.10/dist-packages/jnius/jnius.cpython-310-x86_64-linux-gnu.so
+70b76da38000-70b76e339000 rw-p 00000000 00:00 0 
+70b76e339000-70b76e33c000 r--p 00000000 08:30 7222986                    /usr/lib/python3.10/lib-dynload/termios.cpython-310-x86_64-linux-gnu.so
+70b76e33c000-70b76e33d000 r-xp 00003000 08:30 7222986                    /usr/lib/python3.10/lib-dynload/termios.cpython-310-x86_64-linux-gnu.so
+70b76e33d000-70b76e33f000 r--p 00004000 08:30 7222986                    /usr/lib/python3.10/lib-dynload/termios.cpython-310-x86_64-linux-gnu.so
+70b76e33f000-70b76e340000 r--p 00005000 08:30 7222986                    /usr/lib/python3.10/lib-dynload/termios.cpython-310-x86_64-linux-gnu.so
+70b76e340000-70b76e342000 rw-p 00006000 08:30 7222986                    /usr/lib/python3.10/lib-dynload/termios.cpython-310-x86_64-linux-gnu.so
+70b76e342000-70b76e442000 rw-p 00000000 00:00 0 
+70b76e442000-70b76e47f000 r--p 00000000 08:30 7351477                    /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so
+70b76e47f000-70b76e5c3000 r-xp 0003d000 08:30 7351477                    /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so
+70b76e5c3000-70b76e61f000 r--p 00181000 08:30 7351477                    /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so
+70b76e61f000-70b76e624000 r--p 001dc000 08:30 7351477                    /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so
+70b76e624000-70b76e62b000 rw-p 001e1000 08:30 7351477                    /usr/local/lib/python3.10/dist-packages/tirex_tracker/libtirex_tracker.so
+70b76e62b000-70b76e62c000 rw-p 00000000 00:00 0 
+70b76e62c000-70b76e633000 r--p 00000000 08:30 7351315                    /usr/local/lib/python3.10/dist-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so
+70b76e633000-70b76e679000 r-xp 00007000 08:30 7351315                    /usr/local/lib/python3.10/dist-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so
+70b76e679000-70b76e682000 r--p 0004d000 08:30 7351315                    /usr/local/lib/python3.10/dist-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so
+70b76e682000-70b76e684000 r--p 00055000 08:30 7351315                    /usr/local/lib/python3.10/dist-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so
+70b76e684000-70b76e686000 rw-p 00057000 08:30 7351315                    /usr/local/lib/python3.10/dist-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so
+70b76e686000-70b76f087000 rw-p 00000000 00:00 0 
+70b76f087000-70b76f0a5000 r--p 00000000 08:30 7226069                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+70b76f0a5000-70b76f191000 r-xp 0001e000 08:30 7226069                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+70b76f191000-70b76f1cc000 r--p 0010a000 08:30 7226069                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+70b76f1cc000-70b76f1d0000 r--p 00144000 08:30 7226069                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+70b76f1d0000-70b76f1d4000 rw-p 00148000 08:30 7226069                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+70b76f1d4000-70b76fa55000 rw-p 00000000 00:00 0 
+70b76fa55000-70b76fa59000 r--p 00000000 08:30 7238286                    /usr/local/lib/python3.10/dist-packages/lz4/frame/_frame.cpython-310-x86_64-linux-gnu.so
+70b76fa59000-70b76fa8e000 r-xp 00004000 08:30 7238286                    /usr/local/lib/python3.10/dist-packages/lz4/frame/_frame.cpython-310-x86_64-linux-gnu.so
+70b76fa8e000-70b76fa95000 r--p 00039000 08:30 7238286                    /usr/local/lib/python3.10/dist-packages/lz4/frame/_frame.cpython-310-x86_64-linux-gnu.so
+70b76fa95000-70b76fa96000 r--p 0003f000 08:30 7238286                    /usr/local/lib/python3.10/dist-packages/lz4/frame/_frame.cpython-310-x86_64-linux-gnu.so
+70b76fa96000-70b76fa97000 rw-p 00040000 08:30 7238286                    /usr/local/lib/python3.10/dist-packages/lz4/frame/_frame.cpython-310-x86_64-linux-gnu.so
+70b76fa97000-70b76fa99000 r--p 00000000 08:30 7238276                    /usr/local/lib/python3.10/dist-packages/lz4/_version.cpython-310-x86_64-linux-gnu.so
+70b76fa99000-70b76fab3000 r-xp 00002000 08:30 7238276                    /usr/local/lib/python3.10/dist-packages/lz4/_version.cpython-310-x86_64-linux-gnu.so
+70b76fab3000-70b76fab4000 r--p 0001c000 08:30 7238276                    /usr/local/lib/python3.10/dist-packages/lz4/_version.cpython-310-x86_64-linux-gnu.so
+70b76fab4000-70b76fab5000 r--p 0001d000 08:30 7238276                    /usr/local/lib/python3.10/dist-packages/lz4/_version.cpython-310-x86_64-linux-gnu.so
+70b76fab5000-70b76fab6000 rw-p 0001e000 08:30 7238276                    /usr/local/lib/python3.10/dist-packages/lz4/_version.cpython-310-x86_64-linux-gnu.so
+70b76fab6000-70b76fbb6000 rw-p 00000000 00:00 0 
+70b76fbb6000-70b76fbb9000 r--p 00000000 08:30 7222963                    /usr/lib/python3.10/lib-dynload/_multibytecodec.cpython-310-x86_64-linux-gnu.so
+70b76fbb9000-70b76fbbf000 r-xp 00003000 08:30 7222963                    /usr/lib/python3.10/lib-dynload/_multibytecodec.cpython-310-x86_64-linux-gnu.so
+70b76fbbf000-70b76fbc1000 r--p 00009000 08:30 7222963                    /usr/lib/python3.10/lib-dynload/_multibytecodec.cpython-310-x86_64-linux-gnu.so
+70b76fbc1000-70b76fbc2000 r--p 0000a000 08:30 7222963                    /usr/lib/python3.10/lib-dynload/_multibytecodec.cpython-310-x86_64-linux-gnu.so
+70b76fbc2000-70b76fbc3000 rw-p 0000b000 08:30 7222963                    /usr/lib/python3.10/lib-dynload/_multibytecodec.cpython-310-x86_64-linux-gnu.so
+70b76fbc3000-70b76fbd1000 r--p 00000000 08:30 7234403                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md__mypyc.cpython-310-x86_64-linux-gnu.so
+70b76fbd1000-70b76fbf0000 r-xp 0000e000 08:30 7234403                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md__mypyc.cpython-310-x86_64-linux-gnu.so
+70b76fbf0000-70b76fbfa000 r--p 0002d000 08:30 7234403                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md__mypyc.cpython-310-x86_64-linux-gnu.so
+70b76fbfa000-70b76fbfb000 r--p 00036000 08:30 7234403                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md__mypyc.cpython-310-x86_64-linux-gnu.so
+70b76fbfb000-70b76fbff000 rw-p 00037000 08:30 7234403                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md__mypyc.cpython-310-x86_64-linux-gnu.so
+70b76fbff000-70b770000000 rw-p 00000000 00:00 0 
+70b770000000-70b770021000 rw-p 00000000 00:00 0 
+70b770021000-70b774000000 ---p 00000000 00:00 0 
+70b774004000-70b774022000 r--p 00000000 08:30 7214902                    /usr/lib/x86_64-linux-gnu/libssl.so.3
+70b774022000-70b77407d000 r-xp 0001e000 08:30 7214902                    /usr/lib/x86_64-linux-gnu/libssl.so.3
+70b77407d000-70b77409a000 r--p 00079000 08:30 7214902                    /usr/lib/x86_64-linux-gnu/libssl.so.3
+70b77409a000-70b7740a4000 r--p 00095000 08:30 7214902                    /usr/lib/x86_64-linux-gnu/libssl.so.3
+70b7740a4000-70b7740a8000 rw-p 0009f000 08:30 7214902                    /usr/lib/x86_64-linux-gnu/libssl.so.3
+70b7740a8000-70b7740ba000 r--p 00000000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740ba000-70b7740c7000 r-xp 00012000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740c7000-70b7740d5000 r--p 0001f000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740d5000-70b7740d6000 ---p 0002d000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740d6000-70b7740d7000 r--p 0002d000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740d7000-70b7740e0000 rw-p 0002e000 08:30 7222969                    /usr/lib/python3.10/lib-dynload/_ssl.cpython-310-x86_64-linux-gnu.so
+70b7740e0000-70b7740e4000 r--p 00000000 08:30 7240103                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/testing.cpython-310-x86_64-linux-gnu.so
+70b7740e4000-70b7740f8000 r-xp 00004000 08:30 7240103                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/testing.cpython-310-x86_64-linux-gnu.so
+70b7740f8000-70b7740fb000 r--p 00018000 08:30 7240103                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/testing.cpython-310-x86_64-linux-gnu.so
+70b7740fb000-70b7740fc000 r--p 0001b000 08:30 7240103                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/testing.cpython-310-x86_64-linux-gnu.so
+70b7740fc000-70b7740fd000 rw-p 0001c000 08:30 7240103                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/testing.cpython-310-x86_64-linux-gnu.so
+70b7740fd000-70b774107000 r--p 00000000 08:30 7240093                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.cpython-310-x86_64-linux-gnu.so
+70b774107000-70b774175000 r-xp 0000a000 08:30 7240093                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.cpython-310-x86_64-linux-gnu.so
+70b774175000-70b774182000 r--p 00078000 08:30 7240093                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.cpython-310-x86_64-linux-gnu.so
+70b774182000-70b774185000 r--p 00084000 08:30 7240093                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.cpython-310-x86_64-linux-gnu.so
+70b774185000-70b774188000 rw-p 00087000 08:30 7240093                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.cpython-310-x86_64-linux-gnu.so
+70b774188000-70b77418a000 rw-p 00000000 00:00 0 
+70b77418a000-70b77418c000 r--p 00000000 08:30 7240081                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/json.cpython-310-x86_64-linux-gnu.so
+70b77418c000-70b774195000 r-xp 00002000 08:30 7240081                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/json.cpython-310-x86_64-linux-gnu.so
+70b774195000-70b774198000 r--p 0000b000 08:30 7240081                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/json.cpython-310-x86_64-linux-gnu.so
+70b774198000-70b774199000 r--p 0000e000 08:30 7240081                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/json.cpython-310-x86_64-linux-gnu.so
+70b774199000-70b77419a000 rw-p 0000f000 08:30 7240081                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/json.cpython-310-x86_64-linux-gnu.so
+70b77419a000-70b77429a000 rw-p 00000000 00:00 0 
+70b77429a000-70b7742a6000 r--p 00000000 08:30 7240065                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/groupby.cpython-310-x86_64-linux-gnu.so
+70b7742a6000-70b7744f6000 r-xp 0000c000 08:30 7240065                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/groupby.cpython-310-x86_64-linux-gnu.so
+70b7744f6000-70b774513000 r--p 0025c000 08:30 7240065                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/groupby.cpython-310-x86_64-linux-gnu.so
+70b774513000-70b774516000 r--p 00279000 08:30 7240065                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/groupby.cpython-310-x86_64-linux-gnu.so
+70b774516000-70b77451c000 rw-p 0027c000 08:30 7240065                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/groupby.cpython-310-x86_64-linux-gnu.so
+70b77451c000-70b774620000 rw-p 00000000 00:00 0 
+70b774620000-70b774627000 r--p 00000000 08:30 7240097                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/reshape.cpython-310-x86_64-linux-gnu.so
+70b774627000-70b774660000 r-xp 00007000 08:30 7240097                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/reshape.cpython-310-x86_64-linux-gnu.so
+70b774660000-70b774669000 r--p 00040000 08:30 7240097                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/reshape.cpython-310-x86_64-linux-gnu.so
+70b774669000-70b77466b000 r--p 00048000 08:30 7240097                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/reshape.cpython-310-x86_64-linux-gnu.so
+70b77466b000-70b77466d000 rw-p 0004a000 08:30 7240097                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/reshape.cpython-310-x86_64-linux-gnu.so
+70b77466d000-70b77466e000 rw-p 00000000 00:00 0 
+70b77466e000-70b774674000 r--p 00000000 08:30 7240148                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/indexers.cpython-310-x86_64-linux-gnu.so
+70b774674000-70b774697000 r-xp 00006000 08:30 7240148                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/indexers.cpython-310-x86_64-linux-gnu.so
+70b774697000-70b77469e000 r--p 00029000 08:30 7240148                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/indexers.cpython-310-x86_64-linux-gnu.so
+70b77469e000-70b77469f000 r--p 00030000 08:30 7240148                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/indexers.cpython-310-x86_64-linux-gnu.so
+70b77469f000-70b7746a1000 rw-p 00031000 08:30 7240148                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/indexers.cpython-310-x86_64-linux-gnu.so
+70b7746a1000-70b7746a2000 rw-p 00000000 00:00 0 
+70b7746a2000-70b7746aa000 r--p 00000000 08:30 7240146                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/aggregations.cpython-310-x86_64-linux-gnu.so
+70b7746aa000-70b7746f9000 r-xp 00008000 08:30 7240146                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/aggregations.cpython-310-x86_64-linux-gnu.so
+70b7746f9000-70b774703000 r--p 00057000 08:30 7240146                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/aggregations.cpython-310-x86_64-linux-gnu.so
+70b774703000-70b774705000 r--p 00061000 08:30 7240146                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/aggregations.cpython-310-x86_64-linux-gnu.so
+70b774705000-70b774707000 rw-p 00063000 08:30 7240146                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/window/aggregations.cpython-310-x86_64-linux-gnu.so
+70b774707000-70b774708000 rw-p 00000000 00:00 0 
+70b774708000-70b77470a000 r--p 00000000 08:30 7222981                    /usr/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so
+70b77470a000-70b77470d000 r-xp 00002000 08:30 7222981                    /usr/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so
+70b77470d000-70b77470f000 r--p 00005000 08:30 7222981                    /usr/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so
+70b77470f000-70b774710000 r--p 00006000 08:30 7222981                    /usr/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so
+70b774710000-70b774711000 rw-p 00007000 08:30 7222981                    /usr/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so
+70b774711000-70b774911000 rw-p 00000000 00:00 0 
+70b774911000-70b774919000 r--p 00000000 08:30 7240079                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/join.cpython-310-x86_64-linux-gnu.so
+70b774919000-70b774a5b000 r-xp 00008000 08:30 7240079                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/join.cpython-310-x86_64-linux-gnu.so
+70b774a5b000-70b774a69000 r--p 0014a000 08:30 7240079                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/join.cpython-310-x86_64-linux-gnu.so
+70b774a69000-70b774a6b000 r--p 00157000 08:30 7240079                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/join.cpython-310-x86_64-linux-gnu.so
+70b774a6b000-70b774a6e000 rw-p 00159000 08:30 7240079                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/join.cpython-310-x86_64-linux-gnu.so
+70b774a6e000-70b774a70000 rw-p 00000000 00:00 0 
+70b774a70000-70b774a76000 r--p 00000000 08:30 7240150                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/writers.cpython-310-x86_64-linux-gnu.so
+70b774a76000-70b774aa1000 r-xp 00006000 08:30 7240150                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/writers.cpython-310-x86_64-linux-gnu.so
+70b774aa1000-70b774aa9000 r--p 00031000 08:30 7240150                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/writers.cpython-310-x86_64-linux-gnu.so
+70b774aa9000-70b774aab000 r--p 00038000 08:30 7240150                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/writers.cpython-310-x86_64-linux-gnu.so
+70b774aab000-70b774aad000 rw-p 0003a000 08:30 7240150                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/writers.cpython-310-x86_64-linux-gnu.so
+70b774aad000-70b774aae000 rw-p 00000000 00:00 0 
+70b774aae000-70b774abb000 r--p 00000000 08:30 7240071                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/index.cpython-310-x86_64-linux-gnu.so
+70b774abb000-70b774b65000 r-xp 0000d000 08:30 7240071                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/index.cpython-310-x86_64-linux-gnu.so
+70b774b65000-70b774b7d000 r--p 000b7000 08:30 7240071                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/index.cpython-310-x86_64-linux-gnu.so
+70b774b7d000-70b774b80000 r--p 000ce000 08:30 7240071                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/index.cpython-310-x86_64-linux-gnu.so
+70b774b80000-70b774b88000 rw-p 000d1000 08:30 7240071                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/index.cpython-310-x86_64-linux-gnu.so
+70b774b88000-70b774b8c000 rw-p 00000000 00:00 0 
+70b774b8c000-70b774b90000 r--p 00000000 08:30 7240073                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/indexing.cpython-310-x86_64-linux-gnu.so
+70b774b90000-70b774b98000 r-xp 00004000 08:30 7240073                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/indexing.cpython-310-x86_64-linux-gnu.so
+70b774b98000-70b774b9b000 r--p 0000c000 08:30 7240073                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/indexing.cpython-310-x86_64-linux-gnu.so
+70b774b9b000-70b774b9c000 r--p 0000e000 08:30 7240073                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/indexing.cpython-310-x86_64-linux-gnu.so
+70b774b9c000-70b774b9d000 rw-p 0000f000 08:30 7240073                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/indexing.cpython-310-x86_64-linux-gnu.so
+70b774b9d000-70b774c9d000 rw-p 00000000 00:00 0 
+70b774c9d000-70b774ca5000 r--p 00000000 08:30 7240075                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/internals.cpython-310-x86_64-linux-gnu.so
+70b774ca5000-70b774cef000 r-xp 00008000 08:30 7240075                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/internals.cpython-310-x86_64-linux-gnu.so
+70b774cef000-70b774cfb000 r--p 00052000 08:30 7240075                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/internals.cpython-310-x86_64-linux-gnu.so
+70b774cfb000-70b774cfd000 r--p 0005d000 08:30 7240075                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/internals.cpython-310-x86_64-linux-gnu.so
+70b774cfd000-70b774d00000 rw-p 0005f000 08:30 7240075                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/internals.cpython-310-x86_64-linux-gnu.so
+70b774d00000-70b774d02000 rw-p 00000000 00:00 0 
+70b774d02000-70b774d0a000 r--p 00000000 08:30 7240101                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/sparse.cpython-310-x86_64-linux-gnu.so
+70b774d0a000-70b774de4000 r-xp 00008000 08:30 7240101                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/sparse.cpython-310-x86_64-linux-gnu.so
+70b774de4000-70b774df1000 r--p 000e2000 08:30 7240101                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/sparse.cpython-310-x86_64-linux-gnu.so
+70b774df1000-70b774df3000 r--p 000ef000 08:30 7240101                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/sparse.cpython-310-x86_64-linux-gnu.so
+70b774df3000-70b774df6000 rw-p 000f1000 08:30 7240101                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/sparse.cpython-310-x86_64-linux-gnu.so
+70b774df6000-70b774ef8000 rw-p 00000000 00:00 0 
+70b774ef8000-70b774eff000 r--p 00000000 08:30 7240105                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslib.cpython-310-x86_64-linux-gnu.so
+70b774eff000-70b774f3d000 r-xp 00007000 08:30 7240105                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslib.cpython-310-x86_64-linux-gnu.so
+70b774f3d000-70b774f47000 r--p 00045000 08:30 7240105                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslib.cpython-310-x86_64-linux-gnu.so
+70b774f47000-70b774f49000 r--p 0004e000 08:30 7240105                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslib.cpython-310-x86_64-linux-gnu.so
+70b774f49000-70b774f4b000 rw-p 00050000 08:30 7240105                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslib.cpython-310-x86_64-linux-gnu.so
+70b774f4b000-70b77504c000 rw-p 00000000 00:00 0 
+70b77504c000-70b775052000 r--p 00000000 08:30 7240067                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashing.cpython-310-x86_64-linux-gnu.so
+70b775052000-70b775076000 r-xp 00006000 08:30 7240067                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashing.cpython-310-x86_64-linux-gnu.so
+70b775076000-70b77507d000 r--p 0002a000 08:30 7240067                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashing.cpython-310-x86_64-linux-gnu.so
+70b77507d000-70b77507e000 r--p 00031000 08:30 7240067                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashing.cpython-310-x86_64-linux-gnu.so
+70b77507e000-70b775080000 rw-p 00032000 08:30 7240067                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashing.cpython-310-x86_64-linux-gnu.so
+70b775080000-70b775081000 rw-p 00000000 00:00 0 
+70b775081000-70b775087000 r--p 00000000 08:30 7240087                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops.cpython-310-x86_64-linux-gnu.so
+70b775087000-70b7750b5000 r-xp 00006000 08:30 7240087                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops.cpython-310-x86_64-linux-gnu.so
+70b7750b5000-70b7750bd000 r--p 00034000 08:30 7240087                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops.cpython-310-x86_64-linux-gnu.so
+70b7750bd000-70b7750bf000 r--p 0003b000 08:30 7240087                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops.cpython-310-x86_64-linux-gnu.so
+70b7750bf000-70b7750c1000 rw-p 0003d000 08:30 7240087                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops.cpython-310-x86_64-linux-gnu.so
+70b7750c1000-70b7752c2000 rw-p 00000000 00:00 0 
+70b7752c2000-70b7752f6000 r--p 00000000 08:30 7342012                    /usr/local/lib/python3.10/dist-packages/pyarrow/_compute.cpython-310-x86_64-linux-gnu.so
+70b7752f6000-70b775386000 r-xp 00034000 08:30 7342012                    /usr/local/lib/python3.10/dist-packages/pyarrow/_compute.cpython-310-x86_64-linux-gnu.so
+70b775386000-70b7753b5000 r--p 000c4000 08:30 7342012                    /usr/local/lib/python3.10/dist-packages/pyarrow/_compute.cpython-310-x86_64-linux-gnu.so
+70b7753b5000-70b7753bb000 r--p 000f3000 08:30 7342012                    /usr/local/lib/python3.10/dist-packages/pyarrow/_compute.cpython-310-x86_64-linux-gnu.so
+70b7753bb000-70b7753c8000 rw-p 000f9000 08:30 7342012                    /usr/local/lib/python3.10/dist-packages/pyarrow/_compute.cpython-310-x86_64-linux-gnu.so
+70b7753c8000-70b7754cc000 rw-p 00000000 00:00 0 
+70b7754cc000-70b7754d8000 r--p 00000000 08:30 7240083                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.cpython-310-x86_64-linux-gnu.so
+70b7754d8000-70b77557e000 r-xp 0000c000 08:30 7240083                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.cpython-310-x86_64-linux-gnu.so
+70b77557e000-70b775597000 r--p 000b2000 08:30 7240083                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.cpython-310-x86_64-linux-gnu.so
+70b775597000-70b77559b000 r--p 000ca000 08:30 7240083                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.cpython-310-x86_64-linux-gnu.so
+70b77559b000-70b7755a1000 rw-p 000ce000 08:30 7240083                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/lib.cpython-310-x86_64-linux-gnu.so
+70b7755a1000-70b7755a3000 rw-p 00000000 00:00 0 
+70b7755a3000-70b7755af000 r--p 00000000 08:30 7240059                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/algos.cpython-310-x86_64-linux-gnu.so
+70b7755af000-70b775793000 r-xp 0000c000 08:30 7240059                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/algos.cpython-310-x86_64-linux-gnu.so
+70b775793000-70b7757b0000 r--p 001f0000 08:30 7240059                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/algos.cpython-310-x86_64-linux-gnu.so
+70b7757b0000-70b7757b3000 r--p 0020d000 08:30 7240059                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/algos.cpython-310-x86_64-linux-gnu.so
+70b7757b3000-70b7757b7000 rw-p 00210000 08:30 7240059                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/algos.cpython-310-x86_64-linux-gnu.so
+70b7757b7000-70b7757bc000 rw-p 00000000 00:00 0 
+70b7757bc000-70b7757c2000 r--p 00000000 08:30 7240140                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/vectorized.cpython-310-x86_64-linux-gnu.so
+70b7757c2000-70b7757ec000 r-xp 00006000 08:30 7240140                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/vectorized.cpython-310-x86_64-linux-gnu.so
+70b7757ec000-70b7757f4000 r--p 00030000 08:30 7240140                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/vectorized.cpython-310-x86_64-linux-gnu.so
+70b7757f4000-70b7757f5000 r--p 00038000 08:30 7240140                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/vectorized.cpython-310-x86_64-linux-gnu.so
+70b7757f5000-70b7757f7000 rw-p 00039000 08:30 7240140                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/vectorized.cpython-310-x86_64-linux-gnu.so
+70b7757f7000-70b7757f8000 rw-p 00000000 00:00 0 
+70b7757f8000-70b775801000 r--p 00000000 08:30 7240128                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/period.cpython-310-x86_64-linux-gnu.so
+70b775801000-70b775857000 r-xp 00009000 08:30 7240128                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/period.cpython-310-x86_64-linux-gnu.so
+70b775857000-70b775870000 r--p 0005f000 08:30 7240128                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/period.cpython-310-x86_64-linux-gnu.so
+70b775870000-70b775873000 r--p 00077000 08:30 7240128                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/period.cpython-310-x86_64-linux-gnu.so
+70b775873000-70b775876000 rw-p 0007a000 08:30 7240128                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/period.cpython-310-x86_64-linux-gnu.so
+70b775876000-70b775877000 rw-p 00000000 00:00 0 
+70b775879000-70b77587b000 r--p 00000000 08:30 7222985                    /usr/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so
+70b77587b000-70b77587c000 r-xp 00002000 08:30 7222985                    /usr/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so
+70b77587c000-70b77587d000 r--p 00003000 08:30 7222985                    /usr/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so
+70b77587d000-70b77587e000 r--p 00003000 08:30 7222985                    /usr/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so
+70b77587e000-70b77587f000 rw-p 00004000 08:30 7222985                    /usr/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so
+70b77587f000-70b775881000 r--p 00000000 08:30 7222961                    /usr/lib/python3.10/lib-dynload/_lsprof.cpython-310-x86_64-linux-gnu.so
+70b775881000-70b775884000 r-xp 00002000 08:30 7222961                    /usr/lib/python3.10/lib-dynload/_lsprof.cpython-310-x86_64-linux-gnu.so
+70b775884000-70b775886000 r--p 00005000 08:30 7222961                    /usr/lib/python3.10/lib-dynload/_lsprof.cpython-310-x86_64-linux-gnu.so
+70b775886000-70b775887000 r--p 00006000 08:30 7222961                    /usr/lib/python3.10/lib-dynload/_lsprof.cpython-310-x86_64-linux-gnu.so
+70b775887000-70b775888000 rw-p 00007000 08:30 7222961                    /usr/lib/python3.10/lib-dynload/_lsprof.cpython-310-x86_64-linux-gnu.so
+70b775888000-70b77588c000 r--p 00000000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b77588c000-70b775894000 r-xp 00004000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b775894000-70b775898000 r--p 0000c000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b775898000-70b775899000 ---p 00010000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b775899000-70b77589a000 r--p 00010000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b77589a000-70b77589c000 rw-p 00011000 08:30 7222943                    /usr/lib/python3.10/lib-dynload/_asyncio.cpython-310-x86_64-linux-gnu.so
+70b77589c000-70b7758a2000 r--p 00000000 08:30 7222968                    /usr/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so
+70b7758a2000-70b7758b0000 r-xp 00006000 08:30 7222968                    /usr/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so
+70b7758b0000-70b7758b5000 r--p 00014000 08:30 7222968                    /usr/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so
+70b7758b5000-70b7758b6000 r--p 00018000 08:30 7222968                    /usr/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so
+70b7758b6000-70b7758b8000 rw-p 00019000 08:30 7222968                    /usr/lib/python3.10/lib-dynload/_sqlite3.cpython-310-x86_64-linux-gnu.so
+70b7758b8000-70b7759b8000 rw-p 00000000 00:00 0 
+70b7759b8000-70b7759c1000 r--p 00000000 08:30 7240126                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/parsing.cpython-310-x86_64-linux-gnu.so
+70b7759c1000-70b775a12000 r-xp 00009000 08:30 7240126                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/parsing.cpython-310-x86_64-linux-gnu.so
+70b775a12000-70b775a1f000 r--p 0005a000 08:30 7240126                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/parsing.cpython-310-x86_64-linux-gnu.so
+70b775a1f000-70b775a21000 r--p 00067000 08:30 7240126                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/parsing.cpython-310-x86_64-linux-gnu.so
+70b775a21000-70b775a24000 rw-p 00069000 08:30 7240126                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/parsing.cpython-310-x86_64-linux-gnu.so
+70b775a24000-70b775a25000 rw-p 00000000 00:00 0 
+70b775a25000-70b775a29000 r--p 00000000 08:30 7240095                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/properties.cpython-310-x86_64-linux-gnu.so
+70b775a29000-70b775a35000 r-xp 00004000 08:30 7240095                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/properties.cpython-310-x86_64-linux-gnu.so
+70b775a35000-70b775a38000 r--p 00010000 08:30 7240095                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/properties.cpython-310-x86_64-linux-gnu.so
+70b775a38000-70b775a39000 r--p 00012000 08:30 7240095                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/properties.cpython-310-x86_64-linux-gnu.so
+70b775a39000-70b775a3a000 rw-p 00013000 08:30 7240095                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/properties.cpython-310-x86_64-linux-gnu.so
+70b775a3a000-70b775a3b000 rw-p 00000000 00:00 0 
+70b775a3b000-70b775a42000 r--p 00000000 08:30 7240138                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-310-x86_64-linux-gnu.so
+70b775a42000-70b775a7f000 r-xp 00007000 08:30 7240138                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-310-x86_64-linux-gnu.so
+70b775a7f000-70b775a88000 r--p 00044000 08:30 7240138                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-310-x86_64-linux-gnu.so
+70b775a88000-70b775a8a000 r--p 0004d000 08:30 7240138                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-310-x86_64-linux-gnu.so
+70b775a8a000-70b775a8c000 rw-p 0004f000 08:30 7240138                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/tzconversion.cpython-310-x86_64-linux-gnu.so
+70b775a8c000-70b775a8d000 rw-p 00000000 00:00 0 
+70b775a8d000-70b775a94000 r--p 00000000 08:30 7240118                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/fields.cpython-310-x86_64-linux-gnu.so
+70b775a94000-70b775ad2000 r-xp 00007000 08:30 7240118                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/fields.cpython-310-x86_64-linux-gnu.so
+70b775ad2000-70b775adc000 r--p 00045000 08:30 7240118                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/fields.cpython-310-x86_64-linux-gnu.so
+70b775adc000-70b775ade000 r--p 0004e000 08:30 7240118                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/fields.cpython-310-x86_64-linux-gnu.so
+70b775ade000-70b775ae0000 rw-p 00050000 08:30 7240118                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/fields.cpython-310-x86_64-linux-gnu.so
+70b775ae0000-70b775de1000 rw-p 00000000 00:00 0 
+70b775de1000-70b775de3000 r--p 00000000 08:30 7222960                    /usr/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so
+70b775de3000-70b775dea000 r-xp 00002000 08:30 7222960                    /usr/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so
+70b775dea000-70b775dec000 r--p 00009000 08:30 7222960                    /usr/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so
+70b775dec000-70b775ded000 r--p 0000a000 08:30 7222960                    /usr/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so
+70b775ded000-70b775dee000 rw-p 0000b000 08:30 7222960                    /usr/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so
+70b775dee000-70b775eee000 rw-p 00000000 00:00 0 
+70b775eee000-70b775ef0000 r--p 00000000 08:30 7222979                    /usr/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so
+70b775ef0000-70b775ef6000 r-xp 00002000 08:30 7222979                    /usr/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so
+70b775ef6000-70b775ef8000 r--p 00008000 08:30 7222979                    /usr/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so
+70b775ef8000-70b775ef9000 r--p 00009000 08:30 7222979                    /usr/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so
+70b775ef9000-70b775efa000 rw-p 0000a000 08:30 7222979                    /usr/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so
+70b775efa000-70b775f00000 r--p 00000000 08:30 7240136                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.cpython-310-x86_64-linux-gnu.so
+70b775f00000-70b775f32000 r-xp 00006000 08:30 7240136                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.cpython-310-x86_64-linux-gnu.so
+70b775f32000-70b775f3b000 r--p 00038000 08:30 7240136                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.cpython-310-x86_64-linux-gnu.so
+70b775f3b000-70b775f3d000 r--p 00040000 08:30 7240136                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.cpython-310-x86_64-linux-gnu.so
+70b775f3d000-70b775f3f000 rw-p 00042000 08:30 7240136                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timezones.cpython-310-x86_64-linux-gnu.so
+70b775f3f000-70b775f40000 rw-p 00000000 00:00 0 
+70b775f40000-70b775f4a000 r--p 00000000 08:30 7240132                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-310-x86_64-linux-gnu.so
+70b775f4a000-70b775fb8000 r-xp 0000a000 08:30 7240132                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-310-x86_64-linux-gnu.so
+70b775fb8000-70b775fcd000 r--p 00078000 08:30 7240132                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-310-x86_64-linux-gnu.so
+70b775fcd000-70b775fd0000 r--p 0008c000 08:30 7240132                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-310-x86_64-linux-gnu.so
+70b775fd0000-70b775fd3000 rw-p 0008f000 08:30 7240132                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timedeltas.cpython-310-x86_64-linux-gnu.so
+70b775fd3000-70b775fd5000 rw-p 00000000 00:00 0 
+70b775fd5000-70b775fdb000 r--p 00000000 08:30 7240120                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/nattype.cpython-310-x86_64-linux-gnu.so
+70b775fdb000-70b775ffc000 r-xp 00006000 08:30 7240120                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/nattype.cpython-310-x86_64-linux-gnu.so
+70b775ffc000-70b77600a000 r--p 00027000 08:30 7240120                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/nattype.cpython-310-x86_64-linux-gnu.so
+70b77600a000-70b77600c000 r--p 00034000 08:30 7240120                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/nattype.cpython-310-x86_64-linux-gnu.so
+70b77600c000-70b77600e000 rw-p 00036000 08:30 7240120                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/nattype.cpython-310-x86_64-linux-gnu.so
+70b77600e000-70b77600f000 rw-p 00000000 00:00 0 
+70b77600f000-70b77601a000 r--p 00000000 08:30 7240134                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timestamps.cpython-310-x86_64-linux-gnu.so
+70b77601a000-70b776081000 r-xp 0000b000 08:30 7240134                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timestamps.cpython-310-x86_64-linux-gnu.so
+70b776081000-70b7760a2000 r--p 00072000 08:30 7240134                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timestamps.cpython-310-x86_64-linux-gnu.so
+70b7760a2000-70b7760a5000 r--p 00092000 08:30 7240134                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timestamps.cpython-310-x86_64-linux-gnu.so
+70b7760a5000-70b7760a8000 rw-p 00095000 08:30 7240134                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/timestamps.cpython-310-x86_64-linux-gnu.so
+70b7760a8000-70b7760aa000 rw-p 00000000 00:00 0 
+70b7760aa000-70b7760ba000 r--p 00000000 08:30 7240124                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/offsets.cpython-310-x86_64-linux-gnu.so
+70b7760ba000-70b776179000 r-xp 00010000 08:30 7240124                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/offsets.cpython-310-x86_64-linux-gnu.so
+70b776179000-70b77619e000 r--p 000cf000 08:30 7240124                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/offsets.cpython-310-x86_64-linux-gnu.so
+70b77619e000-70b7761a2000 r--p 000f3000 08:30 7240124                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/offsets.cpython-310-x86_64-linux-gnu.so
+70b7761a2000-70b7761ac000 rw-p 000f7000 08:30 7240124                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/offsets.cpython-310-x86_64-linux-gnu.so
+70b7761ac000-70b7761b0000 rw-p 00000000 00:00 0 
+70b7761b0000-70b7761b3000 r--p 00000000 08:30 7240111                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/base.cpython-310-x86_64-linux-gnu.so
+70b7761b3000-70b7761ba000 r-xp 00003000 08:30 7240111                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/base.cpython-310-x86_64-linux-gnu.so
+70b7761ba000-70b7761bc000 r--p 0000a000 08:30 7240111                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/base.cpython-310-x86_64-linux-gnu.so
+70b7761bc000-70b7761bd000 r--p 0000c000 08:30 7240111                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/base.cpython-310-x86_64-linux-gnu.so
+70b7761bd000-70b7761be000 rw-p 0000d000 08:30 7240111                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/base.cpython-310-x86_64-linux-gnu.so
+70b7761be000-70b7761c5000 r--p 00000000 08:30 7240114                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.cpython-310-x86_64-linux-gnu.so
+70b7761c5000-70b7761fb000 r-xp 00007000 08:30 7240114                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.cpython-310-x86_64-linux-gnu.so
+70b7761fb000-70b776205000 r--p 0003d000 08:30 7240114                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.cpython-310-x86_64-linux-gnu.so
+70b776205000-70b776207000 r--p 00046000 08:30 7240114                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.cpython-310-x86_64-linux-gnu.so
+70b776207000-70b776209000 rw-p 00048000 08:30 7240114                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/conversion.cpython-310-x86_64-linux-gnu.so
+70b776209000-70b77620a000 rw-p 00000000 00:00 0 
+70b77620a000-70b77620e000 r--p 00000000 08:30 7240122                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-310-x86_64-linux-gnu.so
+70b77620e000-70b776225000 r-xp 00004000 08:30 7240122                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-310-x86_64-linux-gnu.so
+70b776225000-70b77622a000 r--p 0001b000 08:30 7240122                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-310-x86_64-linux-gnu.so
+70b77622a000-70b77622b000 r--p 00020000 08:30 7240122                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-310-x86_64-linux-gnu.so
+70b77622b000-70b77622c000 rw-p 00021000 08:30 7240122                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/np_datetime.cpython-310-x86_64-linux-gnu.so
+70b77622c000-70b77622d000 rw-p 00000000 00:00 0 
+70b77622d000-70b776231000 r--p 00000000 08:30 7240112                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-310-x86_64-linux-gnu.so
+70b776231000-70b77623f000 r-xp 00004000 08:30 7240112                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-310-x86_64-linux-gnu.so
+70b77623f000-70b776242000 r--p 00012000 08:30 7240112                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-310-x86_64-linux-gnu.so
+70b776242000-70b776243000 r--p 00015000 08:30 7240112                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-310-x86_64-linux-gnu.so
+70b776243000-70b776244000 rw-p 00016000 08:30 7240112                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/ccalendar.cpython-310-x86_64-linux-gnu.so
+70b776244000-70b77624b000 r--p 00000000 08:30 7240116                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/dtypes.cpython-310-x86_64-linux-gnu.so
+70b77624b000-70b776267000 r-xp 00007000 08:30 7240116                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/dtypes.cpython-310-x86_64-linux-gnu.so
+70b776267000-70b77626d000 r--p 00023000 08:30 7240116                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/dtypes.cpython-310-x86_64-linux-gnu.so
+70b77626d000-70b77626f000 r--p 00029000 08:30 7240116                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/dtypes.cpython-310-x86_64-linux-gnu.so
+70b77626f000-70b776270000 rw-p 0002b000 08:30 7240116                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/dtypes.cpython-310-x86_64-linux-gnu.so
+70b776270000-70b776272000 rw-p 00000000 00:00 0 
+70b776272000-70b776278000 r--p 00000000 08:30 7240085                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.cpython-310-x86_64-linux-gnu.so
+70b776278000-70b776298000 r-xp 00006000 08:30 7240085                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.cpython-310-x86_64-linux-gnu.so
+70b776298000-70b77629f000 r--p 00026000 08:30 7240085                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.cpython-310-x86_64-linux-gnu.so
+70b77629f000-70b7762a1000 r--p 0002c000 08:30 7240085                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.cpython-310-x86_64-linux-gnu.so
+70b7762a1000-70b7762a3000 rw-p 0002e000 08:30 7240085                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/missing.cpython-310-x86_64-linux-gnu.so
+70b7762a3000-70b7762a4000 rw-p 00000000 00:00 0 
+70b7762a4000-70b7762b9000 r--p 00000000 08:30 7240069                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.cpython-310-x86_64-linux-gnu.so
+70b7762b9000-70b776482000 r-xp 00015000 08:30 7240069                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.cpython-310-x86_64-linux-gnu.so
+70b776482000-70b7764b9000 r--p 001de000 08:30 7240069                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.cpython-310-x86_64-linux-gnu.so
+70b7764b9000-70b7764be000 r--p 00215000 08:30 7240069                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.cpython-310-x86_64-linux-gnu.so
+70b7764be000-70b7764cb000 rw-p 0021a000 08:30 7240069                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/hashtable.cpython-310-x86_64-linux-gnu.so
+70b7764cb000-70b7764d3000 rw-p 00000000 00:00 0 
+70b7764d3000-70b7764e0000 r--p 00000000 08:30 7240077                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.cpython-310-x86_64-linux-gnu.so
+70b7764e0000-70b776602000 r-xp 0000d000 08:30 7240077                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.cpython-310-x86_64-linux-gnu.so
+70b776602000-70b776620000 r--p 0012f000 08:30 7240077                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.cpython-310-x86_64-linux-gnu.so
+70b776620000-70b776622000 r--p 0014d000 08:30 7240077                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.cpython-310-x86_64-linux-gnu.so
+70b776622000-70b776629000 rw-p 0014f000 08:30 7240077                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/interval.cpython-310-x86_64-linux-gnu.so
+70b776629000-70b77672b000 rw-p 00000000 00:00 0 
+70b77672b000-70b776737000 r--p 00000000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b776737000-70b7767ac000 r-xp 0000c000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b7767ac000-70b776803000 r--p 00081000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b776803000-70b776804000 ---p 000d8000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b776804000-70b776807000 r--p 000d8000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b776807000-70b77680a000 rw-p 000db000 08:30 7239652                    /usr/local/lib/python3.10/dist-packages/numpy/random/_generator.cpython-310-x86_64-linux-gnu.so
+70b77680a000-70b77680c000 rw-p 00000000 00:00 0 
+70b77680c000-70b776810000 r--p 00000000 08:30 7239656                    /usr/local/lib/python3.10/dist-packages/numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so
+70b776810000-70b776821000 r-xp 00004000 08:30 7239656                    /usr/local/lib/python3.10/dist-packages/numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so
+70b776821000-70b776827000 r--p 00015000 08:30 7239656                    /usr/local/lib/python3.10/dist-packages/numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so
+70b776827000-70b776828000 r--p 0001a000 08:30 7239656                    /usr/local/lib/python3.10/dist-packages/numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so
+70b776828000-70b776829000 rw-p 0001b000 08:30 7239656                    /usr/local/lib/python3.10/dist-packages/numpy/random/_pcg64.cpython-310-x86_64-linux-gnu.so
+70b776829000-70b77682a000 rw-p 00000000 00:00 0 
+70b77682a000-70b77682e000 r--p 00000000 08:30 7239631                    /usr/local/lib/python3.10/dist-packages/numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so
+70b77682e000-70b77686f000 r-xp 00004000 08:30 7239631                    /usr/local/lib/python3.10/dist-packages/numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so
+70b77686f000-70b776878000 r--p 00045000 08:30 7239631                    /usr/local/lib/python3.10/dist-packages/numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so
+70b776878000-70b776879000 r--p 0004d000 08:30 7239631                    /usr/local/lib/python3.10/dist-packages/numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so
+70b776879000-70b77687a000 rw-p 0004e000 08:30 7239631                    /usr/local/lib/python3.10/dist-packages/numpy/random/_bounded_integers.cpython-310-x86_64-linux-gnu.so
+70b77687a000-70b77687b000 rw-p 00000000 00:00 0 
+70b77687b000-70b77692d000 r--p 00000000 08:30 7214805                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+70b77692d000-70b776b8c000 r-xp 000b2000 08:30 7214805                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+70b776b8c000-70b776c5e000 r--p 00311000 08:30 7214805                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+70b776c5e000-70b776cb9000 r--p 003e2000 08:30 7214805                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+70b776cb9000-70b776cbc000 rw-p 0043d000 08:30 7214805                    /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+70b776cbc000-70b776dbf000 rw-p 00000000 00:00 0 
+70b776dbf000-70b776fff000 rw-p 00000000 00:00 0 
+70b776fff000-70b777000000 ---p 00000000 00:00 0 
+70b777000000-70b777800000 rw-p 00000000 00:00 0 
+70b777800000-70b778000000 rw-p 00000000 00:00 0 
+70b778003000-70b778004000 r--p 00000000 08:30 7240091                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_datetime.cpython-310-x86_64-linux-gnu.so
+70b778004000-70b77800a000 r-xp 00001000 08:30 7240091                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_datetime.cpython-310-x86_64-linux-gnu.so
+70b77800a000-70b77800b000 r--p 00007000 08:30 7240091                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_datetime.cpython-310-x86_64-linux-gnu.so
+70b77800b000-70b77800c000 r--p 00008000 08:30 7240091                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_datetime.cpython-310-x86_64-linux-gnu.so
+70b77800c000-70b77800d000 rw-p 00009000 08:30 7240091                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_datetime.cpython-310-x86_64-linux-gnu.so
+70b77800d000-70b77800f000 r--p 00000000 08:30 7240092                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_parser.cpython-310-x86_64-linux-gnu.so
+70b77800f000-70b778015000 r-xp 00002000 08:30 7240092                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_parser.cpython-310-x86_64-linux-gnu.so
+70b778015000-70b778017000 r--p 00008000 08:30 7240092                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_parser.cpython-310-x86_64-linux-gnu.so
+70b778017000-70b778018000 r--p 00009000 08:30 7240092                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_parser.cpython-310-x86_64-linux-gnu.so
+70b778018000-70b778019000 rw-p 0000a000 08:30 7240092                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/pandas_parser.cpython-310-x86_64-linux-gnu.so
+70b778019000-70b77801d000 r--p 00000000 08:30 7239658                    /usr/local/lib/python3.10/dist-packages/numpy/random/_philox.cpython-310-x86_64-linux-gnu.so
+70b77801d000-70b77802b000 r-xp 00004000 08:30 7239658                    /usr/local/lib/python3.10/dist-packages/numpy/random/_philox.cpython-310-x86_64-linux-gnu.so
+70b77802b000-70b778030000 r--p 00012000 08:30 7239658                    /usr/local/lib/python3.10/dist-packages/numpy/random/_philox.cpython-310-x86_64-linux-gnu.so
+70b778030000-70b778031000 r--p 00016000 08:30 7239658                    /usr/local/lib/python3.10/dist-packages/numpy/random/_philox.cpython-310-x86_64-linux-gnu.so
+70b778031000-70b778032000 rw-p 00017000 08:30 7239658                    /usr/local/lib/python3.10/dist-packages/numpy/random/_philox.cpython-310-x86_64-linux-gnu.so
+70b778032000-70b778033000 rw-p 00000000 00:00 0 
+70b778033000-70b77803c000 r--p 00000000 08:30 7239670                    /usr/local/lib/python3.10/dist-packages/numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so
+70b77803c000-70b77808c000 r-xp 00009000 08:30 7239670                    /usr/local/lib/python3.10/dist-packages/numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so
+70b77808c000-70b7780df000 r--p 00059000 08:30 7239670                    /usr/local/lib/python3.10/dist-packages/numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so
+70b7780df000-70b7780e2000 r--p 000ab000 08:30 7239670                    /usr/local/lib/python3.10/dist-packages/numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so
+70b7780e2000-70b7780e4000 rw-p 000ae000 08:30 7239670                    /usr/local/lib/python3.10/dist-packages/numpy/random/mtrand.cpython-310-x86_64-linux-gnu.so
+70b7780e4000-70b7780e6000 rw-p 00000000 00:00 0 
+70b7780e6000-70b778525000 r--p 00000000 08:30 7342606                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow.so.2200
+70b778525000-70b77a15f000 r-xp 0043f000 08:30 7342606                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow.so.2200
+70b77a15f000-70b77a8be000 r--p 02079000 08:30 7342606                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow.so.2200
+70b77a8be000-70b77a9bd000 r--p 027d8000 08:30 7342606                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow.so.2200
+70b77a9bd000-70b77a9f8000 rw-p 028d7000 08:30 7342606                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow.so.2200
+70b77a9f8000-70b77ac23000 rw-p 00000000 00:00 0 
+70b77ac23000-70b77ad2c000 r--p 00000000 08:30 7342608                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_compute.so.2200
+70b77ad2c000-70b77b842000 r-xp 00109000 08:30 7342608                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_compute.so.2200
+70b77b842000-70b77ba56000 r--p 00c1f000 08:30 7342608                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_compute.so.2200
+70b77ba56000-70b77ba75000 r--p 00e33000 08:30 7342608                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_compute.so.2200
+70b77ba75000-70b77ba7a000 rw-p 00e52000 08:30 7342608                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_compute.so.2200
+70b77ba7a000-70b77ba87000 rw-p 00000000 00:00 0 
+70b77ba87000-70b77badc000 r--p 00000000 08:30 7342607                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_acero.so.2200
+70b77badc000-70b77bbce000 r-xp 00055000 08:30 7342607                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_acero.so.2200
+70b77bbce000-70b77bc06000 r--p 00147000 08:30 7342607                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_acero.so.2200
+70b77bc06000-70b77bc0c000 r--p 0017e000 08:30 7342607                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_acero.so.2200
+70b77bc0c000-70b77bc0f000 rw-p 00184000 08:30 7342607                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_acero.so.2200
+70b77bc0f000-70b77be09000 r--p 00000000 08:30 7342621                    /usr/local/lib/python3.10/dist-packages/pyarrow/libparquet.so.2200
+70b77be09000-70b77c39d000 r-xp 001fa000 08:30 7342621                    /usr/local/lib/python3.10/dist-packages/pyarrow/libparquet.so.2200
+70b77c39d000-70b77c560000 r--p 0078e000 08:30 7342621                    /usr/local/lib/python3.10/dist-packages/pyarrow/libparquet.so.2200
+70b77c560000-70b77c5fb000 r--p 00951000 08:30 7342621                    /usr/local/lib/python3.10/dist-packages/pyarrow/libparquet.so.2200
+70b77c5fb000-70b77c609000 rw-p 009ec000 08:30 7342621                    /usr/local/lib/python3.10/dist-packages/pyarrow/libparquet.so.2200
+70b77c609000-70b77c60d000 rw-p 00000000 00:00 0 
+70b77c60d000-70b77c6b2000 r--p 00000000 08:30 7342609                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_dataset.so.2200
+70b77c6b2000-70b77c78f000 r-xp 000a5000 08:30 7342609                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_dataset.so.2200
+70b77c78f000-70b77c7d2000 r--p 00182000 08:30 7342609                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_dataset.so.2200
+70b77c7d2000-70b77c7db000 r--p 001c4000 08:30 7342609                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_dataset.so.2200
+70b77c7db000-70b77c7dd000 rw-p 001cd000 08:30 7342609                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_dataset.so.2200
+70b77c7dd000-70b77c850000 r--p 00000000 08:30 7342620                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_substrait.so.2200
+70b77c850000-70b77cb39000 r-xp 00073000 08:30 7342620                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_substrait.so.2200
+70b77cb39000-70b77cbf0000 r--p 0035c000 08:30 7342620                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_substrait.so.2200
+70b77cbf0000-70b77cbfd000 r--p 00413000 08:30 7342620                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_substrait.so.2200
+70b77cbfd000-70b77cc13000 rw-p 00420000 08:30 7342620                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_substrait.so.2200
+70b77cc13000-70b77cc15000 rw-p 00000000 00:00 0 
+70b77cc15000-70b77cca0000 r--p 00000000 08:30 7342612                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_python.so.2200
+70b77cca0000-70b77cdc2000 r-xp 0008b000 08:30 7342612                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_python.so.2200
+70b77cdc2000-70b77ce05000 r--p 001ad000 08:30 7342612                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_python.so.2200
+70b77ce05000-70b77ce11000 r--p 001f0000 08:30 7342612                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_python.so.2200
+70b77ce11000-70b77ce14000 rw-p 001fc000 08:30 7342612                    /usr/local/lib/python3.10/dist-packages/pyarrow/libarrow_python.so.2200
+70b77ce14000-70b77ce72000 r--p 00000000 08:30 7342601                    /usr/local/lib/python3.10/dist-packages/pyarrow/lib.cpython-310-x86_64-linux-gnu.so
+70b77ce72000-70b77d0c3000 r-xp 0005e000 08:30 7342601                    /usr/local/lib/python3.10/dist-packages/pyarrow/lib.cpython-310-x86_64-linux-gnu.so
+70b77d0c3000-70b77d1b0000 r--p 002af000 08:30 7342601                    /usr/local/lib/python3.10/dist-packages/pyarrow/lib.cpython-310-x86_64-linux-gnu.so
+70b77d1b0000-70b77d1bf000 r--p 0039b000 08:30 7342601                    /usr/local/lib/python3.10/dist-packages/pyarrow/lib.cpython-310-x86_64-linux-gnu.so
+70b77d1bf000-70b77d1e7000 rw-p 003aa000 08:30 7342601                    /usr/local/lib/python3.10/dist-packages/pyarrow/lib.cpython-310-x86_64-linux-gnu.so
+70b77d1e7000-70b77d3f5000 rw-p 00000000 00:00 0 
+70b77d3f5000-70b77d3f6000 ---p 00000000 00:00 0 
+70b77d3f6000-70b77dbf6000 rw-p 00000000 00:00 0 
+70b77dbf6000-70b77dbf7000 ---p 00000000 00:00 0 
+70b77dbf7000-70b77e3f7000 rw-p 00000000 00:00 0 
+70b77e3f7000-70b77e3f8000 ---p 00000000 00:00 0 
+70b77e3f8000-70b77ebf8000 rw-p 00000000 00:00 0 
+70b77ebf8000-70b77ebf9000 ---p 00000000 00:00 0 
+70b77ebf9000-70b77f3f9000 rw-p 00000000 00:00 0 
+70b77f3f9000-70b77f3fa000 ---p 00000000 00:00 0 
+70b77f3fa000-70b77fbfa000 rw-p 00000000 00:00 0 
+70b77fbfa000-70b77fbfb000 ---p 00000000 00:00 0 
+70b77fbfb000-70b7803fb000 rw-p 00000000 00:00 0 
+70b7803fb000-70b7803fc000 ---p 00000000 00:00 0 
+70b7803fc000-70b780bfc000 rw-p 00000000 00:00 0 
+70b780bfc000-70b780bfd000 ---p 00000000 00:00 0 
+70b780bfd000-70b7813fd000 rw-p 00000000 00:00 0 
+70b7813fd000-70b7813fe000 ---p 00000000 00:00 0 
+70b7813fe000-70b781bfe000 rw-p 00000000 00:00 0 
+70b781bfe000-70b781bff000 ---p 00000000 00:00 0 
+70b781bff000-70b7823ff000 rw-p 00000000 00:00 0 
+70b7823ff000-70b782400000 ---p 00000000 00:00 0 
+70b782400000-70b782c00000 rw-p 00000000 00:00 0 
+70b782c00000-70b79ac00000 rw-p 00000000 00:00 0 
+70b79ac00000-70b79ac3b000 r-xp 00000000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ac3b000-70b79ae3a000 ---p 0003b000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ae3a000-70b79ae3b000 r--p 0003a000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ae3b000-70b79ae3c000 rw-p 0003b000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ae3c000-70b79ae3d000 rw-p 0003c000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ae3d000-70b79ae3e000 rw-p 0003d000 08:30 7238352                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+70b79ae3e000-70b79ae3f000 r--p 00000000 08:30 7234401                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md.cpython-310-x86_64-linux-gnu.so
+70b79ae3f000-70b79ae40000 r-xp 00001000 08:30 7234401                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md.cpython-310-x86_64-linux-gnu.so
+70b79ae40000-70b79ae41000 r--p 00002000 08:30 7234401                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md.cpython-310-x86_64-linux-gnu.so
+70b79ae41000-70b79ae42000 r--p 00002000 08:30 7234401                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md.cpython-310-x86_64-linux-gnu.so
+70b79ae42000-70b79ae43000 rw-p 00003000 08:30 7234401                    /usr/local/lib/python3.10/dist-packages/charset_normalizer/md.cpython-310-x86_64-linux-gnu.so
+70b79ae43000-70b79ae47000 r--p 00000000 08:30 7239662                    /usr/local/lib/python3.10/dist-packages/numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so
+70b79ae47000-70b79ae50000 r-xp 00004000 08:30 7239662                    /usr/local/lib/python3.10/dist-packages/numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so
+70b79ae50000-70b79ae54000 r--p 0000d000 08:30 7239662                    /usr/local/lib/python3.10/dist-packages/numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so
+70b79ae54000-70b79ae55000 r--p 00010000 08:30 7239662                    /usr/local/lib/python3.10/dist-packages/numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so
+70b79ae55000-70b79ae56000 rw-p 00011000 08:30 7239662                    /usr/local/lib/python3.10/dist-packages/numpy/random/_sfc64.cpython-310-x86_64-linux-gnu.so
+70b79ae56000-70b79ae5a000 r--p 00000000 08:30 7239654                    /usr/local/lib/python3.10/dist-packages/numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so
+70b79ae5a000-70b79ae6a000 r-xp 00004000 08:30 7239654                    /usr/local/lib/python3.10/dist-packages/numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so
+70b79ae6a000-70b79ae70000 r--p 00014000 08:30 7239654                    /usr/local/lib/python3.10/dist-packages/numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so
+70b79ae70000-70b79ae71000 r--p 00019000 08:30 7239654                    /usr/local/lib/python3.10/dist-packages/numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so
+70b79ae71000-70b79ae72000 rw-p 0001a000 08:30 7239654                    /usr/local/lib/python3.10/dist-packages/numpy/random/_mt19937.cpython-310-x86_64-linux-gnu.so
+70b79ae72000-70b79ae73000 rw-p 00000000 00:00 0 
+70b79ae73000-70b79ae77000 r--p 00000000 08:30 7222959                    /usr/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so
+70b79ae77000-70b79ae7d000 r-xp 00004000 08:30 7222959                    /usr/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so
+70b79ae7d000-70b79ae81000 r--p 0000a000 08:30 7222959                    /usr/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so
+70b79ae81000-70b79ae82000 r--p 0000d000 08:30 7222959                    /usr/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so
+70b79ae82000-70b79ae84000 rw-p 0000e000 08:30 7222959                    /usr/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so
+70b79ae84000-70b79ae88000 r--p 00000000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79ae88000-70b79aeb4000 r-xp 00004000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79aeb4000-70b79aeb8000 r--p 00030000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79aeb8000-70b79aeb9000 ---p 00034000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79aeb9000-70b79aeba000 r--p 00034000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79aeba000-70b79aebb000 rw-p 00035000 08:30 7239633                    /usr/local/lib/python3.10/dist-packages/numpy/random/_common.cpython-310-x86_64-linux-gnu.so
+70b79aebb000-70b79aebc000 rw-p 00000000 00:00 0 
+70b79aebc000-70b79aec2000 r--p 00000000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aec2000-70b79aee1000 r-xp 00006000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aee1000-70b79aeeb000 r--p 00025000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aeeb000-70b79aeec000 ---p 0002f000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aeec000-70b79aeed000 r--p 0002f000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aeed000-70b79aeef000 rw-p 00030000 08:30 7239664                    /usr/local/lib/python3.10/dist-packages/numpy/random/bit_generator.cpython-310-x86_64-linux-gnu.so
+70b79aeef000-70b79aef0000 rw-p 00000000 00:00 0 
+70b79aef0000-70b79aef2000 r--p 00000000 08:30 7222967                    /usr/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so
+70b79aef2000-70b79aef4000 r-xp 00002000 08:30 7222967                    /usr/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so
+70b79aef4000-70b79aef5000 r--p 00004000 08:30 7222967                    /usr/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so
+70b79aef5000-70b79aef6000 r--p 00004000 08:30 7222967                    /usr/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so
+70b79aef6000-70b79aef7000 rw-p 00005000 08:30 7222967                    /usr/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so
+70b79aef7000-70b79aef9000 r--p 00000000 08:30 7214922                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+70b79aef9000-70b79aefd000 r-xp 00002000 08:30 7214922                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+70b79aefd000-70b79aefe000 r--p 00006000 08:30 7214922                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+70b79aefe000-70b79aeff000 r--p 00006000 08:30 7214922                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+70b79aeff000-70b79af00000 rw-p 00007000 08:30 7214922                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+70b79af00000-70b79b000000 rw-p 00000000 00:00 0 
+70b79b000000-70b79b276000 r-xp 00000000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b276000-70b79b475000 ---p 00276000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b475000-70b79b476000 r--p 00275000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b476000-70b79b478000 rw-p 00276000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b478000-70b79b484000 rw-p 0027b000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b484000-70b79b48d000 rw-p 00287000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b48d000-70b79b496000 rw-p 00290000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b496000-70b79b49f000 rw-p 00299000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b49f000-70b79b4a8000 rw-p 002a2000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b4a8000-70b79b4b1000 rw-p 002ab000 08:30 7238351                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+70b79b4b1000-70b79b4b2000 r--p 00000000 08:30 7222976                    /usr/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so
+70b79b4b2000-70b79b4b3000 r-xp 00001000 08:30 7222976                    /usr/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so
+70b79b4b3000-70b79b4b4000 r--p 00002000 08:30 7222976                    /usr/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so
+70b79b4b4000-70b79b4b5000 r--p 00002000 08:30 7222976                    /usr/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so
+70b79b4b5000-70b79b4b6000 rw-p 00003000 08:30 7222976                    /usr/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so
+70b79b4b6000-70b79b4bb000 r--p 00000000 08:30 7226019                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.5.1
+70b79b4bb000-70b79b4dc000 r-xp 00005000 08:30 7226019                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.5.1
+70b79b4dc000-70b79b4e3000 r--p 00026000 08:30 7226019                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.5.1
+70b79b4e3000-70b79b4e4000 r--p 0002c000 08:30 7226019                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.5.1
+70b79b4e4000-70b79b4e5000 rw-p 0002d000 08:30 7226019                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.5.1
+70b79b4e5000-70b79b4ed000 r--p 00000000 08:30 7222958                    /usr/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so
+70b79b4ed000-70b79b502000 r-xp 00008000 08:30 7222958                    /usr/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so
+70b79b502000-70b79b50e000 r--p 0001d000 08:30 7222958                    /usr/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so
+70b79b50e000-70b79b50f000 r--p 00028000 08:30 7222958                    /usr/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so
+70b79b50f000-70b79b512000 rw-p 00029000 08:30 7222958                    /usr/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so
+70b79b512000-70b79b513000 r--p 00000000 08:30 7214892                    /usr/lib/x86_64-linux-gnu/librt.so.1
+70b79b513000-70b79b514000 r-xp 00001000 08:30 7214892                    /usr/lib/x86_64-linux-gnu/librt.so.1
+70b79b514000-70b79b515000 r--p 00002000 08:30 7214892                    /usr/lib/x86_64-linux-gnu/librt.so.1
+70b79b515000-70b79b516000 r--p 00002000 08:30 7214892                    /usr/lib/x86_64-linux-gnu/librt.so.1
+70b79b516000-70b79b517000 rw-p 00003000 08:30 7214892                    /usr/lib/x86_64-linux-gnu/librt.so.1
+70b79b517000-70b79b51b000 r--p 00000000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b51b000-70b79b53f000 r-xp 00004000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b53f000-70b79b544000 r--p 00028000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b544000-70b79b545000 ---p 0002d000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b545000-70b79b546000 r--p 0002d000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b546000-70b79b547000 rw-p 0002e000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b547000-70b79b549000 rw-p 00035000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b549000-70b79b54a000 rw-p 00037000 08:30 7239483                    /usr/local/lib/python3.10/dist-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+70b79b54a000-70b79b54c000 r--p 00000000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b54c000-70b79b553000 r-xp 00002000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b553000-70b79b554000 r--p 00009000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b554000-70b79b555000 ---p 0000a000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b555000-70b79b556000 r--p 0000a000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b556000-70b79b557000 rw-p 0000b000 08:30 7214815                    /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+70b79b557000-70b79b657000 rw-p 00000000 00:00 0 
+70b79b657000-70b79b6f1000 r--p 00000000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b6f1000-70b79b802000 r-xp 0009a000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b802000-70b79b871000 r--p 001ab000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b871000-70b79b872000 ---p 0021a000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b872000-70b79b87d000 r--p 0021a000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b87d000-70b79b880000 rw-p 00225000 08:30 7214904                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+70b79b880000-70b79b883000 rw-p 00000000 00:00 0 
+70b79b883000-70b79b952000 r--p 00000000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79b952000-70b79cc4d000 r-xp 000cf000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cc4d000-70b79ce35000 r--p 013ca000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79ce35000-70b79ce36000 ---p 015b2000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79ce36000-70b79ce3e000 r--p 015b2000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79ce3e000-70b79ce4d000 rw-p 015ba000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79ce4d000-70b79ce56000 rw-p 00000000 00:00 0 
+70b79ce56000-70b79ce5a000 ---p 015d3000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79ce5a000-70b79cea9000 rw-p 016a6000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cea9000-70b79cee3000 rw-p 016f5000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cee3000-70b79cf1d000 rw-p 0172f000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cf1d000-70b79cf57000 rw-p 01769000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cf57000-70b79cf91000 rw-p 017a3000 08:30 7238353                    /usr/local/lib/python3.10/dist-packages/numpy.libs/libscipy_openblas64_-56d6093b.so
+70b79cf91000-70b79cfb9000 r--p 00000000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79cfb9000-70b79d754000 r-xp 00028000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d754000-70b79d8e5000 r--p 007c3000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d8e5000-70b79d8e6000 ---p 00954000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d8e6000-70b79d8e9000 r--p 00954000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d8e9000-70b79d90b000 rw-p 00957000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d90b000-70b79d923000 rw-p 00000000 00:00 0 
+70b79d923000-70b79d928000 rw-p 009ee000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d928000-70b79d92d000 rw-p 009f3000 08:30 7238432                    /usr/local/lib/python3.10/dist-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+70b79d930000-70b79d935000 r--p 00000000 08:30 7240061                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/arrays.cpython-310-x86_64-linux-gnu.so
+70b79d935000-70b79d948000 r-xp 00005000 08:30 7240061                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/arrays.cpython-310-x86_64-linux-gnu.so
+70b79d948000-70b79d94c000 r--p 00018000 08:30 7240061                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/arrays.cpython-310-x86_64-linux-gnu.so
+70b79d94c000-70b79d94d000 r--p 0001c000 08:30 7240061                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/arrays.cpython-310-x86_64-linux-gnu.so
+70b79d94d000-70b79d94f000 rw-p 0001d000 08:30 7240061                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/arrays.cpython-310-x86_64-linux-gnu.so
+70b79d94f000-70b79d953000 r--p 00000000 08:30 7240089                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops_dispatch.cpython-310-x86_64-linux-gnu.so
+70b79d953000-70b79d95a000 r-xp 00004000 08:30 7240089                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops_dispatch.cpython-310-x86_64-linux-gnu.so
+70b79d95a000-70b79d95c000 r--p 0000b000 08:30 7240089                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops_dispatch.cpython-310-x86_64-linux-gnu.so
+70b79d95c000-70b79d95d000 r--p 0000d000 08:30 7240089                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops_dispatch.cpython-310-x86_64-linux-gnu.so
+70b79d95d000-70b79d95e000 rw-p 0000e000 08:30 7240089                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/ops_dispatch.cpython-310-x86_64-linux-gnu.so
+70b79d95e000-70b79d966000 r--p 00000000 08:30 7240130                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/strptime.cpython-310-x86_64-linux-gnu.so
+70b79d966000-70b79d9ae000 r-xp 00008000 08:30 7240130                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/strptime.cpython-310-x86_64-linux-gnu.so
+70b79d9ae000-70b79d9b8000 r--p 00050000 08:30 7240130                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/strptime.cpython-310-x86_64-linux-gnu.so
+70b79d9b8000-70b79d9ba000 r--p 0005a000 08:30 7240130                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/strptime.cpython-310-x86_64-linux-gnu.so
+70b79d9ba000-70b79d9bc000 rw-p 0005c000 08:30 7240130                    /usr/local/lib/python3.10/dist-packages/pandas/_libs/tslibs/strptime.cpython-310-x86_64-linux-gnu.so
+70b79d9bc000-70b79dabe000 rw-p 00000000 00:00 0 
+70b79dabe000-70b79dac1000 r--p 00000000 08:30 7214846                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+70b79dac1000-70b79dadc000 r-xp 00003000 08:30 7214846                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+70b79dadc000-70b79dae7000 r--p 0001e000 08:30 7214846                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+70b79dae7000-70b79dae8000 r--p 00028000 08:30 7214846                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+70b79dae8000-70b79dae9000 rw-p 00029000 08:30 7214846                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+70b79dae9000-70b79daec000 r--p 00000000 08:30 7222962                    /usr/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+70b79daec000-70b79daf0000 r-xp 00003000 08:30 7222962                    /usr/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+70b79daf0000-70b79daf3000 r--p 00007000 08:30 7222962                    /usr/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+70b79daf3000-70b79daf4000 r--p 00009000 08:30 7222962                    /usr/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+70b79daf4000-70b79daf5000 rw-p 0000a000 08:30 7222962                    /usr/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+70b79daf5000-70b79daf7000 r--p 00000000 08:30 7214794                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+70b79daf7000-70b79db04000 r-xp 00002000 08:30 7214794                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+70b79db04000-70b79db06000 r--p 0000f000 08:30 7214794                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+70b79db06000-70b79db07000 r--p 00010000 08:30 7214794                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+70b79db07000-70b79db08000 rw-p 00011000 08:30 7214794                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+70b79db08000-70b79de08000 rw-p 00000000 00:00 0 
+70b79de0b000-70b79de0c000 r--p 00000000 08:30 7214809                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+70b79de0c000-70b79de0d000 r-xp 00001000 08:30 7214809                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+70b79de0d000-70b79de0e000 r--p 00002000 08:30 7214809                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+70b79de0e000-70b79de0f000 r--p 00002000 08:30 7214809                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+70b79de0f000-70b79de10000 rw-p 00003000 08:30 7214809                    /usr/lib/x86_64-linux-gnu/libdl.so.2
+70b79de10000-70b79de16000 r--p 00000000 08:30 7222953                    /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+70b79de16000-70b79de26000 r-xp 00006000 08:30 7222953                    /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+70b79de26000-70b79de2c000 r--p 00016000 08:30 7222953                    /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+70b79de2c000-70b79de2d000 r--p 0001b000 08:30 7222953                    /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+70b79de2d000-70b79de31000 rw-p 0001c000 08:30 7222953                    /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+70b79de31000-70b79de34000 r--p 00000000 08:30 7214820                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+70b79de34000-70b79de4b000 r-xp 00003000 08:30 7214820                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+70b79de4b000-70b79de4f000 r--p 0001a000 08:30 7214820                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+70b79de4f000-70b79de50000 r--p 0001d000 08:30 7214820                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+70b79de50000-70b79de51000 rw-p 0001e000 08:30 7214820                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+70b79de51000-70b79de52000 r--p 00000000 08:30 7222965                    /usr/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so
+70b79de52000-70b79de53000 r-xp 00001000 08:30 7222965                    /usr/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so
+70b79de53000-70b79de54000 r--p 00002000 08:30 7222965                    /usr/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so
+70b79de54000-70b79de55000 r--p 00002000 08:30 7222965                    /usr/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so
+70b79de55000-70b79de56000 rw-p 00003000 08:30 7222965                    /usr/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so
+70b79de56000-70b79df56000 rw-p 00000000 00:00 0 
+70b79df58000-70b79df59000 r--p 00000000 08:30 7222951                    /usr/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+70b79df59000-70b79df5a000 r-xp 00001000 08:30 7222951                    /usr/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+70b79df5a000-70b79df5b000 r--p 00002000 08:30 7222951                    /usr/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+70b79df5b000-70b79df5c000 r--p 00002000 08:30 7222951                    /usr/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+70b79df5c000-70b79df5d000 rw-p 00003000 08:30 7222951                    /usr/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+70b79df5d000-70b79df5f000 r--p 00000000 08:30 7222944                    /usr/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+70b79df5f000-70b79df62000 r-xp 00002000 08:30 7222944                    /usr/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+70b79df62000-70b79df64000 r--p 00005000 08:30 7222944                    /usr/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+70b79df64000-70b79df65000 r--p 00006000 08:30 7222944                    /usr/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+70b79df65000-70b79df66000 rw-p 00007000 08:30 7222944                    /usr/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+70b79df66000-70b79df67000 r--p 00000000 08:30 7214890                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+70b79df67000-70b79df68000 r-xp 00001000 08:30 7214890                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+70b79df68000-70b79df69000 r--p 00002000 08:30 7214890                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+70b79df69000-70b79df6a000 r--p 00002000 08:30 7214890                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+70b79df6a000-70b79df6b000 rw-p 00003000 08:30 7214890                    /usr/lib/x86_64-linux-gnu/libpthread.so.0
+70b79df6b000-70b79df6f000 r--p 00000000 08:30 7351286                    /usr/local/lib/python3.10/dist-packages/wrapt/_wrappers.cpython-310-x86_64-linux-gnu.so
+70b79df6f000-70b79df75000 r-xp 00004000 08:30 7351286                    /usr/local/lib/python3.10/dist-packages/wrapt/_wrappers.cpython-310-x86_64-linux-gnu.so
+70b79df75000-70b79df78000 r--p 0000a000 08:30 7351286                    /usr/local/lib/python3.10/dist-packages/wrapt/_wrappers.cpython-310-x86_64-linux-gnu.so
+70b79df78000-70b79df79000 r--p 0000c000 08:30 7351286                    /usr/local/lib/python3.10/dist-packages/wrapt/_wrappers.cpython-310-x86_64-linux-gnu.so
+70b79df79000-70b79df7b000 rw-p 0000d000 08:30 7351286                    /usr/local/lib/python3.10/dist-packages/wrapt/_wrappers.cpython-310-x86_64-linux-gnu.so
+70b79df7b000-70b79e1dd000 rw-p 00000000 00:00 0 
+70b79e1dd000-70b79e1e4000 r--s 00000000 08:30 7214763                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+70b79e1e4000-70b79e23b000 r--p 00000000 08:30 7214375                    /usr/lib/locale/C.utf8/LC_CTYPE
+70b79e23b000-70b79e23d000 rw-p 00000000 00:00 0 
+70b79e23d000-70b79e265000 r--p 00000000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e265000-70b79e3fa000 r-xp 00028000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e3fa000-70b79e452000 r--p 001bd000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e452000-70b79e453000 ---p 00215000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e453000-70b79e457000 r--p 00215000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e457000-70b79e459000 rw-p 00219000 08:30 7214795                    /usr/lib/x86_64-linux-gnu/libc.so.6
+70b79e459000-70b79e466000 rw-p 00000000 00:00 0 
+70b79e466000-70b79e468000 r--p 00000000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e468000-70b79e479000 r-xp 00002000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e479000-70b79e47f000 r--p 00013000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e47f000-70b79e480000 ---p 00019000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e480000-70b79e481000 r--p 00019000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e481000-70b79e482000 rw-p 0001a000 08:30 7214926                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+70b79e482000-70b79e486000 r--p 00000000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e486000-70b79e4a5000 r-xp 00004000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e4a5000-70b79e4af000 r--p 00023000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e4af000-70b79e4b0000 ---p 0002d000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e4b0000-70b79e4b2000 r--p 0002d000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e4b2000-70b79e4b3000 rw-p 0002f000 08:30 7225921                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+70b79e4b3000-70b79e4c1000 r--p 00000000 08:30 7214847                    /usr/lib/x86_64-linux-gnu/libm.so.6
+70b79e4c1000-70b79e53d000 r-xp 0000e000 08:30 7214847                    /usr/lib/x86_64-linux-gnu/libm.so.6
+70b79e53d000-70b79e598000 r--p 0008a000 08:30 7214847                    /usr/lib/x86_64-linux-gnu/libm.so.6
+70b79e598000-70b79e599000 r--p 000e4000 08:30 7214847                    /usr/lib/x86_64-linux-gnu/libm.so.6
+70b79e599000-70b79e59a000 rw-p 000e5000 08:30 7214847                    /usr/lib/x86_64-linux-gnu/libm.so.6
+70b79e59c000-70b79e59d000 ---p 00000000 00:00 0 
+70b79e59d000-70b79e59e000 r--p 00000000 00:00 0 
+70b79e59e000-70b79e5a0000 rw-p 00000000 00:00 0 
+70b79e5a0000-70b79e5a2000 r--p 00000000 08:30 7214777                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70b79e5a2000-70b79e5cc000 r-xp 00002000 08:30 7214777                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70b79e5cc000-70b79e5d7000 r--p 0002c000 08:30 7214777                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70b79e5d8000-70b79e5da000 r--p 00037000 08:30 7214777                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+70b79e5da000-70b79e5dc000 rw-p 00039000 08:30 7214777                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fff67462000-7fff67466000 ---p 00000000 00:00 0 
+7fff67466000-7fff67562000 rw-p 00000000 00:00 0                          [stack]
+7fff675ec000-7fff675f0000 r--p 00000000 00:00 0                          [vvar]
+7fff675f0000-7fff675f2000 r-xp 00000000 00:00 0                          [vdso]
+
+
+VM Arguments:
+java_command: python[pyterrier]:./retrieve-copy.py
+java_class_path (initial): /root/.pyterrier/terrier-prf--SNAPSHOT.jar:/root/.pyterrier/terrier-assemblies-5.11-jar-with-dependencies.jar:/root/.pyterrier/terrier-python-helper-0.0.8.jar:/usr/local/lib/python3.10/dist-packages/jnius/src
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 121634816                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1927282688                                {product} {ergonomic}
+   size_t MaxNewSize                               = 1155530752                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=/vscode/vscode-server/bin/linux-x64/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
+SHELL=/bin/bash
+LANG=en_US.UTF-8
+LC_CTYPE=C.UTF-8
+TERM=xterm-256color
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xebbd40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xebbd40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0xebbd40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0xbfe040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0xbfe040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0xebbd40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR2: [libjvm.so+0xbfdee0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0xbfe6a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0xbfe6a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0xbfe6a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0xbfe6a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+DISTRIB_DESCRIPTION="Ubuntu 22.04.5 LTS"
+uname:Linux 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64
+OS uptime: 1 days 4:22 hours
+libc:glibc 2.35 NPTL 2.35 
+rlimit (soft/hard): STACK 8192k/infinity , CORE 0k/infinity , NPROC infinity/infinity , NOFILE 1048576/1048576 , AS infinity/infinity , CPU infinity/infinity , DATA infinity/infinity , FSIZE infinity/infinity , MEMLOCK infinity/infinity
+load average:1.82 1.30 1.02
+
+/proc/meminfo:
+MemTotal:        7523528 kB
+MemFree:         3293104 kB
+MemAvailable:    4709684 kB
+Buffers:           49892 kB
+Cached:          1418656 kB
+SwapCached:         9252 kB
+Active:          1248384 kB
+Inactive:        2441988 kB
+Active(anon):     346156 kB
+Inactive(anon):  1879728 kB
+Active(file):     902228 kB
+Inactive(file):   562260 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       2097152 kB
+SwapFree:        1861756 kB
+Dirty:               184 kB
+Writeback:             0 kB
+AnonPages:       2221244 kB
+Mapped:           225560 kB
+Shmem:              4060 kB
+KReclaimable:     146488 kB
+Slab:             241312 kB
+SReclaimable:     146488 kB
+SUnreclaim:        94824 kB
+KernelStack:       10068 kB
+PageTables:        44044 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5858916 kB
+Committed_AS:    5135124 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       35720 kB
+VmallocChunk:          0 kB
+Percpu:             6016 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:       91136 kB
+DirectMap2M:     6631424 kB
+DirectMap1G:     9437184 kB
+
+/sys/kernel/mm/transparent_hugepage/enabled:
+always [madvise] never
+/sys/kernel/mm/transparent_hugepage/defrag (defrag/compaction efforts parameter):
+always defer defer+madvise [madvise] never
+
+Process Memory:
+Virtual Size: 5457388K (peak: 14072800K)
+Resident Set Size: 213676K (peak: 213676K) (anon: 127620K, file: 86056K, shmem: 0K)
+Swapped out: 0K
+C-Heap outstanding allocations: 52344K, retained: 8131K
+glibc malloc tunables: (default)
+
+/proc/sys/kernel/threads-max (system-wide limit on the number of threads):
+58698
+/proc/sys/vm/max_map_count (maximum number of memory map areas a process may have):
+262144
+/proc/sys/kernel/pid_max (system-wide limit on number of process identifiers):
+99999
+
+container (cgroup) information:
+container_type: cgroupv2
+cpu_cpuset_cpus: not supported
+cpu_memory_nodes: not supported
+active_processor_count: 12
+cpu_quota: no quota
+cpu_period: 100000
+cpu_shares: no shares
+memory_limit_in_bytes: unlimited
+memory_and_swap_limit_in_bytes: unlimited
+memory_soft_limit_in_bytes: unlimited
+memory_usage_in_bytes: 3042736 k
+memory_max_usage_in_bytes: not supported
+memory_swap_current_in_bytes: 145840 k
+memory_swap_max_limit_in_bytes: unlimited
+maximum number of tasks: unlimited
+current number of tasks: 234
+
+Hyper-V virtualization detected
+Steal ticks since vm start: 0
+Steal ticks percentage since vm start:  0.000
+
+CPU:total 12 (initial active 12) (16 cores per cpu, 2 threads per core) family 25 model 80 stepping 0 microcode 0xffffffff, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+CPU Model and flags from /proc/cpuinfo:
+model name	: AMD Ryzen 5 PRO 5650U with Radeon Graphics
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+Online cpus:
+0-11
+Offline cpus:
+
+BIOS frequency limitation:
+<Not Available>
+Frequency switch latency (ns):
+<Not Available>
+Available cpu frequencies:
+<Not Available>
+Current governor:
+<Not Available>
+Core performance/turbo boost:
+<Not Available>
+
+Memory: 4k page, physical 7523528k(3293104k free), swap 2097152k(1861756k free)
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.28+6-post-Ubuntu-1ubuntu122.04.1) for linux-amd64 JRE (11.0.28+6-post-Ubuntu-1ubuntu122.04.1), built on Jul 17 2025 21:05:18 by "unknown" with gcc 11.4.0
+
+END.
