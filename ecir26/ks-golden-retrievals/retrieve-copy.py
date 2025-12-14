@@ -18,6 +18,8 @@ def run_query_expansion(index, dataset, retrieval_model, query_expansion):
     elif query_expansion == "RM3":
         rm3_expansion = pt.BatchRetrieve(index, wmodel=retrieval_model) >> pt.rewrite.RM3(index) >> pt.BatchRetrieve(index, wmodel=retrieval_model)
         return rm3_expansion(topics)
+    elif query_expansion == "QE":
+        
 
 def extract_text_of_document(doc, field):
     # ToDo: here one can make modifications to the document representations
@@ -58,9 +60,11 @@ def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retriev
 
     retriever = pt.terrier.Retriever(index, wmodel=retrieval_model)
 
-    description = f"This is a PyTerrier retriever using the retrieval model {retriever} retrieving on the {text_field_to_retrieve} text representation of the documents. Everything is set to the defaults."
+    description = f"This is a PyTerrier retriever using the retrieval model {retriever} retrieving on the {text_field_to_retrieve} text representation of the documents. {query_expansion} is used to add additional terms. Everything is set to the defaults."
 
     with tracking(export_file_path=target_dir / "ir-metadata.yml", export_format=ExportFormat.IR_METADATA, system_description=description, system_name=tag):
+        
+        
         run = retriever(topics)
 
     pt.io.write_results(run, target_file)
@@ -78,7 +82,7 @@ def run_retrieval(output, index, dataset, retrieval_model, text_field_to_retriev
 @click.option("--output", type=Path, required=False, default=Path("output"), help="The output directory.")
 @click.option("--retrieval-model", type=str, default="BM25", required=False, help="The retrieval model (e.g., BM25, PL2, DirichletLM).")
 @click.option("--text-field-to-retrieve", type=click.Choice(["default_text", "title", "description"]), required=False, default="default_text", help="The text field of the documents on which to retrieve.")
-@click.option("--query-expansion", type=click.Choice(["no-qe", "bo1", "RM3"]), required=False, default="no-qe", help="The query expansion algorithm.")
+@click.option("--query-expansion", type=click.Choice(["no-qe", "Bo1", "RM3", "QE"]), required=False, default="no-qe", help="The query expansion algorithm.")
 def main(dataset, text_field_to_retrieve, retrieval_model, query_expansion, output):
     ensure_pyterrier_is_loaded(is_offline=False)
 
