@@ -64,7 +64,7 @@ def run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansio
         tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}"
         description = f"This is a PyTerrier retriever with {first_model} retrieving on the {text_field_to_retrieve} text representation of the documents. {query_expansion} is used to add additional terms."
     elif query_expansion in {"Bo1", "RM3"}:
-        tag = f"pyterrier-on-{text_field_to_retrieve}-with-({first_model}-{query_expansion}-{last_model})"
+        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}-{query_expansion}-{last_model}"
         description = f"This is a PyTerrier retriever pipeline retrieving on the {text_field_to_retrieve} text representation of the documents.{first_model}-{query_expansion}-{last_model} is used to add additional terms."
     else:
         tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}"
