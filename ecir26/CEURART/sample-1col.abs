@@ -1,6 +1,9 @@
-A clear and well-documented \LaTeX{} document is presented as an
-  article formatted for publication by CEUR-WS in a conference
-  proceedings. Based on the ``ceurart'' document class, this article
-  presents and explains many of the common variations, as well as many
-  of the formatting elements an author may use in the preparation of
-  the documentation of their work.
+Query expansion via pseudo-relevance feedback is a well-established technique to improve
+  retrieval effectiveness in information retrieval systems. Among classical approaches,
+  Bo1 and RM3 are frequently used but exhibit varying effectiveness depending on the
+  retrieval setting. In this work, we empirically compare Bo1 and RM3 query expansion
+  within a controlled Retriever--Rewriter--Retriever pipeline using the DPH retrieval model.
+  Experiments are conducted on the \textit{radboud-validation-20251114-training} dataset
+  using nDCG@10 as evaluation metric. Statistical significance testing shows that neither
+  a significant difference nor a significant improvement in retrieval effectiveness can be
+  observed between Bo1 and RM3 under identical parameter settings.
