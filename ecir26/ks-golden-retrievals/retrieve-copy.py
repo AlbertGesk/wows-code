@@ -8,11 +8,11 @@ from tqdm import tqdm
 import string
 
 
-def get_retriever(index, model):
+def get_retriever(index, model, numr_results):
     model = model.upper()
 
     if model == "BM25":
-        return index.bm25(k1=1.2, b=0.5)
+        return index.bm25(k1=1.2, b=0.5, num_results=numr_results)
     elif model == "DPH":
         return index.dph()
     elif model == "PL2":
@@ -22,20 +22,20 @@ def get_retriever(index, model):
     else:
         raise ValueError(f"Unsupported retrieval model: {model}")
 
-def run_query_expansion(index, dataset, query_expansion, first_model, last_model, reformulation):
+def run_query_expansion(index, dataset, query_expansion, first_model, last_model, reformulation, num_results):
     topics = pt.datasets.get_dataset(f"irds:ir-lab-wise-2025/{dataset}").get_topics("title")
 
     if query_expansion == "Bo1":
         if reformulation == "reformulation":
-            pipe = get_retriever(index, first_model) >> pt.rewrite.tokenise() >> pt.rewrite.Bo1QueryExpansion(index.index_ref()) >> get_retriever(index, last_model) >> pt.rewrite.reset()
+            pipe = get_retriever(index, first_model, num_results) >> pt.rewrite.tokenise() >> pt.rewrite.Bo1QueryExpansion(index.index_ref()) >> get_retriever(index, last_model, num_results) >> pt.rewrite.reset()
         else:
-            pipe = get_retriever(index, first_model) >> pt.rewrite.tokenise() >> pt.rewrite.Bo1QueryExpansion(index.index_ref()) >> get_retriever(index, last_model)
+            pipe = get_retriever(index, first_model, num_results) >> pt.rewrite.tokenise() >> pt.rewrite.Bo1QueryExpansion(index.index_ref()) >> get_retriever(index, last_model, num_results)
         return pipe(topics)
     elif query_expansion == "RM3":
         if reformulation == "reformulation":
-            pipe = get_retriever(index, first_model) >> pt.rewrite.tokenise() >> pt.rewrite.RM3(index.index_ref()) >> get_retriever(index, last_model) >> pt.rewrite.reset()
+            pipe = get_retriever(index, first_model, num_results) >> pt.rewrite.tokenise() >> pt.rewrite.RM3(index.index_ref()) >> get_retriever(index, last_model, num_results) >> pt.rewrite.reset()
         else:
-            pipe = get_retriever(index, first_model) >> pt.rewrite.tokenise() >> pt.rewrite.RM3(index.index_ref()) >> get_retriever(index, last_model)
+            pipe = get_retriever(index, first_model, num_results) >> pt.rewrite.tokenise() >> pt.rewrite.RM3(index.index_ref()) >> get_retriever(index, last_model, num_results)
         return pipe(topics)
     else :
         pipe = pt.rewrite.tokenise() >> get_retriever(index, first_model)
@@ -65,15 +65,15 @@ def get_index(dataset, field, output_path):
     return pt.terrier.TerrierIndex(str(index_dir))
 
 
-def run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation):
+def run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation, num_results):
     if query_expansion == "no-qe":
-        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}"
+        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}-num_results-{num_results}"
         description = f"This is a PyTerrier retriever with {first_model} retrieving on the {text_field_to_retrieve} text representation of the documents. {query_expansion} is used to add additional terms."
     elif query_expansion in {"Bo1", "RM3"}:
-        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}-{query_expansion}-{last_model}-{reformulation}"
+        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}-{query_expansion}-{last_model}-with-{reformulation}-num_results-{num_results}"
         description = f"This is a PyTerrier retriever pipeline retrieving on the {text_field_to_retrieve} text representation of the documents. Pipeline: {first_model}-{query_expansion}-{last_model}-{reformulation} is used to add additional terms."
     else:
-        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}"
+        tag = f"pyterrier-on-{text_field_to_retrieve}-with-{first_model}-num_results-{num_results}"
         description = f"This is a PyTerrier retriever with {first_model} retrieving on the {text_field_to_retrieve} text representation of the documents. {query_expansion} is used to add additional terms."
     
     target_dir = output / "runs" / dataset / tag
@@ -83,7 +83,7 @@ def run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansio
         return
 
     with tracking(export_file_path=target_dir / "ir-metadata.yml", export_format=ExportFormat.IR_METADATA, system_description=description, system_name=tag): 
-        run = run_query_expansion(index, dataset, query_expansion, first_model, last_model, reformulation)
+        run = run_query_expansion(index, dataset, query_expansion, first_model, last_model, reformulation, num_results)
 
     pt.io.write_results(run, target_file)
 
@@ -95,11 +95,12 @@ def run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansio
 @click.option("--first-model", type=click.Choice(["BM25", "DPH", "PL2", "TF_IDF"]), required=False, default="BM25", help="The first retrieval model in the pipeline.")
 @click.option("--last-model", type=click.Choice(["BM25", "DPH", "PL2", "TF_IDF"]), required=False, default="BM25", help="The last retrieval model in the pipeline if query expansion is used.")
 @click.option("--reformulation", type=click.Choice(["reformulation", "no-reformulation"]), required=False, default="no-reformulation", help="Decide if reformulation should be done after query expansion")
-def main(dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation, output):
+@click.option("--num_results", type=click.Choice(["10", "100", "1000"]), required=False, default="1000", help="The maximum number of results to return per query for the retrieval models.")
+def main(dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation, output, num_results):
     ensure_pyterrier_is_loaded(is_offline=False)
 
     index = get_index(dataset, text_field_to_retrieve, output)
-    run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation)
+    run_retrieval(output, index, dataset, text_field_to_retrieve, query_expansion, first_model, last_model, reformulation, num_results)
     
 if __name__ == '__main__':
     main()
