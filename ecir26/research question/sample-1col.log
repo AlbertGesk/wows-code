@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  15 JAN 2026 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  21 JAN 2026 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1198,257 +1198,6 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
-Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks43
-\pgfutil@tempdima=\dimen279
-\pgfutil@tempdimb=\dimen280
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box70
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks44
-\pgfkeys@temptoks=\toks45
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks46
-))
-\pgf@x=\dimen281
-\pgf@y=\dimen282
-\pgf@xa=\dimen283
-\pgf@ya=\dimen284
-\pgf@xb=\dimen285
-\pgf@yb=\dimen286
-\pgf@xc=\dimen287
-\pgf@yc=\dimen288
-\pgf@xd=\dimen289
-\pgf@yd=\dimen290
-\w@pgf@writea=\write5
-\r@pgf@reada=\read4
-\c@pgf@counta=\count375
-\c@pgf@countb=\count376
-\c@pgf@countc=\count377
-\c@pgf@countd=\count378
-\t@pgf@toka=\toks47
-\t@pgf@tokb=\toks48
-\t@pgf@tokc=\toks49
-\pgf@sys@id@count=\count379
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-pdftex.def
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count380
-\pgfsyssoftpath@bigbuffer@items=\count381
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen291
-\pgfmath@count=\count382
-\pgfmath@box=\box71
-\pgfmath@toks=\toks50
-\pgfmath@stack@operand=\toks51
-\pgfmath@stack@operation=\toks52
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count383
-)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen292
-\pgf@picmaxx=\dimen293
-\pgf@picminy=\dimen294
-\pgf@picmaxy=\dimen295
-\pgf@pathminx=\dimen296
-\pgf@pathmaxx=\dimen297
-\pgf@pathminy=\dimen298
-\pgf@pathmaxy=\dimen299
-\pgf@xx=\dimen300
-\pgf@xy=\dimen301
-\pgf@yx=\dimen302
-\pgf@yy=\dimen303
-\pgf@zx=\dimen304
-\pgf@zy=\dimen305
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen306
-\pgf@path@lasty=\dimen307
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen308
-\pgf@shorten@start@additional=\dimen309
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box72
-\pgf@hbox=\box73
-\pgf@layerbox@main=\box74
-\pgf@picture@serial@count=\count384
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen310
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen311
-\pgf@pt@y=\dimen312
-\pgf@pt@temp=\dimen313
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen314
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen315
-\pgf@sys@shading@range@num=\count385
-\pgf@shadingcount=\count386
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box75
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box76
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen316
-\pgf@nodesepend=\dimen317
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen318
-\pgffor@skip=\dimen319
-\pgffor@stack=\toks53
-\pgffor@toks=\toks54
-)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count387
-\pgfplotmarksize=\dimen320
-)
-\tikz@lastx=\dimen321
-\tikz@lasty=\dimen322
-\tikz@lastxsaved=\dimen323
-\tikz@lastysaved=\dimen324
-\tikz@lastmovetox=\dimen325
-\tikz@lastmovetoy=\dimen326
-\tikzleveldistance=\dimen327
-\tikzsiblingdistance=\dimen328
-\tikz@figbox=\box77
-\tikz@figbox@bg=\box78
-\tikz@tempbox=\box79
-\tikz@tempbox@bg=\box80
-\tikztreelevel=\count388
-\tikznumberofchildren=\count389
-\tikznumberofcurrentchild=\count390
-\tikz@fig@count=\count391
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count392
-\pgfmatrixcurrentcolumn=\count393
-\pgf@matrix@numberofcolumns=\count394
-)
-\tikz@expandcount=\count395
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
-\t@pgfplots@toka=\toks55
-\t@pgfplots@tokb=\toks56
-\t@pgfplots@tokc=\toks57
-\pgfplots@tmpa=\dimen329
-\c@pgfplots@coordindex=\count396
-\c@pgfplots@scanlineindex=\count397
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
-Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks58
-\t@pgf@tokb=\toks59
-\t@pgf@tokc=\toks60
-(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count398
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count399
-\t@pgfplotstable@a=\toks61
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count400
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen330
-\pgfdecoratedremainingdistance=\dimen331
-\pgfdecoratedinputsegmentcompleteddistance=\dimen332
-\pgfdecoratedinputsegmentremainingdistance=\dimen333
-\pgf@decorate@distancetomove=\dimen334
-\pgf@decorate@repeatstate=\count401
-\pgfdecorationsegmentamplitude=\dimen335
-\pgfdecorationsegmentlength=\dimen336
-)
-\tikz@lib@dec@box=\box81
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count402
-\pgfplots@xmin@reg=\dimen337
-\pgfplots@xmax@reg=\dimen338
-\pgfplots@ymin@reg=\dimen339
-\pgfplots@ymax@reg=\dimen340
-\pgfplots@zmin@reg=\dimen341
-\pgfplots@zmax@reg=\dimen342
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
-File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-Package tocbasic Info: Loading of class-dependent code for package caption3
-(tocbasic)             prevented on line 50.
-
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen343
-\captionmargin=\dimen344
-\caption@leftmargin=\dimen345
-\caption@rightmargin=\dimen346
-\caption@width=\dimen347
-\caption@indent=\dimen348
-\caption@parindent=\dimen349
-\caption@hangindent=\dimen350
-)
-\c@caption@flags=\count403
-\c@continuedfloat=\count404
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: wrapfig package is loaded.
-)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count405
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count406
-)
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -1456,80 +1205,80 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 27.
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+(scrartcl)           before \begin{document} on input line 24.
+(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count407
+\BKM@id=\count375
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/ccicons\ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
 )
-LaTeX Font Info:    Trying to load font information for T1+LibertinusSerif-TLF on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+LibertinusSerif-TLF on input line 24.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusserif-tlf.fd
 File: T1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for T1/LibertinusSerif-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 27.
+(Font)              scaled to size 10.95pt on input line 24.
  (sample-1col.aux)
 \openout1 = `sample-1col.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-Package scrbase Info: activating english \abstractname on input line 27.
-Package scrbase Info: activating english \partname on input line 27.
-Package scrbase Info: activating english \figurename on input line 27.
-Package scrbase Info: activating english \tablename on input line 27.
-Package scrbase Info: activating english \contentsname on input line 27.
-Package scrbase Info: activating english \listfigurename on input line 27.
-Package scrbase Info: activating english \listtablename on input line 27.
-Package scrbase Info: activating english \refname on input line 27.
-Package scrbase Info: activating english \indexname on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+Package scrbase Info: activating english \abstractname on input line 24.
+Package scrbase Info: activating english \partname on input line 24.
+Package scrbase Info: activating english \figurename on input line 24.
+Package scrbase Info: activating english \tablename on input line 24.
+Package scrbase Info: activating english \contentsname on input line 24.
+Package scrbase Info: activating english \listfigurename on input line 24.
+Package scrbase Info: activating english \listtablename on input line 24.
+Package scrbase Info: activating english \refname on input line 24.
+Package scrbase Info: activating english \indexname on input line 24.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count408
-\scratchdimen=\dimen351
-\scratchbox=\box82
-\nofMPsegments=\count409
-\nofMParguments=\count410
-\everyMPshowfont=\toks62
-\MPscratchCnt=\count411
-\MPscratchDim=\dimen352
-\MPnumerator=\count412
-\makeMPintoPDFobject=\count413
-\everyMPtoPDFconversion=\toks63
+\scratchcounter=\count376
+\scratchdimen=\dimen279
+\scratchbox=\box70
+\nofMPsegments=\count377
+\nofMParguments=\count378
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count379
+\MPscratchDim=\dimen280
+\MPnumerator=\count380
+\makeMPintoPDFobject=\count381
+\everyMPtoPDFconversion=\toks44
 ) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 27.
-Package microtype Info: Applying patch `item' on input line 27.
-Package microtype Info: Applying patch `toc' on input line 27.
-Package microtype Info: Applying patch `eqnum' on input line 27.
-Package microtype Info: Applying patch `footnote' on input line 27.
-Package microtype Info: Applying patch `verbatim' on input line 27.
-LaTeX Info: Redefining \microtypesetup on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 24.
+Package microtype Info: Applying patch `item' on input line 24.
+Package microtype Info: Applying patch `toc' on input line 24.
+Package microtype Info: Applying patch `eqnum' on input line 24.
+Package microtype Info: Applying patch `footnote' on input line 24.
+Package microtype Info: Applying patch `verbatim' on input line 24.
+LaTeX Info: Redefining \microtypesetup on input line 24.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1544,9 +1293,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusSerif-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 27.
-\c@mv@tabular=\count414
-\c@mv@boldtabular=\count415
+Package hyperref Info: Link coloring ON on input line 24.
+\c@mv@tabular=\count382
+\c@mv@boldtabular=\count383
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1584,135 +1333,121 @@ Package hyperref Info: Link coloring ON on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count416
+\c@lstlisting=\count384
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 27.
+(tocbasic)             because of missing \bbl@set@language on input line 24.
 \scr@dte@lstlisting@maxnumwidth=\skip91
-
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 27.
-
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
-\verbatim@out=\write6
-\openout6 = `sample-1col.abs'.
+\verbatim@out=\write5
+\openout5 = `sample-1col.abs'.
 
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 105.
-LaTeX Font Info:    Trying to load font information for T1+LibertinusSans-TLF on input line 105.
+(Font)              scaled to size 10.95pt on input line 84.
+LaTeX Font Info:    Trying to load font information for T1+LibertinusSans-TLF on input line 84.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinussans-tlf.fd
 File: T1LibertinusSans-TLF.fd 2024/09/22 (autoinst) Font definitions for T1/LibertinusSans-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 105.
+(Font)              scaled to size 10.95pt on input line 84.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusSans-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 105.
+(Font)              scaled to size 9.0pt on input line 84.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 110.
+(Font)              scaled to size 17.28pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 110.
+(Font)              scaled to size 17.28pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 110.
+(Font)              scaled to size 17.28pt on input line 89.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 89.
 <<ot1.cmap>> (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )<<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 110.
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 110.
+(Font)              scaled to size 8.0pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 110.
+(Font)              scaled to size 8.0pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 110.
+(Font)              scaled to size 14.4pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 110.
+(Font)              scaled to size 9.0pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 110.
- (sample-1col.abs
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-)
-Overfull \hbox (407.66833pt too wide) detected at line 110
+(Font)              scaled to size 6.0pt on input line 89.
+ (sample-1col.abs)
+Overfull \hbox (407.66833pt too wide) detected at line 89
 []
  []
 
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 89.
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 110.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+Package hyperref Warning: Ignoring empty anchor on input line 89.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+Package hyperref Warning: Ignoring empty anchor on input line 89.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+Package hyperref Warning: Ignoring empty anchor on input line 89.
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 110.
+
+Package hyperref Warning: Ignoring empty anchor on input line 89.
+
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 89.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomefree1.fd)
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+Package hyperref Warning: Ignoring empty anchor on input line 89.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+Package hyperref Warning: Ignoring empty anchor on input line 89.
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on input line 110.
-(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomebrands1.fd)
-LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not available
-(Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead on input line 110.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 110.
-
-<doclicense-CC-by-88x31.pdf, id=24, 90.3375pt x 31.61812pt>
+<doclicense-CC-by-88x31.pdf, id=16, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-88x31.pdf>
-Package pdftex.def Info: doclicense-CC-by-88x31.pdf  used on input line 110.
+Package pdftex.def Info: doclicense-CC-by-88x31.pdf  used on input line 89.
 (pdftex.def)             Requested size: 38.32509pt x 13.41362pt.
-LaTeX Font Info:    Trying to load font information for TS1+LibertinusSerif-TLF on input line 110.
+LaTeX Font Info:    Trying to load font information for TS1+LibertinusSerif-TLF on input line 89.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\ts1libertinusserif-tlf.fd
 File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/LibertinusSerif-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 110.
+(Font)              scaled to size 6.0pt on input line 89.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusSerif-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (4.5pt too wide) in paragraph at lines 110--110
+Overfull \hbox (4.5pt too wide) in paragraph at lines 89--89
 [][][][]||$[]$ $[]$|  
  []
 
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 112.
+(Font)              scaled to size 10.95pt on input line 91.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 112.
-LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 122.
+(Font)              scaled to size 14.4pt on input line 91.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 104.
+LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 120.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusmono-tlf.fd
 File: T1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for T1/LibertinusMono-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 122.
+(Font)              scaled to size 9.30756pt on input line 120.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1723,64 +1458,174 @@ Package microtype Info: Character `guilsinglleft ' is missing
 Package microtype Info: Character `guilsinglright ' is missing
 (microtype)             in font `T1/LibertinusMono-TLF/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 124.
-LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 154.
+(Font)              scaled to size 10.0pt on input line 125.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 154.
+(Font)              scaled to size 10.0pt on input line 125.
  [1
 
-{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands1.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
-LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 176.
- [2] [3]
-Underfull \hbox (badness 7451) in paragraph at lines 345--350
+{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
+LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 137.
+ [2] [3] [4]
+Underfull \hbox (badness 7451) in paragraph at lines 397--402
 \T1/LibertinusSerif-TLF/m/n/10.95 (+20) Your work should use stan-dard L[]T[]X sec-tion-ing com-mands: [][]\T1/LibertinusMono-TLF/m/n/10.95 \section[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) , [][]\T1/LibertinusMono-TLF/m/n/10.95 \subsection[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) ,
  []
 
-[4]
+[5]
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 376.
+(Font)              scaled to size 10.0pt on input line 428.
 LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 406.
+(Font)              scaled to size 8.50006pt on input line 458.
 Package microtype Info: Character `guilsinglleft ' is missing
 (microtype)             in font `T1/LibertinusMono-TLF/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guilsinglright ' is missing
 (microtype)             in font `T1/LibertinusMono-TLF/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [5]
-<UML_state_machine_Fig1.png, id=143, 356.532pt x 142.131pt>
+
+
+Package natbib Warning: Citation `Lamport:LaTeX' on page 6 undefined on input line 479.
+
+[6{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}]
+<UML_state_machine_Fig1.png, id=152, 356.532pt x 142.131pt>
 File: UML_state_machine_Fig1.png Graphic file (type png)
 <use UML_state_machine_Fig1.png>
-Package pdftex.def Info: UML_state_machine_Fig1.png  used on input line 470.
+Package pdftex.def Info: UML_state_machine_Fig1.png  used on input line 522.
 (pdftex.def)             Requested size: 372.9679pt x 148.6954pt.
- [6 <./UML_state_machine_Fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 579--582
+
+
+Package natbib Warning: Citation `Abril07' on page 7 undefined on input line 554.
+
+
+Package natbib Warning: Citation `Cohen07' on page 7 undefined on input line 555.
+
+
+Package natbib Warning: Citation `JCohen96' on page 7 undefined on input line 556.
+
+
+Package natbib Warning: Citation `Kosiur01' on page 7 undefined on input line 556.
+
+
+Package natbib Warning: Citation `Harel79' on page 7 undefined on input line 558.
+
+
+Package natbib Warning: Citation `Editor00' on page 7 undefined on input line 559.
+
+
+Package natbib Warning: Citation `Editor00a' on page 7 undefined on input line 560.
+
+
+Package natbib Warning: Citation `Spector90' on page 7 undefined on input line 562.
+
+
+Package natbib Warning: Citation `Douglass98' on page 7 undefined on input line 563.
+
+
+Package natbib Warning: Citation `Knuth97' on page 7 undefined on input line 563.
+
+
+Package natbib Warning: Citation `Andler79' on page 7 undefined on input line 565.
+
+
+Package natbib Warning: Citation `Smith10' on page 7 undefined on input line 566.
+
+
+Package natbib Warning: Citation `VanGundy07' on page 7 undefined on input line 567.
+
+
+Package natbib Warning: Citation `Harel78' on page 7 undefined on input line 568.
+
+
+Package natbib Warning: Citation `Clarkson85' on page 7 undefined on input line 569.
+
+
+Package natbib Warning: Citation `anisi03' on page 7 undefined on input line 569.
+
+
+Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 571.
+
+
+Package natbib Warning: Citation `Ablamowicz07' on page 7 undefined on input line 571.
+
+
+Package natbib Warning: Citation `Poker06' on page 7 undefined on input line 571.
+
+
+Package natbib Warning: Citation `Obama08' on page 7 undefined on input line 571.
+
+
+Package natbib Warning: Citation `Novak03' on page 7 undefined on input line 572.
+
+
+Package natbib Warning: Citation `Lee05' on page 7 undefined on input line 572.
+
+
+Package natbib Warning: Citation `JoeScientist001' on page 7 undefined on input line 573.
+
+
+Package natbib Warning: Citation `rous08' on page 7 undefined on input line 573.
+
+
+Package natbib Warning: Citation `SaeediMEJ10' on page 7 undefined on input line 574.
+
+
+Package natbib Warning: Citation `SaeediJETC10' on page 7 undefined on input line 574.
+
+
+Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 576.
+
+
+Package natbib Warning: Citation `MR781536' on page 7 undefined on input line 577.
+
+
+Package natbib Warning: Citation `MR781537' on page 7 undefined on input line 577.
+
+
+Package natbib Warning: Citation `2004:ITE:1009386.1010128' on page 7 undefined on input line 578.
+
+
+Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 578.
+
+
+Package natbib Warning: Citation `TUGInstmem' on page 7 undefined on input line 579.
+
+
+Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 579.
+
+
+Package natbib Warning: Citation `R' on page 7 undefined on input line 579.
+
+
+Package natbib Warning: Citation `UMassCitations' on page 7 undefined on input line 579.
+
+[7 <./UML_state_machine_Fig1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 631--634
 
  []
 
-(sample-1col.bbl [7] [8]) [9] (sample-1col.aux)
+(sample-1col.bbl [8])
+
+Package natbib Warning: There were undefined citations.
+
+[9] (sample-1col.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 52059 strings out of 467871
- 1165916 string characters out of 5417892
- 1824368 words of memory out of 5000000
- 79615 multiletter control sequences out of 15000+600000
- 775457 words of font info for 310 fonts, out of 8000000 for 9000
+ 30632 strings out of 467871
+ 575956 string characters out of 5417892
+ 1184622 words of memory out of 5000000
+ 58561 multiletter control sequences out of 15000+600000
+ 774496 words of font info for 309 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,21n,131p,11334b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusMono-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on sample-1col.pdf (9 pages, 686295 bytes).
+ 122i,21n,121p,11334b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusMono-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on sample-1col.pdf (9 pages, 706273 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
- 89839 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 91419 words of extra memory for PDF output out of 106986 (max. 10000000)
 

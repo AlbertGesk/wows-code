@@ -16,9 +16,6 @@
 %% Minted listings support 
 %% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
 \usepackage{listings}
-\usepackage{pgfplots}
-\usepackage{subcaption}
-\usepackage{hyperref}
 %% auto break lines
 \lstset{breaklines=true}
 
@@ -29,54 +26,32 @@
 %%
 %% Rights management information.
 %% CC-BY is default license.
-\copyrightyear{2025}
+\copyrightyear{2026}
 \copyrightclause{Copyright for this paper by its authors.
   Use permitted under Creative Commons License Attribution 4.0
   International (CC BY 4.0).}
 
 %%
 %% This command is for the conference information
-\conference{Woodstock'22: Symposium on the irreproducible science,
-  June 07--11, 2022, Woodstock, NY}
+\conference{IR Lab Course, Winter Semester 2025}
 
 %%
 %% The "title" command
-\title{A better way to format your document for CEUR-WS using LaTeX}
-
-\tnotemark[1]
-\tnotetext[1]{You can use this document as the template for preparing your
-  publication. We recommend using the latest version of the ceurart style.}
+\title{A Comparative Study of Bo1 and RM3 Query Expansion using DPH Retrieval}
 
 %%
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
-\author[1,2]{Dmitry S. Kulyabov}[%
-orcid=0000-0002-0877-7063,
-email=kulyabov-ds@rudn.ru,
-url=https://yamadharma.github.io/,
+\author[1]{Albert Gesk}[%
+email=albert.gesk@gmail.com,
+url=https://github.com/AlbertGesk,
 ]
-\cormark[1]
-\fnmark[1]
-\address[1]{Peoples' Friendship University of Russia (RUDN University),
-  6 Miklukho-Maklaya St, Moscow, 117198, Russian Federation}
-\address[2]{Joint Institute for Nuclear Research,
-  6 Joliot-Curie, Dubna, Moscow region, 141980, Russian Federation}
+\author[1]{Lilian Erler}[%
+email=uk076601@student.uni-kassel.de,
+url=https://github.com/lilianerler,
+]
+\address[1]{University Kassel, Germany}
 
-\author[3]{Ilaria Tiddi}[%
-orcid=0000-0001-7116-9338,
-email=i.tiddi@vu.nl,
-url=https://kmitd.github.io/ilaria/,
-]
-\fnmark[1]
-\address[3]{Vrije Universiteit Amsterdam, De Boelelaan 1105, 1081 HV Amsterdam, The Netherlands}
-
-\author[4]{Manfred Jeusfeld}[%
-orcid=0000-0002-9421-8566,
-email=Manfred.Jeusfeld@acm.org,
-url=http://conceptbase.sourceforge.net/mjf/,
-]
-\fnmark[1]
-\address[4]{University of Skövde, Högskolevägen 1, 541 28 Skövde, Sweden}
 
 %% Footnotes
 \cortext[1]{Corresponding author.}
@@ -86,22 +61,26 @@ url=http://conceptbase.sourceforge.net/mjf/,
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  A clear and well-documented \LaTeX{} document is presented as an
-  article formatted for publication by CEUR-WS in a conference
-  proceedings. Based on the ``ceurart'' document class, this article
-  presents and explains many of the common variations, as well as many
-  of the formatting elements an author may use in the preparation of
-  the documentation of their work.
+  Query expansion via pseudo-relevance feedback is a well-established technique to improve 
+  retrieval effectiveness in information retrieval systems. Among classical approaches, 
+  Bo1 and RM3 are frequently used but exhibit varying effectiveness depending on the 
+  retrieval setting. In this work, we empirically compare Bo1 and RM3 query expansion 
+  within a controlled Retriever-Rewriter-Retriever pipeline using the DPH retrieval model. 
+  Experiments are conducted on the \textit{radboud-validation-20251114-training} dataset 
+  using nDCG@10 as evaluation metric. Statistical significance testing shows that neither 
+  a significant difference nor a significant improvement in retrieval effectiveness can be 
+  observed between Bo1 and RM3 under identical parameter settings.
 \end{abstract}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
 \begin{keywords}
-  LaTeX class \sep
-  paper template \sep
-  paper formatting \sep
-  CEUR-WS
+  Information Retrieval \sep
+  Query Expansion \sep
+  Bo1 \sep
+  RM3 \sep
+  PyTerrier
 \end{keywords}
 
 %%
@@ -111,46 +90,119 @@ url=http://conceptbase.sourceforge.net/mjf/,
 
 \section{Introduction}
 
-CEUR-WS's article template provides a consistent \LaTeX{} style for
-use across CEUR-WS publications, and incorporates accessibility and
-metadata-extraction functionality. This document will explain the
-major features of the document class.
+Query expansion using pseudo-relevance feedback (PRF) is a classical approach to mitigate 
+vocabulary mismatch in information retrieval (IR) systems. The mechanism of pseudo-relevance 
+feedback (PRF) involves extracting expansion terms from the initial top-ranked documents to 
+formulate a new query for a second retrieval stage. Among commonly used PRF techniques, Bo1 and RM3
+are widely adopted in traditional IR systems and toolkits.
 
-If you are new to publishing with CEUR-WS, this document is a valuable
-guide to the process of preparing your work for publication.
+Despite their popularity, the relative effectiveness of Bo1 and RM3 is known to be sensitive 
+to retrieval models, parameter settings, and datasets. This motivates a controlled comparison 
+of both methods under identical experimental conditions.
 
-The ``\verb|ceurart|'' document class can be used to prepare articles
-for any CEUR-WS publication, and for any stage of publication, from
-review to final ``camera-ready'' copy with {\itshape very} few changes
-to the source.
+In this paper, we investigate the following research question: \textit{Does the choice of Bo1 versus RM3 query expansion lead to significant differences 
+or improvements in retrieval effectiveness when applied within a DPH-based retrieval pipeline?}
 
-This class depends on the following packages
-for its proper functioning:
+Our contributions are:
+(i) a controlled experimental comparison of Bo1 and RM3 query expansion using identical 
+retrieval and feedback settings, and
+(ii) a statistical analysis of their impact on nDCG@10 on the 
+\textit{radboud-validation-20251114-training} dataset.
 
+
+\section{Related Work}
+
+\section{Methodology}
+This section depicts the experimental setup designed to answer the research question.
+
+\subsection{Dataset and Preprocessing}
+For the experiments, we utilized the \textit{radboud-validation-20251114-training} dataset. 
+The indexing of the documents was based on the standard textual representation (\texttt{default\_text}) 
+provided in the dataset. No additional preprocessing steps or filtering were applied, 
+meaning only the standard tokenization performed by PyTerrier was used. 
+Queries were derived exclusively from the title field of the topic descriptions; 
+the 'description' and 'narrative' fields were not taken into account.
+
+\subsection{Experimental Design}
+\label{subsec:exp}
+The experiment use a retriever-rewriter-retriever pipeline as foundation. The DPH retrieval model \cite{DBLP:conf/ecir/Amati06} implemented via PyTerrier 
+is setup with a thousand maximum number of results to return per query and with no metadata fields to return for each search result. 
+The pseudo-relevance feedback models,both the Bo1 \cite{DBLP:phd/ethos/Amati03} and RM3 \cite{DBLP:conf/trec/JaleelACDLLSW04} are implemented via PyTerrier as well.
+For both models, all parameters are remained at default, the number of feedback terms to use is set to ten and the number of feedback documents to use is set to three. 
+The interpolation weight between the original query and the feedback model for RM3 is set to 0.6.
+
+\subsection{Hypotheses and Null-Hypotheses}
+Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
 \begin{itemize}
-\item \verb|natbib.sty| for citation processing;
-\item \verb|geometry.sty| for margin settings;
-\item \verb|graphicx.sty| for graphics inclusion;
-\item \verb|hyperref.sty| optional package if hyperlinking is required in
-  the document;
-\item \verb|fontawesome5.sty| optional package for bells and whistles.
+  \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
+  \item $H^{}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
 \end{itemize}
 
-All the above packages are part of any
-standard \LaTeX{} installation.
-For the TexLive package, you should however make sure that the
-Libertinus font family is included. For Debian/Ubuntu, the command is:
-\begin{verbatim}
-    sudo apt install texlive-fonts-extra
-\end{verbatim}
+
+\section{Results}
+Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
+This means the observed difference is likely due to random variation across topics. 
+We failed to reject our $H^{0}_{1}$ and $H^{0}_{2}$, which means we can't prove our $H^{}_{1}$ and $H^{}_{2}$.
 
 
-\section{Modifications}
+\section{Conclusion}
+Given the parameters of 3 retrieved documents and 10 expansion terms for Bo1 and RM3, 
+both pseudo-relevance feedback-based transformer models behave similarly. 
+Experimenting with more feedback documents and more expansion terms in the future could be meaningful.
 
-Modifying the template --- including but not limited to: adjusting
-margins, typeface sizes, line spacing, paragraph and list definitions,
-and the use of the \verb|\vspace| command to manually adjust the
-vertical spacing between elements of your work --- is not allowed.
+\section{Reference}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Template parameters}
 

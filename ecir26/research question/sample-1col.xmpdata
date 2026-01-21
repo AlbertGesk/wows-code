@@ -1,8 +1,8 @@
-\Title{A better way to format your document for CEUR-WS using LaTeX}
-\Author{Dmitry S. Kulyabov\sep Ilaria Tiddi\sep Manfred Jeusfeld}
-\Keywords{LaTeX class \sep paper template \sep paper formatting \sep CEUR-WS}
+\Title{A Comparative Study of Bo1 and RM3 Query Expansion using DPH Retrieval}
+\Author{Albert Gesk\sep Lilian Erler}
+\Keywords{Information Retrieval \sep Query Expansion \sep Bo1 \sep RM3 \sep PyTerrier}
 \Subject{Layout by CEURART v0.5.3}
-\Copyright{\copyright\ 2025\ Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).}
+\Copyright{\copyright\ 2026\ Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).}
 \CopyrightURL{https://creativecommons.org/licenses/by/4.0}
 \Journaltitle{CEUR Workshop Proceedings}
 \Journalnumber{1613-0073}
