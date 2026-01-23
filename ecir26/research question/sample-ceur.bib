@@ -56,3 +56,50 @@
   biburl       = {https://dblp.org/rec/phd/ethos/Amati03.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
+
+@phdthesis{Wang25,
+  author       = {Wang Junmei},
+  title        = {A knowledge-based approach for pseudo-relevance feedback by exploiting semantic relevance},
+  year         = {2025},
+  url          = {https://doi.org/10.1007/s10115-025-02581-5},
+  biburl       = {https://citation-needed.springer.com/v2/references/10.1007/s10115-025-02581-5?format=refman&flavour=citation},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@INPROCEEDINGS{10725314,
+  author={Sinhababu, Nilanjan and Khatun, Rabina},
+  booktitle={2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)}, 
+  title={LEq: Large Language Models Generate Expanded Queries for Searching}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-4},
+  keywords={Large language models;Computational modeling;Query Expansion;LLM;Information Retrieval},
+  doi={10.1109/ICCCNT61001.2024.10725314}}
+
+@article{de2024performance,
+  title={Performance Comparison of Different Query Expansion and Pseudo-Relevance Feedback Methods},
+  author={de Swart, Laurens},
+  year={2024}
+}
+
+@article{10.1145/3572405,
+author = {Wang, Xiao and MacDonald, Craig and Tonellotto, Nicola and Ounis, Iadh},
+title = {ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval},
+year = {2023},
+issue_date = {February 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {17},
+number = {1},
+issn = {1559-1131},
+url = {https://doi.org/10.1145/3572405},
+doi = {10.1145/3572405},
+abstract = {Pseudo-relevance feedback mechanisms, from Rocchio to the relevance models, have shown the usefulness of expanding and reweighting the users’ initial queries using information occurring in an initial set of retrieved documents, known as the pseudo-relevant set. Recently, dense retrieval – through the use of neural contextual language models such as BERT for analysing the documents’ and queries’ contents and computing their relevance scores – has shown a promising performance on several information retrieval tasks still relying on the traditional inverted index for identifying documents relevant to a query. Two different dense retrieval families have emerged: the use of single embedded representations for each passage and query, e.g., using BERT’s [CLS] token, or via multiple representations, e.g., using an embedding for each token of the query and document (exemplified by ColBERT). In this work, we conduct the first study into the potential for multiple representation dense retrieval to be enhanced using pseudo-relevance feedback and present our proposed approach ColBERT-PRF. In particular, based on the pseudo-relevant set of documents identified using a first-pass dense retrieval, ColBERT-PRF extracts the representative feedback embeddings from the document embeddings of the pseudo-relevant set. Among the representative feedback embeddings, the embeddings that most highly discriminate among documents are employed as the expansion embeddings, which are then added to the original query representation. We show that these additional expansion embeddings both enhance the effectiveness of a reranking of the initial query results as well as an additional dense retrieval operation. Indeed, experiments on the MSMARCO passage ranking dataset show that MAP can be improved by up to 26\% on the TREC 2019 query set and 10\% on the TREC 2020 query set by the application of our proposed ColBERT-PRF method on a ColBERT dense retrieval approach.We further validate the effectiveness of our proposed pseudo-relevance feedback technique for a dense retrieval model on MSMARCO document ranking and TREC Robust04 document ranking tasks. For instance, ColBERT-PRF exhibits up to 21\% and 14\% improvement in MAP over the ColBERT E2E model on the MSMARCO document ranking TREC 2019 and TREC 2020 query sets, respectively. Additionally, we study the effectiveness of variants of the ColBERT-PRF model with different weighting methods. Finally, we show that ColBERT-PRF can be made more efficient, attaining up to 4.54\texttimes{} speedup over the default ColBERT-PRF model, and with little impact on effectiveness, through the application of approximate scoring and different clustering methods.},
+journal = {ACM Trans. Web},
+month = jan,
+articleno = {3},
+numpages = {39},
+keywords = {dense retrieval, BERT, pseudo-relevance feedback, Query expansion}
+}
+

@@ -93,17 +93,17 @@ url=https://github.com/lilianerler,
 Query expansion using pseudo-relevance feedback (PRF) is a classical approach to mitigate 
 vocabulary mismatch in information retrieval (IR) systems. The mechanism of pseudo-relevance 
 feedback (PRF) involves extracting expansion terms from the initial top-ranked documents to 
-formulate a new query for a second retrieval stage. Among commonly used PRF techniques, Bo1 and RM3
+formulate a new query for a second retrieval stage \cite{Wang25}. Among commonly used PRF techniques, Bo1 and RM3
 are widely adopted in traditional IR systems and toolkits.
 
-Despite their popularity, the relative effectiveness of Bo1 and RM3 is known to be sensitive 
+\noindent Despite their popularity, the relative effectiveness of Bo1 and RM3 is known to be sensitive 
 to retrieval models, parameter settings, and datasets. This motivates a controlled comparison 
 of both methods under identical experimental conditions.
 
-In this paper, we investigate the following research question: \textit{Does the choice of Bo1 versus RM3 query expansion lead to significant differences 
+\noindent In this paper, we investigate the following research question: \textit{Does the choice of Bo1 versus RM3 query expansion lead to significant differences 
 or improvements in retrieval effectiveness when applied within a DPH-based retrieval pipeline?}
 
-Our contributions are:
+\noindent Our contributions are:
 (i) a controlled experimental comparison of Bo1 and RM3 query expansion using identical 
 retrieval and feedback settings, and
 (ii) a statistical analysis of their impact on nDCG@10 on the 
@@ -111,6 +111,30 @@ retrieval and feedback settings, and
 
 
 \section{Related Work}
+Pseudo-relevance feedback (PRF) is a well-established technique in information retrieval 
+to improve query effectiveness by automatically expanding the original query with terms 
+extracted from top-ranked documents \cite{Wang25}.  
+
+Previous studies have shown that RM3 provides robust improvements over baseline retrieval models
+like BM25, particularly when the number of feedback documents and expansion terms are carefully
+tuned. However, the quality of the expansion terms can be limited because of it's reliance on pseudo-
+relevant documents. This happens especially in scenarios where the top-ranked documents are not 
+truly relevant. \cite{10725314}
+
+These findings motivate a controlled comparison between RM3 and Bo1, as they represent 
+alternative pseudo-relevance feedback methods based on distinct term selection principles.
+Bo1 is based on divergence-from-randomness (DRF) and selects terms that are statistically informative 
+in the top-retrieved documents \cite{de2024performance}, while RM3 is a probabilistic relevance 
+model \cite{10725314}.
+
+Other works have explored hybrid or transformer-based retrieval pipelines that 
+incorporate PRF or developed a demanding pipelines, such as ColBERT-PRF, which integrates
+semantic pseudo-relevance feedback into dense retrieval models \cite{10.1145/3572405}. But controlled comparisons of 
+classical Bo1 and RM3 within identical DPH-based pipelines remain limited.
+
+This motivates our work to conduct a systematic and controlled evaluation of Bo1 and RM3 
+under identical experimental conditions, assessing not only retrieval effectiveness but also 
+statistical significance of the observed differences.
 
 \section{Methodology}
 This section depicts the experimental setup designed to answer the research question.

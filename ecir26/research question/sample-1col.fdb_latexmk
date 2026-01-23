@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex sample-1col"] 1769179204.97362 "sample-1col.aux" "sample-1col.bbl" "sample-1col" 1769179220.77731 0
+["bibtex sample-1col"] 1769198039.69611 "sample-1col.aux" "sample-1col.bbl" "sample-1col" 1769198054.99694 0
   "./elsarticle-num-names.bst" 1769100878 30431 7a30bf729a4503bf3d6be1e1e9480509 ""
-  "./sample-ceur.bib" 1769100878 2666 9bbfdbe1b50adce42bf5089749c743a2 ""
-  "sample-1col.aux" 1769179216 14897 9cdf8c755f0dfd05b83654aa2b8d252c "pdflatex"
+  "./sample-ceur.bib" 1769197932 7154 9742555ce2a42679667a5db2ec7b7f5b ""
+  "sample-1col.aux" 1769198049 15281 8e96e951e81bd9719e3a186313244a16 "pdflatex"
   (generated)
   "sample-1col.bbl"
   "sample-1col.blg"
   (rewritten before read)
-["pdflatex"] 1769179206.2173 "c:/Users/Lilian/Documents/Lilian - Studium PlusMint/Informatik/9 Semester Wise 25/Information Retrieval/GitHub/wows-code/ecir26/research question/sample-1col.tex" "sample-1col.pdf" "sample-1col" 1769179220.78032 0
+["pdflatex"] 1769198040.68461 "c:/Users/Lilian/Documents/Lilian - Studium PlusMint/Informatik/9 Semester Wise 25/Information Retrieval/GitHub/wows-code/ecir26/research question/sample-1col.tex" "sample-1col.pdf" "sample-1col" 1769198055.00157 0
   "C:/Users/Lilian/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768404709 184077 45705f4fc99e2b682f58041f39cb6eb4 ""
   "C:/Users/Lilian/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1768404045 13334012 2b00f1104fd7ff1923f616e8f5a6522f ""
   "C:/Users/Lilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1651500229 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -238,14 +238,14 @@
   "C:/Users/Lilian/AppData/Local/Programs/MiKTeX/tex/latex/xmpincl/xmpincl.sty" 1633254124 2832 d498c59e94b7dfa3b4bcf74380ad6348 ""
   "C:/Users/Lilian/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "UML_state_machine_Fig1.png" 1769100878 10434 67611b072be6e951a816b9d986ee3bc6 ""
-  "c:/Users/Lilian/Documents/Lilian - Studium PlusMint/Informatik/9 Semester Wise 25/Information Retrieval/GitHub/wows-code/ecir26/research question/sample-1col.tex" 1769179188 25466 74df51cecbe67b44251ce7c8ea8812cf ""
+  "c:/Users/Lilian/Documents/Lilian - Studium PlusMint/Informatik/9 Semester Wise 25/Information Retrieval/GitHub/wows-code/ecir26/research question/sample-1col.tex" 1769198023 27197 05bd61171a377e75a1a8ec00c94eaabd ""
   "ceurart.cls" 1769100878 87764 2c6f7928cfcf4525d25a7760fec1fcc1 ""
-  "pdfa.xmpi" 1769179212 6740 1a997c3db769356040c814f9bdb022b2 "pdflatex"
-  "sample-1col.abs" 1769179214 776 858b0b2d26c16318c5fcfbe73363d9ae "pdflatex"
-  "sample-1col.aux" 1769179216 14897 9cdf8c755f0dfd05b83654aa2b8d252c "pdflatex"
-  "sample-1col.bbl" 1769179205 2749 79525b92f2c22271b058da43362b4f27 "bibtex sample-1col"
-  "sample-1col.tex" 1769179188 25466 74df51cecbe67b44251ce7c8ea8812cf ""
-  "sample-1col.xmpdata" 1769179216 524 99d4a674d3e534e461568a540f7ae6a8 "pdflatex"
+  "pdfa.xmpi" 1769198045 6740 1a32c7055803460d84662de613952bce "pdflatex"
+  "sample-1col.abs" 1769198047 776 858b0b2d26c16318c5fcfbe73363d9ae "pdflatex"
+  "sample-1col.aux" 1769198049 15281 8e96e951e81bd9719e3a186313244a16 "pdflatex"
+  "sample-1col.bbl" 1769198040 4297 19ceb2338ce17aaff1813b2e6171569c "bibtex sample-1col"
+  "sample-1col.tex" 1769198023 27197 05bd61171a377e75a1a8ec00c94eaabd ""
+  "sample-1col.xmpdata" 1769198049 524 99d4a674d3e534e461568a540f7ae6a8 "pdflatex"
   (generated)
   "pdfa.xmpi"
   "sample-1col.abs"
