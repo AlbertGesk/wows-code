@@ -1,0 +1,53 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Inproceedings
+\bibitem[{Amati(2006)}]{DBLP:conf/ecir/Amati06}
+\bibinfo{author}{G.~Amati},
+\newblock \bibinfo{title}{Frequentist and bayesian approach to information
+  retrieval},
+\newblock in: \bibinfo{editor}{M.~Lalmas}, \bibinfo{editor}{A.~MacFarlane},
+  \bibinfo{editor}{S.~M. R{\"{u}}ger}, \bibinfo{editor}{A.~Tombros},
+  \bibinfo{editor}{T.~Tsikrika}, \bibinfo{editor}{A.~Yavlinsky} (Eds.),
+  \bibinfo{booktitle}{Advances in Information Retrieval, 28th European
+  Conference on {IR} Research, {ECIR} 2006, London, UK, April 10-12, 2006,
+  Proceedings}, volume \bibinfo{volume}{3936} of
+  \textit{\bibinfo{series}{Lecture Notes in Computer Science}},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{2006}, pp.
+  \bibinfo{pages}{13--24}. \URLprefix
+  \url{https://doi.org/10.1007/11735106\_3}.
+  \DOIprefix\doi{10.1007/11735106\_3}.
+%Type = Phdthesis
+\bibitem[{Amati(2003)}]{DBLP:phd/ethos/Amati03}
+\bibinfo{author}{G.~Amati}, \bibinfo{title}{Probability models for information
+  retrieval based on divergence from randomness}, Ph.D. thesis, University of
+  Glasgow, {UK}, \bibinfo{year}{2003}. \URLprefix
+  \url{http://theses.gla.ac.uk/1570/}.
+%Type = Inproceedings
+\bibitem[{Jaleel et~al.(2004)Jaleel, Allan, Croft, Diaz, Larkey, Li, Smucker,
+  and Wade}]{DBLP:conf/trec/JaleelACDLLSW04}
+\bibinfo{author}{N.~A. Jaleel}, \bibinfo{author}{J.~Allan},
+  \bibinfo{author}{W.~B. Croft}, \bibinfo{author}{F.~Diaz},
+  \bibinfo{author}{L.~S. Larkey}, \bibinfo{author}{X.~Li},
+  \bibinfo{author}{M.~D. Smucker}, \bibinfo{author}{C.~Wade},
+\newblock \bibinfo{title}{Umass at {TREC} 2004: Novelty and {HARD}},
+\newblock in: \bibinfo{editor}{E.~M. Voorhees}, \bibinfo{editor}{L.~P.
+  Buckland} (Eds.), \bibinfo{booktitle}{Proceedings of the Thirteenth Text
+  REtrieval Conference, {TREC} 2004, Gaithersburg, Maryland, USA, November
+  16-19, 2004}, volume \bibinfo{volume}{500-261} of
+  \textit{\bibinfo{series}{{NIST} Special Publication}},
+  \bibinfo{publisher}{National Institute of Standards and Technology {(NIST)}},
+  \bibinfo{year}{2004}. \URLprefix
+  \url{http://trec.nist.gov/pubs/trec13/papers/umass.novelty.hard.pdf}.
+
+\end{thebibliography}

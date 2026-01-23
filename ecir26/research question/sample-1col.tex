@@ -4,7 +4,7 @@
 %% twocolumn : Two column layout. Do not use twocolumn for papers submitted to CEUR-WS!
 %% hf: enable header and footer.
 \documentclass[
-% twocolumn,
+%twocolumn,
 % hf,
 ]{ceurart}
 
@@ -120,8 +120,6 @@ For the experiments, we utilized the \textit{radboud-validation-20251114-trainin
 The indexing of the documents was based on the standard textual representation (\texttt{default\_text}) 
 provided in the dataset. No additional preprocessing steps or filtering were applied, 
 meaning only the standard tokenization performed by PyTerrier was used. 
-Queries were derived exclusively from the title field of the topic descriptions; 
-the 'description' and 'narrative' fields were not taken into account.
 
 \subsection{Experimental Design}
 \label{subsec:exp}
@@ -130,6 +128,11 @@ is setup with a thousand maximum number of results to return per query and with 
 The pseudo-relevance feedback models,both the Bo1 \cite{DBLP:phd/ethos/Amati03} and RM3 \cite{DBLP:conf/trec/JaleelACDLLSW04} are implemented via PyTerrier as well.
 For both models, all parameters are remained at default, the number of feedback terms to use is set to ten and the number of feedback documents to use is set to three. 
 The interpolation weight between the original query and the feedback model for RM3 is set to 0.6.
+
+\noindent To evaluate the effectiveness of the retrieval pipelines, differences in per-topic 
+nDCG@10 scores were assessed for statistical significance using a paired Student’s 
+t-test. The significance level was set to $\alpha = 0.05$, and Bonferroni correction 
+was applied to account for multiple comparisons.
 
 \subsection{Hypotheses and Null-Hypotheses}
 Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
@@ -142,9 +145,24 @@ Given the research question the following two hypotheses and corresponding null-
 
 
 \section{Results}
-Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
+Table~\ref{tab:results} presents the retrieval effectiveness and statistical testing results.
+The DPH-Bo1-DPH pipeline achieves a higher mean nDCG@10 score than DPH-RM3-DPH. Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
 This means the observed difference is likely due to random variation across topics. 
 We failed to reject our $H^{0}_{1}$ and $H^{0}_{2}$, which means we can't prove our $H^{}_{1}$ and $H^{}_{2}$.
+
+\begin{table}[t]
+\centering
+\caption{Retrieval effectiveness and statistical significance (nDCG@10).}
+\label{tab:results}
+\begin{tabular}{lccc}
+\toprule
+Method & nDCG@10 & p-value \\
+\midrule
+DPH-Bo1-DPH & 0.4947 & \multirow{2}{*}{0.283} \\
+DPH-RM3-DPH & 0.4744 &   \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 \section{Conclusion}
