@@ -4,7 +4,7 @@
 %% twocolumn : Two column layout. Do not use twocolumn for papers submitted to CEUR-WS!
 %% hf: enable header and footer.
 \documentclass[
-% twocolumn,
+%twocolumn,
 % hf,
 ]{ceurart}
 
@@ -93,24 +93,47 @@ url=https://github.com/lilianerler,
 Query expansion using pseudo-relevance feedback (PRF) is a classical approach to mitigate 
 vocabulary mismatch in information retrieval (IR) systems. The mechanism of pseudo-relevance 
 feedback (PRF) involves extracting expansion terms from the initial top-ranked documents to 
-formulate a new query for a second retrieval stage. Among commonly used PRF techniques, Bo1 and RM3
+formulate a new query for a second retrieval stage \cite{Wang25}. Among commonly used PRF techniques, Bo1 and RM3
 are widely adopted in traditional IR systems and toolkits.
 
-Despite their popularity, the relative effectiveness of Bo1 and RM3 is known to be sensitive 
+\noindent Despite their popularity, the relative effectiveness of Bo1 and RM3 is known to be sensitive 
 to retrieval models, parameter settings, and datasets. This motivates a controlled comparison 
 of both methods under identical experimental conditions.
 
-In this paper, we investigate the following research question: \textit{Does the choice of Bo1 versus RM3 query expansion lead to significant differences 
+\noindent In this paper, we investigate the following research question: \textit{Does the choice of Bo1 versus RM3 query expansion lead to significant differences 
 or improvements in retrieval effectiveness when applied within a DPH-based retrieval pipeline?}
 
-Our contributions are:
+\noindent Our contributions are:
 (i) a controlled experimental comparison of Bo1 and RM3 query expansion using identical 
 retrieval and feedback settings, and
 (ii) a statistical analysis of their impact on nDCG@10 on the 
 \textit{radboud-validation-20251114-training} dataset.
 
 \section{Related Work}
+Pseudo-relevance feedback (PRF) is a well-established technique in information retrieval 
+to improve query effectiveness by automatically expanding the original query with terms 
+extracted from top-ranked documents \cite{Wang25}.  
 
+Previous studies have shown that RM3 provides robust improvements over baseline retrieval models
+like BM25, particularly when the number of feedback documents and expansion terms are carefully
+tuned. However, the quality of the expansion terms can be limited because of it's reliance on pseudo-
+relevant documents. This happens especially in scenarios where the top-ranked documents are not 
+truly relevant. \cite{10725314}
+
+These findings motivate a controlled comparison between RM3 and Bo1, as they represent 
+alternative pseudo-relevance feedback methods based on distinct term selection principles.
+Bo1 is based on divergence-from-randomness (DRF) and selects terms that are statistically informative 
+in the top-retrieved documents \cite{de2024performance}, while RM3 is a probabilistic relevance 
+model \cite{10725314}.
+
+Other works have explored hybrid or transformer-based retrieval pipelines that 
+incorporate PRF or developed a demanding pipelines, such as ColBERT-PRF, which integrates
+semantic pseudo-relevance feedback into dense retrieval models \cite{10.1145/3572405}. But controlled comparisons of 
+classical Bo1 and RM3 within identical DPH-based pipelines remain limited.
+
+This motivates our work to conduct a systematic and controlled evaluation of Bo1 and RM3 
+under identical experimental conditions, assessing not only retrieval effectiveness but also 
+statistical significance of the observed differences.
 
 \section{Methodology}
 This section depicts the experimental setup designed to answer the research question.
@@ -129,8 +152,6 @@ For the experiments, we utilized the \textit{radboud-validation-20251114-trainin
 The indexing of the documents was based on the standard textual representation (\texttt{default\_text}) 
 provided in the dataset. No additional preprocessing steps or filtering were applied, 
 meaning only the standard tokenization performed by PyTerrier was used. 
-Queries were derived exclusively from the title field of the topic descriptions; 
-the 'description' and 'narrative' fields were not taken into account.
 
 \subsection{Experimental Design}
 \label{subsec:exp}
@@ -140,14 +161,40 @@ The pseudo-relevance feedback models,both the Bo1 \cite{DBLP:phd/ethos/Amati03} 
 For both models, all parameters are remained at default, the number of feedback terms to use is set to ten and the number of feedback documents to use is set to three. 
 The interpolation weight between the original query and the feedback model for RM3 is set to 0.6.
 
-\subsection{Analysis}
+\noindent To evaluate the effectiveness of the retrieval pipelines, differences in per-topic 
+nDCG@10 scores were assessed for statistical significance using a paired Student’s 
+t-test. The significance level was set to $\alpha = 0.05$, and Bonferroni correction 
+was applied to account for multiple comparisons.
 
+\subsection{Hypotheses and Null-Hypotheses}
+Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
+\begin{itemize}
+  \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
+  \item $H^{}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+\end{itemize}
 
 
 \section{Results}
-Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
+Table~\ref{tab:results} presents the retrieval effectiveness and statistical testing results.
+The DPH-Bo1-DPH pipeline achieves a higher mean nDCG@10 score than DPH-RM3-DPH. Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
 This means the observed difference is likely due to random variation across topics. 
 We failed to reject our $H^{0}_{1}$ and $H^{0}_{2}$, which means we can't prove our $H^{}_{1}$ and $H^{}_{2}$.
+
+\begin{table}[t]
+\centering
+\caption{Retrieval effectiveness and statistical significance (nDCG@10).}
+\label{tab:results}
+\begin{tabular}{lccc}
+\toprule
+Method & nDCG@10 & p-value \\
+\midrule
+DPH-Bo1-DPH & 0.4947 & \multirow{2}{*}{0.283} \\
+DPH-RM3-DPH & 0.4744 &   \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 \section{Conclusion}

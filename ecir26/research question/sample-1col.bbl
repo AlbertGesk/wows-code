@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -11,6 +11,36 @@
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Phdthesis
+\bibitem[{Junmei(2025)}]{Wang25}
+\bibinfo{author}{W.~Junmei}, \bibinfo{title}{A knowledge-based approach for
+  pseudo-relevance feedback by exploiting semantic relevance}, Ph.D. thesis,
+  \bibinfo{year}{2025}. \URLprefix
+  \url{https://doi.org/10.1007/s10115-025-02581-5}.
+%Type = Inproceedings
+\bibitem[{Sinhababu and Khatun(2024)}]{10725314}
+\bibinfo{author}{N.~Sinhababu}, \bibinfo{author}{R.~Khatun},
+\newblock \bibinfo{title}{Leq: Large language models generate expanded queries
+  for searching},
+\newblock in: \bibinfo{booktitle}{2024 15th International Conference on
+  Computing Communication and Networking Technologies (ICCCNT)},
+  \bibinfo{year}{2024}, pp. \bibinfo{pages}{1--4}.
+  \DOIprefix\doi{10.1109/ICCCNT61001.2024.10725314}.
+%Type = Article
+\bibitem[{de~Swart(2024)}]{de2024performance}
+\bibinfo{author}{L.~de~Swart},
+\newblock \bibinfo{title}{Performance comparison of different query expansion
+  and pseudo-relevance feedback methods}  (\bibinfo{year}{2024}).
+%Type = Article
+\bibitem[{Wang et~al.(2023)Wang, MacDonald, Tonellotto, and
+  Ounis}]{10.1145/3572405}
+\bibinfo{author}{X.~Wang}, \bibinfo{author}{C.~MacDonald},
+  \bibinfo{author}{N.~Tonellotto}, \bibinfo{author}{I.~Ounis},
+\newblock \bibinfo{title}{Colbert-prf: Semantic pseudo-relevance feedback for
+  dense passage and document retrieval},
+\newblock \bibinfo{journal}{ACM Trans. Web} \bibinfo{volume}{17}
+  (\bibinfo{year}{2023}). \URLprefix \url{https://doi.org/10.1145/3572405}.
+  \DOIprefix\doi{10.1145/3572405}.
 %Type = Inproceedings
 \bibitem[{Amati(2006)}]{DBLP:conf/ecir/Amati06}
 \bibinfo{author}{G.~Amati},
