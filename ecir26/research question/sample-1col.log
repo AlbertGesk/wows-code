@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  24 JAN 2026 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  24 JAN 2026 17:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -141,10 +141,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
 (typearea)              on input line 80.
-Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input line 84.
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt.clo
-File: scrsize11pt.clo 2025/12/01 v3.49 KOMA-Script font size class option (11pt)
-) (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+ (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -1222,7 +1219,7 @@ LaTeX Font Info:    Trying to load font information for T1+LibertinusSerif-TLF o
 File: T1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for T1/LibertinusSerif-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 24.
+(Font)              scaled to size 9.0pt on input line 24.
  (sample-1col.aux)
 \openout1 = `sample-1col.aux'.
 
@@ -1312,7 +1309,7 @@ Package hyperref Info: Link coloring ON on input line 24.
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=452.9679pt
-* \textheight=704.60031pt
+* \textheight=702.19824pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-43.81725pt
@@ -1323,11 +1320,11 @@ Package hyperref Info: Link coloring ON on input line 24.
 * \marginparwidth=59.7508pt
 * \marginparsep=12.8401pt
 * \columnsep=24.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=8.09998pt plus 3.5996pt minus 1.80037pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
+* \@twocolumntrue
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -1341,30 +1338,46 @@ Package tocbasic Info: omitting babel extension for `lol'
 \openout5 = `sample-1col.abs'.
 
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 84.
+(Font)              scaled to size 9.0pt on input line 84.
 LaTeX Font Info:    Trying to load font information for T1+LibertinusSans-TLF on input line 84.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinussans-tlf.fd
 File: T1LibertinusSans-TLF.fd 2024/09/22 (autoinst) Font definitions for T1/LibertinusSans-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 84.
+(Font)              scaled to size 9.0pt on input line 84.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusSans-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 84.
+(Font)              scaled to size 7.50009pt on input line 84.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 89.
+(Font)              scaled to size 15.55197pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 89.
+(Font)              scaled to size 15.55197pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 89.
+(Font)              scaled to size 15.55197pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 89.
+(Font)              scaled to size 10.79997pt on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <10.79997> on input line 89.
 <<ot1.cmap>> (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)<<oml.cmap>><<oms.cmap>><<omx.cmap>>
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.55994> not available
+(Font)              size <8> substituted on input line 89.
+
+<<oml.cmap>>
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.55994> not available
+(Font)              size <8> substituted on input line 89.
+
+<<oms.cmap>>
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.55994> not available
+(Font)              size <8> substituted on input line 89.
+
+<<omx.cmap>>
 LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
  (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1378,28 +1391,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 89.
+(Font)              scaled to size 7.55994pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 89.
+(Font)              scaled to size 7.55994pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 89.
+(Font)              scaled to size 12.96002pt on input line 89.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 89.
+(Font)              scaled to size 7.50009pt on input line 89.
+LaTeX Font Info:    Calculating math sizes for size <7.50009> on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.50009> not available
+(Font)              size <8> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.75005> not available
+(Font)              size <5> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.50009> not available
+(Font)              size <8> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.75005> not available
+(Font)              size <5> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.50009> not available
+(Font)              size <8> substituted on input line 89.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.75005> not available
+(Font)              size <5> substituted on input line 89.
+
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 89.
- (sample-1col.abs)
+(Font)              scaled to size 5.25003pt on input line 89.
+(sample-1col.abs)
 Overfull \hbox (407.66833pt too wide) detected at line 89
 []
  []
 
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 89.
-
-Package hyperref Warning: Ignoring empty anchor on input line 89.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 89.
-
+(Font)              scaled to size 5.25003pt on input line 89.
 
 Package hyperref Warning: Ignoring empty anchor on input line 89.
 
@@ -1418,215 +1451,108 @@ Package hyperref Warning: Ignoring empty anchor on input line 89.
 File: doclicense-CC-by-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-88x31.pdf>
 Package pdftex.def Info: doclicense-CC-by-88x31.pdf  used on input line 89.
-(pdftex.def)             Requested size: 38.32509pt x 13.41362pt.
+(pdftex.def)             Requested size: 32.37479pt x 11.33087pt.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 4.5pt on input line 89.
 LaTeX Font Info:    Trying to load font information for TS1+LibertinusSerif-TLF on input line 89.
 (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\ts1libertinusserif-tlf.fd
 File: TS1LibertinusSerif-TLF.fd 2024/09/22 (autoinst) Font definitions for TS1/LibertinusSerif-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 89.
+(Font)              scaled to size 4.5pt on input line 89.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusSerif-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (4.5pt too wide) in paragraph at lines 89--89
+Overfull \hbox (3.75005pt too wide) in paragraph at lines 89--89
 [][][][]||$[]$ $[]$|  
  []
 
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 91.
+(Font)              scaled to size 9.0pt on input line 91.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 91.
+(Font)              scaled to size 12.96002pt on input line 91.
 LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 104.
-LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 128.
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 128.
-[1
-
-{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
+(Font)              scaled to size 9.0pt on input line 104.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 141.
-LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 144.
-LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 152.
- (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusmono-tlf.fd
+(Font)              scaled to size 10.79997pt on input line 141.
+LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 143.
+(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusmono-tlf.fd
 File: T1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for T1/LibertinusMono-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 152.
+(Font)              scaled to size 7.65005pt on input line 143.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package microtype Info: Character `guilsinglleft ' is missing
-(microtype)             in font `T1/LibertinusMono-TLF/m/n/10.95'.
+(microtype)             in font `T1/LibertinusMono-TLF/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `guilsinglright ' is missing
-(microtype)             in font `T1/LibertinusMono-TLF/m/n/10.95'.
+(microtype)             in font `T1/LibertinusMono-TLF/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
- [2{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc}]
+
+Underfull \hbox (badness 1122) in paragraph at lines 142--146
+\T1/LibertinusSerif-TLF/m/it/9 (+20) 20251114-training \T1/LibertinusSerif-TLF/m/n/9 (+20) dataset. The in-dex-ing of the doc-u-
+ []
+
+LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
+(Font)              scaled to size 8.21255pt on input line 159.
+LaTeX Font Info:    Calculating math sizes for size <8.21255> on input line 159.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.10628> not available
+(Font)              size <5> substituted on input line 159.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.10628> not available
+(Font)              size <5> substituted on input line 159.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.10628> not available
+(Font)              size <5> substituted on input line 159.
+
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 8.21255pt on input line 159.
+[1{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}
+
+
+{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
+LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 163.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 187.
- [3] [4] [5]
-Underfull \hbox (badness 7451) in paragraph at lines 447--452
-\T1/LibertinusSerif-TLF/m/n/10.95 (+20) Your work should use stan-dard L[]T[]X sec-tion-ing com-mands: [][]\T1/LibertinusMono-TLF/m/n/10.95 \section[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) , [][]\T1/LibertinusMono-TLF/m/n/10.95 \subsection[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) ,
+(Font)              scaled to size 8.21255pt on input line 180.
+ [2] (sample-1col.bbl
+Underfull \hbox (badness 6204) in paragraph at lines 16--21
+\T1/LibertinusSerif-TLF/m/n/9 (+20) relevance feed-back by ex-ploit-ing se-man-tic rel-e-
  []
 
-[6]
-LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 508.
-Package microtype Info: Character `guilsinglleft ' is missing
-(microtype)             in font `T1/LibertinusMono-TLF/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `guilsinglright ' is missing
-(microtype)             in font `T1/LibertinusMono-TLF/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
+) [3
 
-
-Package natbib Warning: Citation `Lamport:LaTeX' on page 7 undefined on input line 529.
-
-[7{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}]
-<UML_state_machine_Fig1.png, id=174, 356.532pt x 142.131pt>
-File: UML_state_machine_Fig1.png Graphic file (type png)
-<use UML_state_machine_Fig1.png>
-Package pdftex.def Info: UML_state_machine_Fig1.png  used on input line 572.
-(pdftex.def)             Requested size: 372.9679pt x 148.6954pt.
-
-
-Package natbib Warning: Citation `Abril07' on page 8 undefined on input line 604.
-
-
-Package natbib Warning: Citation `Cohen07' on page 8 undefined on input line 605.
-
-
-Package natbib Warning: Citation `JCohen96' on page 8 undefined on input line 606.
-
-
-Package natbib Warning: Citation `Kosiur01' on page 8 undefined on input line 606.
-
-
-Package natbib Warning: Citation `Harel79' on page 8 undefined on input line 608.
-
-
-Package natbib Warning: Citation `Editor00' on page 8 undefined on input line 609.
-
-
-Package natbib Warning: Citation `Editor00a' on page 8 undefined on input line 610.
-
-
-Package natbib Warning: Citation `Spector90' on page 8 undefined on input line 612.
-
-
-Package natbib Warning: Citation `Douglass98' on page 8 undefined on input line 613.
-
-
-Package natbib Warning: Citation `Knuth97' on page 8 undefined on input line 613.
-
-
-Package natbib Warning: Citation `Andler79' on page 8 undefined on input line 615.
-
-
-Package natbib Warning: Citation `Smith10' on page 8 undefined on input line 616.
-
-
-Package natbib Warning: Citation `VanGundy07' on page 8 undefined on input line 617.
-
-
-Package natbib Warning: Citation `Harel78' on page 8 undefined on input line 618.
-
-
-Package natbib Warning: Citation `Clarkson85' on page 8 undefined on input line 619.
-
-
-Package natbib Warning: Citation `anisi03' on page 8 undefined on input line 619.
-
-
-Package natbib Warning: Citation `Thornburg01' on page 8 undefined on input line 621.
-
-
-Package natbib Warning: Citation `Ablamowicz07' on page 8 undefined on input line 621.
-
-
-Package natbib Warning: Citation `Poker06' on page 8 undefined on input line 621.
-
-
-Package natbib Warning: Citation `Obama08' on page 8 undefined on input line 621.
-
-
-Package natbib Warning: Citation `Novak03' on page 8 undefined on input line 622.
-
-
-Package natbib Warning: Citation `Lee05' on page 8 undefined on input line 622.
-
-
-Package natbib Warning: Citation `JoeScientist001' on page 8 undefined on input line 623.
-
-
-Package natbib Warning: Citation `rous08' on page 8 undefined on input line 623.
-
-
-Package natbib Warning: Citation `SaeediMEJ10' on page 8 undefined on input line 624.
-
-
-Package natbib Warning: Citation `SaeediJETC10' on page 8 undefined on input line 624.
-
-
-Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 8 undefined on input line 626.
-
-
-Package natbib Warning: Citation `MR781536' on page 8 undefined on input line 627.
-
-
-Package natbib Warning: Citation `MR781537' on page 8 undefined on input line 627.
-
-
-Package natbib Warning: Citation `2004:ITE:1009386.1010128' on page 8 undefined on input line 628.
-
-
-Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 8 undefined on input line 628.
-
-
-Package natbib Warning: Citation `TUGInstmem' on page 8 undefined on input line 629.
-
-
-Package natbib Warning: Citation `Thornburg01' on page 8 undefined on input line 629.
-
-
-Package natbib Warning: Citation `R' on page 8 undefined on input line 629.
-
-
-Package natbib Warning: Citation `UMassCitations' on page 8 undefined on input line 629.
-
-[8 <./UML_state_machine_Fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 681--684
-
- []
-
-(sample-1col.bbl [9])
-
-Package natbib Warning: There were undefined citations.
-
-[10] (sample-1col.aux)
+] (sample-1col.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.24995pt have occurred.
+
  ) 
 Here is how much of TeX's memory you used:
- 30659 strings out of 467871
- 576510 string characters out of 5417892
- 1185622 words of memory out of 5000000
- 58575 multiletter control sequences out of 15000+600000
- 775036 words of font info for 313 fonts, out of 8000000 for 9000
+ 30265 strings out of 467871
+ 572069 string characters out of 5417892
+ 1152535 words of memory out of 5000000
+ 58312 multiletter control sequences out of 15000+600000
+ 776483 words of font info for 292 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,21n,121p,11334b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusMono-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on sample-1col.pdf (10 pages, 721264 bytes).
+ 122i,20n,121p,11334b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusMono-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on sample-1col.pdf (3 pages, 524933 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 91427 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 85094 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -4,7 +4,7 @@
 %% twocolumn : Two column layout. Do not use twocolumn for papers submitted to CEUR-WS!
 %% hf: enable header and footer.
 \documentclass[
-%twocolumn,
+twocolumn,
 % hf,
 ]{ceurart}
 
@@ -43,7 +43,7 @@
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
 \author[1]{Albert Gesk}[%
-email=albert.gesk@gmail.com,
+email=uk071960@uni-kassel.de,
 url=https://github.com/AlbertGesk,
 ]
 \author[1]{Lilian Erler}[%
@@ -54,8 +54,8 @@ url=https://github.com/lilianerler,
 
 
 %% Footnotes
-\cortext[1]{Corresponding author.}
-\fntext[1]{These authors contributed equally.}
+% \cortext[1]{Corresponding author.}
+% \fntext[1]{These authors contributed equally.}
 
 %%
 %% The abstract is a short summary of the work to be presented in the
@@ -138,15 +138,6 @@ statistical significance of the observed differences.
 \section{Methodology}
 This section depicts the experimental setup designed to answer the research question.
 
-\subsection{Hypotheses and Null-Hypotheses}
-Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
-\begin{itemize}
-  \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-  \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
-  \item $H^{}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-  \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-\end{itemize}
-
 \subsection{Dataset and Preprocessing}
 For the experiments, we utilized the \textit{radboud-validation-20251114-training} dataset. 
 The indexing of the documents was based on the standard textual representation (\texttt{default\_text}) 
@@ -167,7 +158,7 @@ t-test. The significance level was set to $\alpha = 0.05$, and Bonferroni correc
 was applied to account for multiple comparisons.
 
 \subsection{Hypotheses and Null-Hypotheses}
-Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
+Based on the research question, two hypotheses and their corresponding null hypotheses were formulated:
 \begin{itemize}
   \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
   \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
@@ -175,12 +166,14 @@ Given the research question the following two hypotheses and corresponding null-
   \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
 \end{itemize}
 
-
 \section{Results}
 Table~\ref{tab:results} presents the retrieval effectiveness and statistical testing results.
-The DPH-Bo1-DPH pipeline achieves a higher mean nDCG@10 score than DPH-RM3-DPH. Though, Bo1 performs better than RM3. The p-value of 0.283 is significantly larger than 0.05. 
-This means the observed difference is likely due to random variation across topics. 
-We failed to reject our $H^{0}_{1}$ and $H^{0}_{2}$, which means we can't prove our $H^{}_{1}$ and $H^{}_{2}$.
+
+The DPH-Bo1-DPH pipeline achieves a higher mean nDCG@10 score than DPH-RM3-DPH. 
+However, Bo1 does not significantly outperform RM3. The obtained p-value (0.283) is 
+substantially greater than the significance threshold of 0.05, indicating that the observed 
+difference is likely due to random variation across topics. Consequently, we fail to reject the null hypotheses 
+$H^{0}_{1}$ and $H^{0}_{2}$, and therefore find no statistical evidence to support the alternative hypotheses $H^{}_{1}$ and $H^{}_{2}$.
 
 \begin{table}[t]
 \centering
@@ -196,514 +189,30 @@ DPH-RM3-DPH & 0.4744 &   \\
 \end{tabular}
 \end{table}
 
-
 \section{Conclusion}
-Given the parameters of 3 retrieved documents and 10 expansion terms for Bo1 and RM3, 
-both pseudo-relevance feedback-based transformer models behave similarly. 
-Experimenting with more feedback documents and more expansion terms in the future could be meaningful.
-
-\section{Reference}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Template parameters}
-
-There are a number of template
-parameters which modify some part of the \verb|ceurart| document class.
-This parameters are enclosed in square
-brackets and are a part of the \verb|\documentclass| command:
-\begin{lstlisting}
-  \documentclass[parameter]{ceurart}
-\end{lstlisting}
-
-Frequently-used parameters, or combinations of parameters, include:
-\begin{itemize}
-\item \verb|twocolumn| : Two column layout. This option is not supported bey CEUR-WS, hence only use it for papers not to be submitted to CEUR-WS.
-\item \verb|hf| : Enable header and footer\footnote{You can enable
-    the display of page numbers in the final version of the entire
-    collection. In this case, you should adhere to the end-to-end
-    pagination of individual papers.}.  This option shall also not be used for papers to be published by CEUR-WS.
-\end{itemize}
-
-\section{Front matter}
-
-\subsection{Title Information}
-
-The titles of papers should be either all use the emphasizing
-capitalized style or they should all use the regular English (or
-native language) style. It does not make a good impression if you or
-your authors mix the styles.
-
-Use the \verb|\title| command to define the title of your work. Do not
-insert line breaks in your title.
-
-\subsection{Title variants}
-
-\verb|\title| command have the below options:
-\begin{itemize}
-\item \verb|title|: Document title. This is default option. 
-\begin{lstlisting}
-\title[mode=title]{This is a title}
-\end{lstlisting}
-You can just omit it, like as follows:
-\begin{lstlisting}
-\title{This is a title}
-\end{lstlisting}
-
-\item \verb|alt|: Alternate title.
-\begin{lstlisting}
-\title[mode=alt]{This is a alternate title}
-\end{lstlisting}
-
-\item \verb|sub|: Sub title.
-\begin{lstlisting}
-\title[mode=sub]{This is a sub title}
-\end{lstlisting}
-You can just use \verb|\subtitle| command, as follows:
-\begin{lstlisting}
-\subtitle{This is a sub title}
-\end{lstlisting}
-
-\item \verb|trans|: Translated title.
-\begin{lstlisting}
-\title[mode=trans]{This is a translated title}
-\end{lstlisting}
-
-\item \verb|transsub|: Translated sub title.
-\begin{lstlisting}
-\title[mode=transsub]{This is a translated sub title}
-\end{lstlisting}
-\end{itemize}
-
-\subsection{Authors and Affiliations}
-
-Each author must be defined separately for accurate metadata
-identification. Multiple authors may share one affiliation. Authors'
-names should not be abbreviated; use full first names wherever
-possible. Include authors' e-mail addresses whenever possible.
-
-\verb|\author| command have the below options: 
-
-\begin{itemize}
-\item \verb|style| : Style of author name (chinese)
-\item \verb|prefix| : Prefix
-\item \verb|suffix| : Suffix
-\item \verb|degree| : Degree
-\item \verb|role| : Role
-\item \verb|orcid| : ORCID
-\item \verb|email| : E-mail
-\item \verb|url| : URL
-\end{itemize}
-
-Author names can have some kinds of marks and notes:
-\begin{itemize}
-\item affiliation mark: \verb|\author[<num>]|.
-\end{itemize}
-
-The author names and affiliations could be formatted in two ways:
-\begin{enumerate}
-\item Group the authors per affiliation.
-\item Use an explicit mark to indicate the affiliations.
-\end{enumerate}
-
-Author block example:
-\begin{lstlisting}
-\author[1,2]{Author Name}[%
-    prefix=Prof.,
-    degree=D.Sc.,
-    role=Researcher,
-    orcid=0000-0000-000-0000,
-    email=name@example.com,
-    url=https://name.example.com
-]
-
-\address[1]{Affiliation #1}
-\address[2]{Affiliation #2}
-\end{lstlisting}
-
-\subsection{Abstract and Keywords}
-
-Abstract shall be entered in an environment that starts
-with \verb|\begin{abstract}| and ends with
-\verb|\end{abstract}|. 
-
-\begin{lstlisting}
-\begin{abstract}
-  This is an abstract.
-\end{abstract}
-\end{lstlisting}
-
-The key words are enclosed in a \verb|keywords|
-environment. Use \verb|\sep| to separate keywords.
-
-\begin{lstlisting}
-\begin{keywords}
-  First keyword \sep 
-  Second keyword \sep 
-  Third keyword \sep 
-  Fourth keyword
-\end{keywords}
-\end{lstlisting}
-
-At the end of front matter add \verb|\maketitle| command.
-
-\subsection{Various Marks in the Front Matter}
-
-The front matter becomes complicated due to various kinds
-of notes and marks to the title and author names. Marks in
-the title will be denoted by a star ($\star$) mark;
-footnotes are denoted by super scripted Arabic numerals,
-corresponding author by an Conformal asterisk (*) mark.
-
-\subsubsection{Title marks}
-
-Title mark can be entered by the command, \verb|\tnotemark[<num>]|
-and the corresponding text can be entered with the command
-\verb|\tnotetext[<num>]{<text>}|. An example will be:
-
-\begin{lstlisting}
-\title{A better way to format your document for CEUR-WS}
-
-\tnotemark[1]
-\tnotetext[1]{You can use this document as the template for preparing your
-  publication. We recommend using the latest version of the ceurart style.}
-\end{lstlisting}
-
-\verb|\tnotemark| and \verb|\tnotetext| can be anywhere in
-the front matter, but should be before \verb|\maketitle| command.
-
-\subsubsection{Author marks}
-
-Author names can have some kinds of marks and notes:
-\begin{itemize}
-\item footnote mark : \verb|\fnmark[<num>]|
-\item footnote text : \verb|\fntext[<num>]{<text>}|
-\item corresponding author mark : \verb|\cormark[<num>]|
-\item corresponding author text : \verb|\cortext[<num>]{<text>}|
-\end{itemize}
-
-\subsubsection{Other marks}
-
-At times, authors want footnotes which leave no marks in
-the author names. The note text shall be listed as part of
-the front matter notes. Class files provides
-\verb|\nonumnote| for this purpose. The usage
-\begin{lstlisting}
-\nonumnote{<text>}
-\end{lstlisting}
-and should be entered anywhere before the \verb|\maketitle|
-command for this to take effect. 
-
-\section{Sectioning Commands}
-
-Your work should use standard \LaTeX{} sectioning commands:
-\verb|\section|, \verb|\subsection|,
-\verb|\subsubsection|, and
-\verb|\paragraph|. They should be numbered; do not remove
-the numbering from the commands.
-
-Simulating a sectioning command by setting the first word or words of
-a paragraph in boldface or italicized text is not allowed.
-
-\section{Tables}
-
-The ``\verb|ceurart|'' document class includes the ``\verb|booktabs|''
-package --- \url{https://ctan.org/pkg/booktabs} --- for preparing
-high-quality tables.
-
-Table captions are placed \textit{above} the table.
-
-Because tables cannot be split across pages, the best placement for
-them is typically the top of the page nearest their initial cite.  To
-ensure this proper ``floating'' placement of tables, use the
-environment \verb|table| to enclose the table's contents and the
-table caption. The contents of the table itself must go in the
-\verb|tabular| environment, to be aligned properly in rows and
-columns, with the desired horizontal and vertical rules.
-
-Immediately following this sentence is the point at which
-Table~\ref{tab:freq} is included in the input file; compare the
-placement of the table here with the table in the printed output of
-this document.
-
-\begin{table*}
-  \caption{Frequency of Special Characters}
-  \label{tab:freq}
-  \begin{tabular}{ccl}
-    \toprule
-    Non-English or Math&Frequency&Comments\\
-    \midrule
-    \O & 1 in 1,000& For Swedish names\\
-    $\pi$ & 1 in 5& Common in math\\
-    \$ & 4 in 5 & Used in business\\
-    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-  \bottomrule
-\end{tabular}
-\end{table*}
-
-To set a wider table, which takes up the whole width of the page's
-live area, use the environment \verb|table*| to enclose the table's
-contents and the table caption.  As with a single-column table, this
-wide table will ``float'' to a location deemed more
-desirable. Immediately following this sentence is the point at which
-Table~\ref{tab:commands} is included in the input file; again, it is
-instructive to compare the placement of the table here with the table
-in the printed output of this document.
-
-\begin{table}
-  \caption{Some Typical Commands}
-  \label{tab:commands}
-  \begin{tabular}{ccl}
-    \toprule
-    Command &A Number & Comments\\
-    \midrule
-    \texttt{{\char'134}author} & 100& Author \\
-    \texttt{{\char'134}table}& 300 & For tables\\
-    \texttt{{\char'134}table*}& 400& For wider tables\\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\section{Math Equations}
-
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of the three are
-discussed in the next sections.
-
-\subsection{Inline (In-text) Equations}
-
-A formula that appears in the running text is called an inline or
-in-text formula.  It is produced by the \verb|math| environment,
-which can be invoked with the usual
-\verb|\begin| \ldots \verb|\end| construction or with
-the short form \verb|$| \ldots \verb|$|. You can use any of the symbols
-and structures, from $\alpha$ to $\omega$, available in
-\LaTeX~\cite{Lamport:LaTeX};
-this section will simply show a few
-examples of in-text equations in context. Notice how this equation:
-\begin{math}
-  \lim_{n\rightarrow \infty} \frac{1}{n} = 0,
-\end{math}
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
-
-\subsection{Display Equations}
-
-A numbered display equation---one set off by vertical space from the
-text and centered horizontally---is produced by the \verb|equation|
-environment. An unnumbered display equation is produced by the
-\verb|displaymath| environment.
-
-Again, in either environment, you can use any of the symbols and
-structures available in \LaTeX{}; this section will just give a couple
-of examples of display equations in context.  First, consider the
-equation, shown as an inline equation above:
-\begin{equation}
-  \lim_{n\rightarrow \infty} \frac{1}{n} = 0.
-\end{equation}
-Notice how it is formatted somewhat differently in
-the \verb|displaymath|
-environment.  Now, we'll enter an unnumbered equation:
-\begin{displaymath}
-  S_{n} = \sum_{i=1}^{n} x_{i} ,
-\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}
-  \lim_{x \to 0} (1 + x)^{1/x} = e
-\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
-
-\section{Figures}
-
-The ``\verb|figure|'' environment should be used for figures. One or
-more images can be placed within a figure. If your figure contains
-third-party material, you must clearly identify it as such, as shown
-in the example below.
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth-80pt]{UML_state_machine_Fig1}
-  \caption{Sample UML state machine (source: \url{https://en.wikipedia.org/wiki/UML_state_machine}, license CC BY-SA 3.0).}
-\end{figure}
-
-Your figures should contain a caption which describes the figure to
-the reader. Figure captions go below the figure. Your figures should
-also include a description suitable for screen readers, to
-assist the visually-challenged to better understand your work.
-
-Figure captions are placed below the figure.
-
-\section{Citations and Bibliographies}
-
-The use of Bib\TeX{} for the preparation and formatting of one's
-references is strongly recommended. Authors' names should be complete
---- use full first names (``Donald E. Knuth'') not initials
-(``D. E. Knuth'') --- and the salient identifying features of a
-reference should be included: title, year, volume, number, pages,
-article DOI, etc.
-
-The bibliography is included in your source document with these two
-commands, placed just before the \verb|\end{document}|
-command:
-\begin{lstlisting}
-\bibliography{bibfile}
-\end{lstlisting}
-where ``\verb|bibfile|'' is the name, without the ``\verb|.bib|''
-suffix, of the Bib\TeX{} file.
-
-
-\subsection{Some examples}
-
-A paginated journal article \cite{Abril07}, an enumerated journal
-article \cite{Cohen07}, a reference to an entire issue
-\cite{JCohen96}, a monograph (whole book) \cite{Kosiur01}, a
-monograph/whole book in a series (see 2a in spec. document)
-\cite{Harel79}, a divisible-book such as an anthology or compilation
-\cite{Editor00} followed by the same example, however we only output
-the series if the volume number is given \cite{Editor00a} (so series
-should not be present since it has no vol. no.), a chapter in a
-divisible book \cite{Spector90}, a chapter in a divisible book in a
-series \cite{Douglass98}, a multi-volume work as book \cite{Knuth97},
-an article in a proceedings (of a conference, symposium, workshop for
-example) (paginated proceedings article) \cite{Andler79}, a
-proceedings article with all possible elements \cite{Smith10}, an
-example of an enumerated proceedings article \cite{VanGundy07}, an
-informally published work \cite{Harel78}, a doctoral dissertation
-\cite{Clarkson85}, a master's thesis: \cite{anisi03}, an online
-document / world wide web resource \cite{Thornburg01, Ablamowicz07,
-  Poker06}, a video game (Case 1) \cite{Obama08} and (Case 2)
-\cite{Novak03} and \cite{Lee05} and (Case 3) a patent
-\cite{JoeScientist001}, work accepted for publication \cite{rous08},
-prolific author \cite{SaeediMEJ10} and \cite{SaeediJETC10}. Other
-cites might contain `duplicate' DOI and URLs (some SIAM articles)
-\cite{Kirschmer:2010:AEI:1958016.1958018}. Multi-volume works as books
-\cite{MR781536} and \cite{MR781537}. A couple of citations with DOIs:
-\cite{2004:ITE:1009386.1010128,Kirschmer:2010:AEI:1958016.1958018}. Online
-citations: \cite{TUGInstmem, Thornburg01, R, UMassCitations}.
-
-\section{Acknowledgments}
-
-Identification of funding sources and other support, and thanks to
-individuals and groups that assisted in the research and the
-preparation of the work should be included in an acknowledgment
-section, which is placed just before the reference section in your
-document.
-
-This section has a special environment:
-\begin{lstlisting}
-\begin{acknowledgments}
-  These are different acknowledgments.
-\end{acknowledgments}
-\end{lstlisting}
-so that the information contained therein can be more easily collected
-during the article metadata extraction phase, and to ensure
-consistency in the spelling of the section heading.
-
-Authors should not prepare this section as a numbered or unnumbered
-\verb|\section|; please use the ``\verb|acknowledgments|'' environment.
-
-\section{Appendices}
-
-If your work needs an appendix, add it before the
-``\verb|\end{document}|'' command at the conclusion of your source
-document.
-
-Start the appendix with the ``\verb|\appendix|'' command:
-\begin{lstlisting}
-\appendix
-\end{lstlisting}
-and note that in the appendix, sections are lettered, not
-numbered. 
-
-%%
-%% The acknowledgments section is defined using the "acknowledgments" environment
-%% (and NOT an unnumbered section). This ensures the proper
-%% identification of the section in the article metadata, and the
-%% consistent spelling of the heading.
-\begin{acknowledgments}
-  Thanks to the developers of ACM consolidated LaTeX styles
-  \url{https://github.com/borisveytsman/acmart} and to the developers
-  of Elsevier updated \LaTeX{} templates
-  \url{https://www.ctan.org/tex-archive/macros/latex/contrib/els-cas-templates}.  
-\end{acknowledgments}
+his study presented a controlled comparison of Bo1 and RM3 pseudo-relevance feedback methods within an 
+identical DPH-based retriever–rewriter–retriever pipeline. Using three feedback documents and ten expansion terms, 
+both approaches yielded comparable retrieval effectiveness on the \textit{radboud-validation-20251114-training} dataset. 
+Although the DPH-Bo1-DPH pipeline achieved a slightly higher mean nDCG@10 score than DPH-RM3-DPH, statistical 
+significance testing showed that this difference was not significant. Consequently, neither method can be 
+considered superior under the examined experimental conditions.
+
+These findings suggest that, when applied with identical parameters and retrieval models, the choice 
+between Bo1 and RM3 has limited impact on retrieval effectiveness. Future work could explore broader 
+parameter sweeps, alternative feedback depths, or different retrieval models to better understand under 
+which conditions one method may consistently outperform the other.
 
 %% The declaration on generative AI comes in effect
 %% in Janary 2025. See also
 %% https://ceur-ws.org/GenAI/Policy.html
 \section*{Declaration on Generative AI}
-  {\em Either:}\newline
-  The author(s) have not employed any Generative AI tools.
-  \newline
-  
- \noindent{\em Or (by using the activity taxonomy in ceur-ws.org/genai-tax.html):\newline}
- During the preparation of this work, the author(s) used X-GPT-4 and Gramby in order to: Grammar and spelling check. Further, the author(s) used X-AI-IMG for figures 3 and 4 in order to: Generate images. After using these tool(s)/service(s), the author(s) reviewed and edited the content as needed and take(s) full responsibility for the publication’s content. 
+ During the preparation of this work, the authors used ChatGPT-5.2 and LanguageTool in order to: Grammar and spelling check. After using these tools/services, the authors reviewed and edited the content as needed and take full responsibility for the publication’s content. 
 
+
+\pagebreak
 %%
 %% Define the bibliography file to be used
 \bibliography{sample-ceur}
-
-%%
-%% If your work has an appendix, this is the place to put it.
-\appendix
-
-\section{Online Resources}
-
-
-The sources for the ceur-art style are available via
-\begin{itemize}
-\item \href{https://github.com/yamadharma/ceurart}{GitHub},
-% \item \href{https://www.overleaf.com/project/5e76702c4acae70001d3bc87}{Overleaf},
-\item
-  \href{https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/pkfscdkgkhcq}{Overleaf
-    template}.
-\end{itemize}
 
 \end{document}
 
