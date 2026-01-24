@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  21 JAN 2026 19:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  22 JAN 2026 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,12 +1442,21 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 104.
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 118.
-LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 120.
-(C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusmono-tlf.fd
+LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 121.
+LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 122.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 122.
+[1
+
+{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+LibertinusMono-TLF on input line 129.
+ (C:\Users\Albert\AppData\Local\Programs\MiKTeX\tex/latex/libertinus-type1\t1libertinusmono-tlf.fd
 File: T1LibertinusMono-TLF.fd 2025/01/11 (autoinst) Font definitions for T1/LibertinusMono-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 120.
+(Font)              scaled to size 9.30756pt on input line 129.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1458,25 +1467,16 @@ Package microtype Info: Character `guilsinglleft ' is missing
 Package microtype Info: Character `guilsinglright ' is missing
 (microtype)             in font `T1/LibertinusMono-TLF/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 125.
-LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 125.
- [1
-
-{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_rlktsf.enc} <C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/doclicense/images/doclicense-CC-by-88x31.pdf>]
-LaTeX Font Info:    Font shape `TS1/LibertinusSerif-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 137.
- [2] [3] [4]
-Underfull \hbox (badness 7451) in paragraph at lines 397--402
+ [2{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_or3pzs.enc}] [3] [4]
+Underfull \hbox (badness 7451) in paragraph at lines 400--405
 \T1/LibertinusSerif-TLF/m/n/10.95 (+20) Your work should use stan-dard L[]T[]X sec-tion-ing com-mands: [][]\T1/LibertinusMono-TLF/m/n/10.95 \section[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) , [][]\T1/LibertinusMono-TLF/m/n/10.95 \subsection[]\T1/LibertinusSerif-TLF/m/n/10.95 (+20) ,
  []
 
 [5]
 LaTeX Font Info:    Font shape `T1/LibertinusSans-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 428.
+(Font)              scaled to size 10.0pt on input line 431.
 LaTeX Font Info:    Font shape `T1/LibertinusMono-TLF/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 458.
+(Font)              scaled to size 8.50006pt on input line 461.
 Package microtype Info: Character `guilsinglleft ' is missing
 (microtype)             in font `T1/LibertinusMono-TLF/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1485,122 +1485,122 @@ Package microtype Info: Character `guilsinglright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-Package natbib Warning: Citation `Lamport:LaTeX' on page 6 undefined on input line 479.
+Package natbib Warning: Citation `Lamport:LaTeX' on page 6 undefined on input line 482.
 
 [6{C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}]
-<UML_state_machine_Fig1.png, id=152, 356.532pt x 142.131pt>
+<UML_state_machine_Fig1.png, id=153, 356.532pt x 142.131pt>
 File: UML_state_machine_Fig1.png Graphic file (type png)
 <use UML_state_machine_Fig1.png>
-Package pdftex.def Info: UML_state_machine_Fig1.png  used on input line 522.
+Package pdftex.def Info: UML_state_machine_Fig1.png  used on input line 525.
 (pdftex.def)             Requested size: 372.9679pt x 148.6954pt.
 
 
-Package natbib Warning: Citation `Abril07' on page 7 undefined on input line 554.
+Package natbib Warning: Citation `Abril07' on page 7 undefined on input line 557.
 
 
-Package natbib Warning: Citation `Cohen07' on page 7 undefined on input line 555.
+Package natbib Warning: Citation `Cohen07' on page 7 undefined on input line 558.
 
 
-Package natbib Warning: Citation `JCohen96' on page 7 undefined on input line 556.
+Package natbib Warning: Citation `JCohen96' on page 7 undefined on input line 559.
 
 
-Package natbib Warning: Citation `Kosiur01' on page 7 undefined on input line 556.
+Package natbib Warning: Citation `Kosiur01' on page 7 undefined on input line 559.
 
 
-Package natbib Warning: Citation `Harel79' on page 7 undefined on input line 558.
+Package natbib Warning: Citation `Harel79' on page 7 undefined on input line 561.
 
 
-Package natbib Warning: Citation `Editor00' on page 7 undefined on input line 559.
+Package natbib Warning: Citation `Editor00' on page 7 undefined on input line 562.
 
 
-Package natbib Warning: Citation `Editor00a' on page 7 undefined on input line 560.
+Package natbib Warning: Citation `Editor00a' on page 7 undefined on input line 563.
 
 
-Package natbib Warning: Citation `Spector90' on page 7 undefined on input line 562.
+Package natbib Warning: Citation `Spector90' on page 7 undefined on input line 565.
 
 
-Package natbib Warning: Citation `Douglass98' on page 7 undefined on input line 563.
+Package natbib Warning: Citation `Douglass98' on page 7 undefined on input line 566.
 
 
-Package natbib Warning: Citation `Knuth97' on page 7 undefined on input line 563.
+Package natbib Warning: Citation `Knuth97' on page 7 undefined on input line 566.
 
 
-Package natbib Warning: Citation `Andler79' on page 7 undefined on input line 565.
+Package natbib Warning: Citation `Andler79' on page 7 undefined on input line 568.
 
 
-Package natbib Warning: Citation `Smith10' on page 7 undefined on input line 566.
+Package natbib Warning: Citation `Smith10' on page 7 undefined on input line 569.
 
 
-Package natbib Warning: Citation `VanGundy07' on page 7 undefined on input line 567.
+Package natbib Warning: Citation `VanGundy07' on page 7 undefined on input line 570.
 
 
-Package natbib Warning: Citation `Harel78' on page 7 undefined on input line 568.
+Package natbib Warning: Citation `Harel78' on page 7 undefined on input line 571.
 
 
-Package natbib Warning: Citation `Clarkson85' on page 7 undefined on input line 569.
+Package natbib Warning: Citation `Clarkson85' on page 7 undefined on input line 572.
 
 
-Package natbib Warning: Citation `anisi03' on page 7 undefined on input line 569.
+Package natbib Warning: Citation `anisi03' on page 7 undefined on input line 572.
 
 
-Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 571.
+Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 574.
 
 
-Package natbib Warning: Citation `Ablamowicz07' on page 7 undefined on input line 571.
+Package natbib Warning: Citation `Ablamowicz07' on page 7 undefined on input line 574.
 
 
-Package natbib Warning: Citation `Poker06' on page 7 undefined on input line 571.
+Package natbib Warning: Citation `Poker06' on page 7 undefined on input line 574.
 
 
-Package natbib Warning: Citation `Obama08' on page 7 undefined on input line 571.
+Package natbib Warning: Citation `Obama08' on page 7 undefined on input line 574.
 
 
-Package natbib Warning: Citation `Novak03' on page 7 undefined on input line 572.
+Package natbib Warning: Citation `Novak03' on page 7 undefined on input line 575.
 
 
-Package natbib Warning: Citation `Lee05' on page 7 undefined on input line 572.
+Package natbib Warning: Citation `Lee05' on page 7 undefined on input line 575.
 
 
-Package natbib Warning: Citation `JoeScientist001' on page 7 undefined on input line 573.
+Package natbib Warning: Citation `JoeScientist001' on page 7 undefined on input line 576.
 
 
-Package natbib Warning: Citation `rous08' on page 7 undefined on input line 573.
+Package natbib Warning: Citation `rous08' on page 7 undefined on input line 576.
 
 
-Package natbib Warning: Citation `SaeediMEJ10' on page 7 undefined on input line 574.
+Package natbib Warning: Citation `SaeediMEJ10' on page 7 undefined on input line 577.
 
 
-Package natbib Warning: Citation `SaeediJETC10' on page 7 undefined on input line 574.
+Package natbib Warning: Citation `SaeediJETC10' on page 7 undefined on input line 577.
 
 
-Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 576.
+Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 579.
 
 
-Package natbib Warning: Citation `MR781536' on page 7 undefined on input line 577.
+Package natbib Warning: Citation `MR781536' on page 7 undefined on input line 580.
 
 
-Package natbib Warning: Citation `MR781537' on page 7 undefined on input line 577.
+Package natbib Warning: Citation `MR781537' on page 7 undefined on input line 580.
 
 
-Package natbib Warning: Citation `2004:ITE:1009386.1010128' on page 7 undefined on input line 578.
+Package natbib Warning: Citation `2004:ITE:1009386.1010128' on page 7 undefined on input line 581.
 
 
-Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 578.
+Package natbib Warning: Citation `Kirschmer:2010:AEI:1958016.1958018' on page 7 undefined on input line 581.
 
 
-Package natbib Warning: Citation `TUGInstmem' on page 7 undefined on input line 579.
+Package natbib Warning: Citation `TUGInstmem' on page 7 undefined on input line 582.
 
 
-Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 579.
+Package natbib Warning: Citation `Thornburg01' on page 7 undefined on input line 582.
 
 
-Package natbib Warning: Citation `R' on page 7 undefined on input line 579.
+Package natbib Warning: Citation `R' on page 7 undefined on input line 582.
 
 
-Package natbib Warning: Citation `UMassCitations' on page 7 undefined on input line 579.
+Package natbib Warning: Citation `UMassCitations' on page 7 undefined on input line 582.
 
 [7 <./UML_state_machine_Fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 631--634
+Underfull \hbox (badness 10000) in paragraph at lines 634--637
 
  []
 
@@ -1615,17 +1615,17 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30632 strings out of 467871
- 575956 string characters out of 5417892
+ 30634 strings out of 467871
+ 575976 string characters out of 5417892
  1184622 words of memory out of 5000000
- 58561 multiletter control sequences out of 15000+600000
+ 58562 multiletter control sequences out of 15000+600000
  774496 words of font info for 309 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,21n,121p,11334b,2548s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusMono-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSans-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on sample-1col.pdf (9 pages, 706273 bytes).
+Output written on sample-1col.pdf (9 pages, 706684 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
- 91419 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
+ 91427 words of extra memory for PDF output out of 106986 (max. 10000000)
 

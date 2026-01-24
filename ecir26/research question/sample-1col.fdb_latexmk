@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex sample-1col"] 1769019635.80828 "sample-1col.aux" "sample-1col.bbl" "sample-1col" 1769019642.4971 0
+["bibtex sample-1col"] 1769081199.85382 "sample-1col.aux" "sample-1col.bbl" "sample-1col" 1769081200.50457 0
   "./elsarticle-num-names.bst" 1768321961 28896 7a30bf729a4503bf3d6be1e1e9480509 ""
-  "./sample-ceur.bib" 1769016634 2608 9bbfdbe1b50adce42bf5089749c743a2 ""
-  "sample-1col.aux" 1769019640 14619 d28573e241cb5dd831317b7155f8606a "pdflatex"
+  "./sample-ceur.bib" 1769081198 8606 98f738feb74a752f802c86c9a0b8902b ""
+  "sample-1col.aux" 1769080784 14946 145f945c557ebff30575d283c79afc7c "pdflatex"
   (generated)
   "sample-1col.bbl"
   "sample-1col.blg"
   (rewritten before read)
-["pdflatex"] 1769019636.4125 "c:/Users/Albert/Documents/1 Project/Deep Semantic Learning/IR/wows-code/ecir26/research question/sample-1col.tex" "sample-1col.pdf" "sample-1col" 1769019642.49852 0
+["pdflatex"] 1769080779.80768 "c:/Users/Albert/Documents/1 Project/Deep Semantic Learning/IR/wows-code/ecir26/research question/sample-1col.tex" "sample-1col.pdf" "sample-1col" 1769081200.50531 0
   "C:/Users/Albert/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768930242 184077 45705f4fc99e2b682f58041f39cb6eb4 ""
   "C:/Users/Albert/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1768328912 13333971 c2c8df2e843612a15e8706da665e3684 ""
   "C:/Users/Albert/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1651500229 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -238,14 +238,14 @@
   "C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/xmpincl/xmpincl.sty" 1633254124 2832 d498c59e94b7dfa3b4bcf74380ad6348 ""
   "C:/Users/Albert/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "UML_state_machine_Fig1.png" 1768321961 10434 67611b072be6e951a816b9d986ee3bc6 ""
-  "c:/Users/Albert/Documents/1 Project/Deep Semantic Learning/IR/wows-code/ecir26/research question/sample-1col.tex" 1769019628 24141 8172772058c0b876ea1710e975dace5a ""
+  "c:/Users/Albert/Documents/1 Project/Deep Semantic Learning/IR/wows-code/ecir26/research question/sample-1col.tex" 1769080769 24165 0c9353c6ef3da1bb886bd3ff033a91bb ""
   "ceurart.cls" 1768321961 84767 2c6f7928cfcf4525d25a7760fec1fcc1 ""
-  "pdfa.xmpi" 1769019638 6740 4db4fe9077e4153bc214f76dfa23ea34 "pdflatex"
-  "sample-1col.abs" 1769019639 776 858b0b2d26c16318c5fcfbe73363d9ae "pdflatex"
-  "sample-1col.aux" 1769019640 14619 d28573e241cb5dd831317b7155f8606a "pdflatex"
-  "sample-1col.bbl" 1769019636 2749 79525b92f2c22271b058da43362b4f27 "bibtex sample-1col"
-  "sample-1col.tex" 1769019628 24141 8172772058c0b876ea1710e975dace5a ""
-  "sample-1col.xmpdata" 1769019640 524 99d4a674d3e534e461568a540f7ae6a8 "pdflatex"
+  "pdfa.xmpi" 1769080782 6740 ae90e2cf590e8c8189ab562ac49e04f9 "pdflatex"
+  "sample-1col.abs" 1769080783 776 858b0b2d26c16318c5fcfbe73363d9ae "pdflatex"
+  "sample-1col.aux" 1769080784 14946 145f945c557ebff30575d283c79afc7c "pdflatex"
+  "sample-1col.bbl" 1769081200 2749 79525b92f2c22271b058da43362b4f27 "bibtex sample-1col"
+  "sample-1col.tex" 1769080769 24165 0c9353c6ef3da1bb886bd3ff033a91bb ""
+  "sample-1col.xmpdata" 1769080785 524 99d4a674d3e534e461568a540f7ae6a8 "pdflatex"
   (generated)
   "pdfa.xmpi"
   "sample-1col.abs"

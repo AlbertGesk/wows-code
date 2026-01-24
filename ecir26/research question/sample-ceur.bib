@@ -56,3 +56,58 @@
   biburl       = {https://dblp.org/rec/phd/ethos/Amati03.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
+
+@article{10.1145/3572405,
+author = {Wang, Xiao and MacDonald, Craig and Tonellotto, Nicola and Ounis, Iadh},
+title = {ColBERT-PRF: Semantic Pseudo-Relevance Feedback for Dense Passage and Document Retrieval},
+year = {2023},
+issue_date = {February 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {17},
+number = {1},
+issn = {1559-1131},
+url = {https://doi.org/10.1145/3572405},
+doi = {10.1145/3572405},
+abstract = {Pseudo-relevance feedback mechanisms, from Rocchio to the relevance models, have shown the usefulness of expanding and reweighting the users’ initial queries using information occurring in an initial set of retrieved documents, known as the pseudo-relevant set. Recently, dense retrieval – through the use of neural contextual language models such as BERT for analysing the documents’ and queries’ contents and computing their relevance scores – has shown a promising performance on several information retrieval tasks still relying on the traditional inverted index for identifying documents relevant to a query. Two different dense retrieval families have emerged: the use of single embedded representations for each passage and query, e.g., using BERT’s [CLS] token, or via multiple representations, e.g., using an embedding for each token of the query and document (exemplified by ColBERT). In this work, we conduct the first study into the potential for multiple representation dense retrieval to be enhanced using pseudo-relevance feedback and present our proposed approach ColBERT-PRF. In particular, based on the pseudo-relevant set of documents identified using a first-pass dense retrieval, ColBERT-PRF extracts the representative feedback embeddings from the document embeddings of the pseudo-relevant set. Among the representative feedback embeddings, the embeddings that most highly discriminate among documents are employed as the expansion embeddings, which are then added to the original query representation. We show that these additional expansion embeddings both enhance the effectiveness of a reranking of the initial query results as well as an additional dense retrieval operation. Indeed, experiments on the MSMARCO passage ranking dataset show that MAP can be improved by up to 26\% on the TREC 2019 query set and 10\% on the TREC 2020 query set by the application of our proposed ColBERT-PRF method on a ColBERT dense retrieval approach.We further validate the effectiveness of our proposed pseudo-relevance feedback technique for a dense retrieval model on MSMARCO document ranking and TREC Robust04 document ranking tasks. For instance, ColBERT-PRF exhibits up to 21\% and 14\% improvement in MAP over the ColBERT E2E model on the MSMARCO document ranking TREC 2019 and TREC 2020 query sets, respectively. Additionally, we study the effectiveness of variants of the ColBERT-PRF model with different weighting methods. Finally, we show that ColBERT-PRF can be made more efficient, attaining up to 4.54\texttimes{} speedup over the default ColBERT-PRF model, and with little impact on effectiveness, through the application of approximate scoring and different clustering methods.},
+journal = {ACM Trans. Web},
+month = jan,
+articleno = {3},
+numpages = {39},
+keywords = {dense retrieval, BERT, pseudo-relevance feedback, Query expansion}
+}
+
+@INPROCEEDINGS{9993572,
+  author={Nehar, Attia and Bellaouar, Slimane and Mahfoud, Djamila and Daoudi, Fatima Zohra},
+  booktitle={2022 5th International Symposium on Informatics and its Applications (ISIA)}, 
+  title={A Hybrid Semantic Statistical Query Expansion for Arabic Information Retrieval Systems}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Vocabulary;Semantics;Transformers;Question answering (information retrieval);Informatics;Information retrieval;Pseudo relevance feed-back;Query expansion;Word embedding;Transformer;AraBERT},
+  doi={10.1109/ISIA55826.2022.9993572}
+  }
+
+@inproceedings{jia-etal-2024-mill,
+    title = "{MILL}: Mutual Verification with Large Language Models for Zero-Shot Query Expansion",
+    author = "Jia, Pengyue  and
+      Liu, Yiding  and
+      Zhao, Xiangyu  and
+      Li, Xiaopeng  and
+      Hao, Changying  and
+      Wang, Shuaiqiang  and
+      Yin, Dawei",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-long.138/",
+    doi = "10.18653/v1/2024.naacl-long.138",
+    pages = "2498--2518",
+    abstract = "Query expansion, pivotal in search engines, enhances the representation of user information needs with additional terms. While existing methods expand queries using retrieved or generated contextual documents, each approach has notable limitations. Retrieval-based methods often fail to accurately capture search intent, particularly with brief or ambiguous queries. Generation-based methods, utilizing large language models (LLMs), generally lack corpus-specific knowledge and entail high fine-tuning costs. To address these gaps, we propose a novel zero-shot query expansion framework utilizing LLMs for mutual verification. Specifically, we first design a query-query-document generation method, leveraging LLMs' zero-shot reasoning ability to produce diverse sub-queries and corresponding documents. Then, a mutual verification process synergizes generated and retrieved documents for optimal expansion. Our proposed method is fully zero-shot, and extensive experiments on three public benchmark datasets are conducted to demonstrate its effectiveness over existing methods. Our code is available online at https://github.com/Applied-Machine-Learning-Lab/MILL to ease reproduction."
+}

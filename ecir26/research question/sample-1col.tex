@@ -109,11 +109,20 @@ retrieval and feedback settings, and
 (ii) a statistical analysis of their impact on nDCG@10 on the 
 \textit{radboud-validation-20251114-training} dataset.
 
-
 \section{Related Work}
+
 
 \section{Methodology}
 This section depicts the experimental setup designed to answer the research question.
+
+\subsection{Hypotheses and Null-Hypotheses}
+Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
+\begin{itemize}
+  \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
+  \item $H^{}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+  \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
+\end{itemize}
 
 \subsection{Dataset and Preprocessing}
 For the experiments, we utilized the \textit{radboud-validation-20251114-training} dataset. 
@@ -131,14 +140,8 @@ The pseudo-relevance feedback models,both the Bo1 \cite{DBLP:phd/ethos/Amati03} 
 For both models, all parameters are remained at default, the number of feedback terms to use is set to ten and the number of feedback documents to use is set to three. 
 The interpolation weight between the original query and the feedback model for RM3 is set to 0.6.
 
-\subsection{Hypotheses and Null-Hypotheses}
-Given the research question the following two hypotheses and corresponding null-hypotheses are formulated:
-\begin{itemize}
-  \item $H^{}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-  \item $H^{0}_{1}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant difference in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05) 
-  \item $H^{}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is a statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-  \item $H^{0}_{2}$ Given query expansion via pseudo-relevance feedback using the top 3 retrieved documents and 10 expansion terms, there is no statistically significant improvement in nDCG@10 on radboud-validation-20251114-training between (i) the DPH-based retrieval pipeline described in subsection~\ref{subsec:exp} three with Bo1 query expansion and (ii) the same pipeline with RM3 query expansion. ($\alpha$=0.05)
-\end{itemize}
+\subsection{Analysis}
+
 
 
 \section{Results}
